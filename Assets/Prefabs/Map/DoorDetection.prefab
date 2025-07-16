@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6983338611628511361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3467911616609116747}
+  - component: {fileID: -7299594620062896436}
+  - component: {fileID: 8390409669607651505}
+  m_Layer: 0
+  m_Name: DoorDetection
+  m_TagString: RoomDetection
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3467911616609116747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983338611628511361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7299594620062896436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983338611628511361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b206b9c1da828004fb1b194f79024f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBeingTriggered: 0
+  spawners: []
+  zombieVariants:
+  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  bossZombies:
+  - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
+--- !u!60 &8390409669607651505
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983338611628511361}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1783
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34986162, y: 0.50530976}
+      - {x: 0.34410536, y: 0.645444}
+      - {x: -3.339491, y: 0.67017376}
+      - {x: -3.3148115, y: -0.13075134}
+      - {x: -3.5028648, y: -0.13423014}
+      - {x: -3.5051126, y: -2.054706}
+      - {x: -3.1782954, y: -2.0596082}
+      - {x: -3.1870055, y: -2.8557482}
+      - {x: 0.5108732, y: -2.8593335}
+      - {x: 0.5082374, y: -0.9146551}
+      - {x: 0.50532866, y: -0.7609172}
+      - {x: 0.49754536, y: 0.5014157}
+  m_UseDelaunayMesh: 0

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Bullet
+  - Door
+  - SpawnManager
+  - GameManager
+  - Walls
+  - GunHolder
+  - RoomDetection
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - hangingAmbience
+  - Water
+  - UI
+  - wall
+  - floor
+  - player
+  - ambience
+  - notWall
+  - Obstacle
+  - bullet
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 859233287
+    locked: 0
+  - name: Foreground
+    uniqueID: 981129739
+    locked: 0
+  - name: UI
+    uniqueID: 3240268489
+    locked: 0
