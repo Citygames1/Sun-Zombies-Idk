@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class DoubleHealthPerk : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject healthBar;
-    public HealthBar healthBarScript;
-    public PlayerHealth playerHS;
+    private HealthBar healthBarScript;
+    private PlayerHealth playerHS;
     public bool inRangeOfMachine;
     public bool hasBought;
     public int costOfMachine;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
         healthBarScript = healthBar.gameObject.GetComponent<HealthBar>();
     }

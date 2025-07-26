@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SaveBulletChance : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject weaponHolder;
-    public weaponManager weaponManager;
+    private GameObject player;
+    private GameObject weaponHolder;
+    private weaponManager weaponManager;
     [HideInInspector] public Shooting currentGunShooting;
     public bool inRangeOfMachine;
     public bool hasBought;
@@ -13,6 +13,8 @@ public class SaveBulletChance : MonoBehaviour
 
     public void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        weaponHolder = GameObject.FindWithTag("GunHolder");
         weaponManager = weaponHolder.GetComponent<weaponManager>();
     }
 

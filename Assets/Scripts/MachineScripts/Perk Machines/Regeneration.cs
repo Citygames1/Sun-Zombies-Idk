@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Regeneration : MonoBehaviour
 {
-    public GameObject player;
-    public PlayerHealth playerHS;
+    private GameObject player;
+    private PlayerHealth playerHS;
     public bool inRangeOfMachine;
     public bool hasBought;
     public int costOfMachine;
@@ -15,6 +15,7 @@ public class Regeneration : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
         regenIntervalTimer = regenInterval;
     }

@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour
     public bool canShoot;
     public bool needsAmmo;
     public bool isShotgun;
+    public bool burstRifle;
     public bool chanceToSaveBullet;
 
     //Game Objects
@@ -32,10 +33,19 @@ public class Shooting : MonoBehaviour
     public int shotgunPelletCount;
     [HideInInspector] public int chanceToSaveBulletInt; 
 
+    //Burst Shooting
+    public int burstShotCount = 3;
+    public int totalBurstShotsFired = 0;
+    public float timeBetweenBurstShot;
+    public float timeBetweenBurstShotTimer;
+    public bool timeBetweenBurstShotTimerRunning;
+    public bool isBursting;
+
     public void Start()
     {
         reloadTimer = timeToReload;
         timeBetweenShotTimer = timeBetweenShot;
+        timeBetweenBurstShotTimer = timeBetweenBurstShot;
 
         SetBullets();
     }
@@ -106,16 +116,56 @@ public class Shooting : MonoBehaviour
         //shooting
         if (canShoot == true && !reloadTimerRunning && Input.GetButton("Fire1"))
         {
-            Shoot();
-            TimeBetweenShots();
-
-            if(chanceToSaveBullet == true)
+            if (burstRifle == true)
             {
-                SaveBulletChance();
+                isBursting = true;
             }
-            if(chanceToSaveBullet == false)
+            else
             {
-                bulletsInMag--;
+                Shoot();
+                TimeBetweenShots();
+                if (chanceToSaveBullet == true)
+                {
+                    SaveBulletChance();
+                }
+                if (chanceToSaveBullet == false)
+                {
+                    bulletsInMag--;
+                }
+            }
+        }
+
+        if (isBursting == true)
+        {
+            timeBetweenBurstShotTimer -= Time.deltaTime;
+            timeBetweenBurstShotTimerRunning = true;
+
+            if (timeBetweenBurstShotTimerRunning == true)
+            {
+                if (timeBetweenBurstShotTimer <= 0)
+                {
+                    if (totalBurstShotsFired < burstShotCount)
+                    {
+                        Shoot();
+                        totalBurstShotsFired++;
+                        if (chanceToSaveBullet == true)
+                        {
+                            SaveBulletChance();
+                        }
+                        else
+                        {
+                            bulletsInMag--;
+                        }
+                        timeBetweenBurstShotTimer = timeBetweenBurstShot;
+                    }
+                    else
+                    {
+                        isBursting = false;
+                        totalBurstShotsFired = 0;
+                        timeBetweenBurstShotTimerRunning = false;
+                        TimeBetweenShots();
+                    }
+                }
             }
         }
 
@@ -126,7 +176,7 @@ public class Shooting : MonoBehaviour
         }
 
         //for ammo machine
-        if(totalBullets != totalPossibleBullets)
+        if (totalBullets != totalPossibleBullets)
         {
             needsAmmo = true;
         }
@@ -140,7 +190,7 @@ public class Shooting : MonoBehaviour
         //if is a shotgun
         if(isShotgun == true)
         {
-            for(int i = 1; i < shotgunPelletCount + 1; i++)
+            for (int i = 1; i < shotgunPelletCount + 1; i++)
             {
                 //points the gun
                 Vector3 mousePos = Input.mousePosition;
@@ -157,7 +207,7 @@ public class Shooting : MonoBehaviour
                 bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward * bulletForce, ForceMode2D.Impulse);
             }
         }
-        //if isnt a shotgun
+        //if is a normal gun
         else
         {
             //points the gun

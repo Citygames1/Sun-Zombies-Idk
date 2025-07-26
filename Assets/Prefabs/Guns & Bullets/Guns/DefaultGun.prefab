@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 403010898540339505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8512616184860825699}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 981129739
-  m_SortingLayer: 4
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,6 +138,10 @@ MonoBehaviour:
   timeBetweenShotTimerRunning: 0
   canShoot: 0
   needsAmmo: 0
+  isShotgun: 0
+  burstRifle: 0
+  normalGun: 0
+  chanceToSaveBullet: 0
   firePoint: {fileID: 7046171263874864256}
   bulletPrefab: {fileID: 3971455278640791982, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
   cam: {fileID: 0}
@@ -147,6 +151,11 @@ MonoBehaviour:
   magSize: 0
   bulletsInMag: 0
   rangeOfSpread: 0
+  shotgunPelletCount: 0
+  chanceToSaveBulletInt: 0
+  burstShotCount: 0
+  timeBetweenBurstShot: 0
+  timeBetweenBurstShotTimer: 0
 --- !u!1 &8860993629201468104
 GameObject:
   m_ObjectHideFlags: 0

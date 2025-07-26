@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1796489311764480107
+--- !u!1001 &2164927871984573892
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,31 +11,19 @@ PrefabInstance:
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 410fa4af431899346a98385e5bad28e3, type: 3}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 602c49f328872d54b96eeb1ed2cc75dd, type: 3}
     - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Name
-      value: Sniper Wall Buy
+      value: AutoShotGun Wall Buy
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
-      value: 1500
+      value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
-      objectReference: {fileID: 1716308190195098218, guid: aea239ee332befb44b0d690f306b0666, type: 3}
+      objectReference: {fileID: 2578463748452256372, guid: 7ccede6fa03fddb4e92bb681963f3d29, type: 3}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -81,24 +69,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Size.x
-      value: 0.46876124
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Size.y
-      value: 0.60980034
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.023323402
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08207971
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.35
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y

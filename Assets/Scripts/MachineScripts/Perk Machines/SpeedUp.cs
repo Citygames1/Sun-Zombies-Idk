@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SpeedUp : MonoBehaviour
 {
-    public GameObject player;
-    public TopDownMovement tdmPlayer;
-    public PlayerHealth playerHealth;
+    private GameObject player;
+    private TopDownMovement tdmPlayer;
+    private PlayerHealth playerHealth;
     public float multiplier = 1.5f;
     public bool inRangeOfMachine;
     public bool hasBought;
@@ -12,6 +12,7 @@ public class SpeedUp : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         tdmPlayer = player.GetComponent<TopDownMovement>();
         playerHealth = player.GetComponent<PlayerHealth>();
     }

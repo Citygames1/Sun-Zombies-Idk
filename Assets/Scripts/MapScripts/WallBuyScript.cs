@@ -7,8 +7,9 @@ using UnityEngine.UIElements;
 public class WallBuyScript : MonoBehaviour
 {
     public GameObject wallBuyWeapon;
-    public Transform gunHolder;
-    public weaponManager weaponManager;
+    private GameObject gunHolder;
+    private Transform gunHolderTransform;
+    private weaponManager weaponManager;
     private GameObject player;
 
     public int costOfGun;
@@ -19,6 +20,9 @@ public class WallBuyScript : MonoBehaviour
     public void Start()
     {
         player = GameObject.FindWithTag("Player");
+        gunHolder = GameObject.FindWithTag("GunHolder");
+        gunHolderTransform = gunHolder.transform;
+        weaponManager = gunHolder.GetComponent<weaponManager>();
     }
 
     public void Update()
@@ -28,7 +32,7 @@ public class WallBuyScript : MonoBehaviour
             if (player.GetComponent<PointSystem>().totalPoints >= costOfGun && hasAlreadyBeenBought == false) 
             {
                 hasAlreadyBeenBought = true;
-                GameObject instantiatedGun = Instantiate(wallBuyWeapon, gunHolder);
+                GameObject instantiatedGun = Instantiate(wallBuyWeapon, gunHolderTransform);
                 weaponManager.guns.Add(instantiatedGun);
                 weaponManager.currentGun = instantiatedGun;
                 player.GetComponent<PointSystem>().totalPoints -= costOfGun;
