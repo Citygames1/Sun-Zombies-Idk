@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M16A2
       objectReference: {fileID: 0}
+    - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
       value: 1000
@@ -24,6 +28,10 @@ PrefabInstance:
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 4562221189031436711, guid: 9dd5d36b2f532a4469a8979bbd053dd7, type: 3}
+    - target: {fileID: 5223158744170131302, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -67,6 +75,22 @@ PrefabInstance:
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_text
+      value: Press E to buy M16A2 (1000 points)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_margin.z
+      value: 3.1878939
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

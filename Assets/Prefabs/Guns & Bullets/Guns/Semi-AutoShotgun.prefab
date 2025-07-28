@@ -45,6 +45,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8463337065498036041, guid: 9f3130a7d6b101e48afb6cbff2a111d3, type: 3}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: timeToReload
       value: 2
       objectReference: {fileID: 0}

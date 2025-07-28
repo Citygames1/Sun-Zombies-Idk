@@ -48,22 +48,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.6
       objectReference: {fileID: 0}
-    - target: {fileID: 5354492464309715655, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5354492464309715655, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5354492464309715655, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.268
-      objectReference: {fileID: 0}
-    - target: {fileID: 5354492464309715655, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.088
-      objectReference: {fileID: 0}
     - target: {fileID: 5971867362261361777, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -85,8 +69,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_text
+      value: Press E to permanently increase health (1500 points)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_margin.z
-      value: -11.16585
+      value: 5.1009
       objectReference: {fileID: 0}
     - target: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Name
@@ -94,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979144226618479879, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7979144226618479879, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -161,10 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00d7dbdf350dce4b84d80856ff3d573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2925205647435027397, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
   healthBar: {fileID: 0}
-  healthBarScript: {fileID: 0}
-  playerHS: {fileID: -6196370789954308718, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 1500

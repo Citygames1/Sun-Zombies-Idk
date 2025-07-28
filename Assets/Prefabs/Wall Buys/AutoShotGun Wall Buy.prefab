@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 2578463748452256372, guid: 7ccede6fa03fddb4e92bb681963f3d29, type: 3}
+    - target: {fileID: 5223158744170131302, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -67,6 +71,42 @@ PrefabInstance:
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_text
+      value: Press E to buy Semi-Auto Shotgun (1750 points)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_margin.z
+      value: 3.213976
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1796489311764480107
+--- !u!1001 &5319349468944625760
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,31 +11,19 @@ PrefabInstance:
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 410fa4af431899346a98385e5bad28e3, type: 3}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: df802090bcfc47140a4f13d6ac067445, type: 3}
     - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Name
-      value: Sniper Wall Buy
+      value: MagnumWallBuy
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
-      value: 1500
+      value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
-      objectReference: {fileID: 1716308190195098218, guid: aea239ee332befb44b0d690f306b0666, type: 3}
+      objectReference: {fileID: 5536402450867952159, guid: 5d778fea901a54745b7997bd0b3c14a3, type: 3}
     - target: {fileID: 5223158744170131302, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -58,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -66,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalRotation.z
@@ -78,67 +66,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6122270578160249175, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.08
+      value: 0.064
       objectReference: {fileID: 0}
     - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236828868643505668, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0.147
       objectReference: {fileID: 0}
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_text
-      value: Press E to buy Sniper (1500 points)
+      value: Press E to buy Magnum (950 points)
       objectReference: {fileID: 0}
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_margin.z
-      value: 3.9664476
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Size.x
-      value: 0.46876124
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Size.y
-      value: 0.60980034
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.023323402
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08207971
+      value: 2.0372043
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.35
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y

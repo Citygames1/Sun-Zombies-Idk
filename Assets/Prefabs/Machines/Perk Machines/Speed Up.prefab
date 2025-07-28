@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390136982816931037, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Size.x
@@ -63,6 +63,14 @@ PrefabInstance:
     - target: {fileID: 5971867362261361777, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_text
+      value: Press E to permanently increase speed (1500 points)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_margin.z
+      value: 5.5513735
       objectReference: {fileID: 0}
     - target: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Name
@@ -150,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e0e087e557c6b4bb42d6428fbe079f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   multiplier: 1.5
   inRangeOfMachine: 0
   hasBought: 0

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3390136982816931037, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Size.x
       value: 0.4025443
@@ -59,6 +63,14 @@ PrefabInstance:
     - target: {fileID: 5971867362261361777, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_text
+      value: Press E to gain regeneration (2500 points)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_margin.z
+      value: 5.4452868
       objectReference: {fileID: 0}
     - target: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Name
@@ -133,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14b97b967a2529469ea75b530e8ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 2500
