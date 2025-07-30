@@ -40,7 +40,7 @@ public class weaponManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //previous weapon
-            if (currentWeaponIndex > 0)
+            if (currentWeaponIndex > 0) //if not the first weapon
             {
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex--;

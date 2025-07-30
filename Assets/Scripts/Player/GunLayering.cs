@@ -5,12 +5,14 @@ public class GunLayering : MonoBehaviour
     public GameObject player;
     private weaponManager weaponManagerScript;
     private GameObject currentGun;
+    private SpriteRenderer playerSpriteRenderer;
     private SpriteRenderer cGunSpriteRenderer;
     private SpriteRenderer bulletSpriteRenderer;
 
     private void Start()
     {
         weaponManagerScript = player.GetComponentInChildren<weaponManager>();
+        playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -21,9 +23,10 @@ public class GunLayering : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            cGunSpriteRenderer.sortingOrder -= 1;
+            cGunSpriteRenderer.sortingOrder -= 2;
+            playerSpriteRenderer.sortingOrder -= 2;
         }
         if(collision.gameObject.tag == "Bullet")
         {
@@ -33,9 +36,10 @@ public class GunLayering : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            cGunSpriteRenderer.sortingOrder += 1;
+            cGunSpriteRenderer.sortingOrder += 2;
+            playerSpriteRenderer.sortingOrder += 2;
         }
         if (collision.gameObject.tag == "Bullet")
         {

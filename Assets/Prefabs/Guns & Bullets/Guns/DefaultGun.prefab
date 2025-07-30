@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 981129739
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8512616184860825699}
   - component: {fileID: 5611191695135060474}
+  - component: {fileID: -3264009962888310590}
   m_Layer: 0
   m_Name: DefaultGun
   m_TagString: Untagged
@@ -140,7 +141,6 @@ MonoBehaviour:
   needsAmmo: 0
   isShotgun: 0
   burstRifle: 0
-  normalGun: 0
   chanceToSaveBullet: 0
   firePoint: {fileID: 7046171263874864256}
   bulletPrefab: {fileID: 3971455278640791982, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
@@ -154,8 +154,23 @@ MonoBehaviour:
   shotgunPelletCount: 0
   chanceToSaveBulletInt: 0
   burstShotCount: 0
+  totalBurstShotsFired: 0
   timeBetweenBurstShot: 0
   timeBetweenBurstShotTimer: 0
+  timeBetweenBurstShotTimerRunning: 0
+  isBursting: 0
+--- !u!114 &-3264009962888310590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389374773817187665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5604e46f93632a4a9b76cf4b19fa654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8860993629201468104
 GameObject:
   m_ObjectHideFlags: 0

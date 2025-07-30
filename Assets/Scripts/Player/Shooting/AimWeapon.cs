@@ -3,16 +3,19 @@ using CodeMonkey.Utils;
 
 public class AimWeapon : MonoBehaviour
 {
-    public Transform currentGunTransform;
+    private Transform currentGunTransform;
 
-    public GameObject gunHolder;
+    private GameObject gunHolder;
     private weaponManager wpnManager;
-    private TopDownMovement movement;
+    private GameObject player;
+    private TopDownMovement playerMovement;
 
     public void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        gunHolder = GameObject.FindWithTag("GunHolder");
         wpnManager = gunHolder.GetComponent<weaponManager>();
-        movement = GetComponent<TopDownMovement>();
+        playerMovement = player.GetComponent<TopDownMovement>();
     }
 
     void Update()
@@ -23,12 +26,11 @@ public class AimWeapon : MonoBehaviour
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-        if (movement.flipGuns == false)
+        if (playerMovement.flipGuns == false)
         {
             currentGunTransform.eulerAngles = new Vector3(0, 0, angle);
         }
-        else
-        {
+        else {
             currentGunTransform.eulerAngles = new Vector3(180, 0, -angle);
         }
     }

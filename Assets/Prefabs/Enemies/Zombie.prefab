@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4552569008655902541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.74, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &3004374775076616233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,9 +202,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0040170355, y: -0.06364774}
+  m_Offset: {x: -0.0040170373, y: 0.039483607}
   serializedVersion: 2
-  m_Radius: 0.032660317
+  m_Radius: 0.030789256
 --- !u!70 &6445612615270940094
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -237,8 +237,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0024645305, y: -0.027701667}
-  m_Size: {x: 0.079902664, y: 0.16184841}
+  m_Offset: {x: -0.0024645298, y: 0.075146675}
+  m_Size: {x: 0.079902664, y: 0.1553062}
   m_Direction: 0
 --- !u!61 &-5347600158081825710
 BoxCollider2D:
@@ -272,10 +272,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001509428, y: -0.016726732}
+  m_Offset: {x: -0.001509428, y: 0.07631198}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.16, y: 0.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -283,7 +283,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15922594, y: 0.1742549}
+  m_Size: {x: 0.15922594, y: 0.17863397}
   m_EdgeRadius: 0
 --- !u!50 &1846636125810854341
 Rigidbody2D:
@@ -629,7 +629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 69.4}
+  m_AnchoredPosition: {x: 0, y: 176.7}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2927065173795630814
