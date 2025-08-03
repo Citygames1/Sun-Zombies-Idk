@@ -194,9 +194,7 @@ public class Shooting : MonoBehaviour
             {
                 //points the gun
                 Vector3 mousePos = Input.mousePosition;
-                mousePos.z = -(transform.position.x - Camera.main.transform.position.x);
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-                transform.LookAt(worldPos);
 
                 //shoots the gun
                 Vector2 error = Random.insideUnitCircle * rangeOfSpread;
@@ -212,9 +210,7 @@ public class Shooting : MonoBehaviour
         {
             //points the gun
             Vector3 mousePos = Input.mousePosition;
-            mousePos.z = -(transform.position.x - Camera.main.transform.position.x);
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-            transform.LookAt(worldPos);
 
             //shoots the gun
             Vector2 error = Random.insideUnitCircle * rangeOfSpread;

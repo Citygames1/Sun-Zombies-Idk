@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Name
       value: Uzi
@@ -82,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.y

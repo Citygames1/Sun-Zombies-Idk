@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.986
+      objectReference: {fileID: 0}
     - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Name
       value: Magnum
@@ -66,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.513
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.361
       objectReference: {fileID: 0}
     - target: {fileID: 8512616184860825699, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_RootOrder
