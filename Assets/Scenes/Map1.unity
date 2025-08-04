@@ -1976,7 +1976,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6196370789954308718, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: maxHealth
-      value: 10000000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 757595346530179698, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5293,7 +5293,7 @@ GameObject:
   - component: {fileID: 482855769}
   m_Layer: 5
   m_Name: PointsCounter
-  m_TagString: Untagged
+  m_TagString: PointCountText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9436,7 +9436,7 @@ GameObject:
   - component: {fileID: 879216406}
   m_Layer: 5
   m_Name: PointsCount
-  m_TagString: Untagged
+  m_TagString: PointCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9955,25 +9955,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 928118038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d1f1bb21f3c5c4faf4921244717ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 842990a9a23948a41941f22028e9de0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zombies: []
   roundCount: 0
   zombiesInARound: 5
   zombiesSpawned: 0
-  roundCountText: {fileID: 1308324260}
-  pointCountText: {fileID: 482855769}
-  player: {fileID: 214696167}
-  roundCountUI: {fileID: 1194213486}
-  ammoCountUI: {fileID: 1060304718}
-  healthBarBorderUI: {fileID: 1875149438}
-  pointsCountUI: {fileID: 879216404}
-  restartButtonUI: {fileID: 2130757330}
-  mainMenuButtonUI: {fileID: 1398905118}
-  splashTextUI: {fileID: 1172192852}
-  difficulty: 1
-  timeBetweenSpawns: 3
+  SpawnTimer: 1
   timeBetweenSpawnsTimer: 0
   timerHasFinished: 0
 --- !u!1001 &955550744
@@ -11553,6 +11542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoCount
       objectReference: {fileID: 0}
+    - target: {fileID: 3605916918469522497, guid: fae4d077c1ac55d4eb867da61a222689, type: 3}
+      propertyPath: m_TagString
+      value: AmmoCount
+      objectReference: {fileID: 0}
     - target: {fileID: 4121841345547799333, guid: fae4d077c1ac55d4eb867da61a222689, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11645,11 +11638,6 @@ PrefabInstance:
 --- !u!224 &1060304717 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4121841345547799333, guid: fae4d077c1ac55d4eb867da61a222689, type: 3}
-  m_PrefabInstance: {fileID: 1060304716}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1060304718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3605916918469522497, guid: fae4d077c1ac55d4eb867da61a222689, type: 3}
   m_PrefabInstance: {fileID: 1060304716}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1069900002
@@ -12251,11 +12239,11 @@ GameObject:
   - component: {fileID: 1172192854}
   m_Layer: 5
   m_Name: Splash Text
-  m_TagString: Untagged
+  m_TagString: SplashText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1172192853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12786,7 +12774,7 @@ GameObject:
   - component: {fileID: 1194213488}
   m_Layer: 5
   m_Name: RoundCount
-  m_TagString: Untagged
+  m_TagString: RoundCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14355,7 +14343,7 @@ GameObject:
   - component: {fileID: 1308324260}
   m_Layer: 5
   m_Name: RoundCounter
-  m_TagString: Untagged
+  m_TagString: RoundCountText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14756,6 +14744,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 214696167}
+--- !u!1 &1331890316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331890317}
+  m_Layer: 0
+  m_Name: DifficultyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1331890317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331890316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1398940583}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343691456
 GameObject:
   m_ObjectHideFlags: 0
@@ -15133,11 +15152,11 @@ GameObject:
   - component: {fileID: 1398905120}
   m_Layer: 5
   m_Name: MainMenuButton
-  m_TagString: Untagged
+  m_TagString: MainMenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1398905119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15271,6 +15290,7 @@ Transform:
   m_Children:
   - {fileID: 928118039}
   - {fileID: 1051248535}
+  - {fileID: 1331890317}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16853,7 +16873,7 @@ GameObject:
   - component: {fileID: 1634279130}
   m_Layer: 5
   m_Name: FPScount
-  m_TagString: Untagged
+  m_TagString: FPScount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19662,7 +19682,7 @@ GameObject:
   - component: {fileID: 1875149440}
   m_Layer: 5
   m_Name: HealthBarBorder
-  m_TagString: Untagged
+  m_TagString: HealthBarBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23107,11 +23127,11 @@ GameObject:
   - component: {fileID: 2130757332}
   m_Layer: 5
   m_Name: RestartButton
-  m_TagString: Untagged
+  m_TagString: RestartButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2130757331
 RectTransform:
   m_ObjectHideFlags: 0

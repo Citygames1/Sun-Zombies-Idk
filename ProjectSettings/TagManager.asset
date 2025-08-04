@@ -12,6 +12,16 @@ TagManager:
   - Walls
   - GunHolder
   - RoomDetection
+  - RoundCountText
+  - PointCountText
+  - RoundCount
+  - AmmoCount
+  - HealthBarBorder
+  - PointCount
+  - RestartButton
+  - MainMenuButton
+  - SplashText
+  - FPScount
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorCollision : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
     public bool isBeingTriggered;
     public Transform[] spawners;
