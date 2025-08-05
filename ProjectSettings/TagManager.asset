@@ -22,6 +22,7 @@ TagManager:
   - MainMenuButton
   - SplashText
   - FPScount
+  - DifficultyManager
   layers:
   - Default
   - TransparentFX

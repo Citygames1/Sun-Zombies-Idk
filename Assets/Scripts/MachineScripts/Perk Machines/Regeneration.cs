@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Regeneration : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     private PlayerHealth playerHS;
     public bool inRangeOfMachine;
     public bool hasBought;
-    public int costOfMachine;
+    public float costOfMachine;
     public int healthPerRegenTick = 15;
 
     public float regenIntervalTimer;
@@ -15,6 +16,10 @@ public class Regeneration : MonoBehaviour
 
     void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
         regenIntervalTimer = regenInterval;

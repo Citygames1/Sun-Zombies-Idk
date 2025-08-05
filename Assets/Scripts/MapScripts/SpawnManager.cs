@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] zombieVariants;
     public GameObject[] bossZombies;
 
+    private DifficultyManager difficultyManager;
     private GameObject gameManager;
     private GameManager gms;
 
@@ -22,6 +23,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         gms = gameManager.GetComponent<GameManager>();
     }
@@ -55,6 +57,16 @@ public class SpawnManager : MonoBehaviour
         {
             //every 5 rounds it spawns a boss zombie
             GameObject spawnedZombie = Instantiate(bossZombies[0], spawners[randomSpawner].position, Quaternion.identity);
+
+            //sets the new speed based on the difficulty
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+
+            //sets the new health based on the difficulty
+            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
+            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
+
             gms.zombies.Add(spawnedZombie);
         }
 
@@ -62,16 +74,46 @@ public class SpawnManager : MonoBehaviour
         {
             //spawning the zombies in a random spawner in the room you are in (this spawns the basic zombie)
             GameObject spawnedZombie = Instantiate(zombieVariants[0], spawners[randomSpawner].position, Quaternion.identity);
+
+            //sets the new speed based on the difficulty
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+
+            //sets the new health based on the difficulty
+            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
+            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
+
             gms.zombies.Add(spawnedZombie);
         }
         if (randomNumber == 3 || randomNumber == 4)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[1], spawners[randomSpawner].position, Quaternion.identity);
+
+            //sets the new speed based on the difficulty
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+
+            //sets the new health based on the difficulty
+            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
+            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
+
             gms.zombies.Add(spawnedZombie);
         }
         if (randomNumber == 5 || randomNumber == 6)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[2], spawners[randomSpawner].position, Quaternion.identity);
+
+            //sets the new speed based on the difficulty
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+            
+            //sets the new health based on the difficulty
+            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
+            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
+
             gms.zombies.Add(spawnedZombie);
         }
 

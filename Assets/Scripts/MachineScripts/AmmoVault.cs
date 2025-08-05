@@ -5,14 +5,19 @@ using UnityEngine;
 
 public class AmmoVault : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     private GameObject gunHolder;
     public bool inRangeOfMachine;
-    public int costOfMachine;
+    public float costOfMachine;
     private weaponManager playerShooting;
 
     void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");
         playerShooting = gunHolder.GetComponent<weaponManager>();

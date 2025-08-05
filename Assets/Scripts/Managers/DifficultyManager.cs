@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class DifficultyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameManager gameManager;
+
+    //PlayerHealth
+    [Space] public float playerHealthMultiplier = 1;
+
+    //EnemyHealth
+    [Space] public float enemyHealthMultiplier = 1;
+
+    //PointsGainedPerShot
+    [Space] public float pointsMultiplier = 1;
+
+    //ZombieSpeed
+    [Space] public float enemySpeedMultiplier = 1;
+
+    //PurchasingPrice
+    [Space] public float priceMultiplier = 1;
+
+    public void Awake()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (gameManager == null)
+        {
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        }
+        else
+        {
+            //setting player health in the PlayerHealth script
+
+            //setting enemy health happens in the SpawnManager script
+
+            //setting points happens in the PointSystem script
+
+            //setting enemy speed happens in SpawnManager script
+
+            //setting prices happens in all of the scripts that handle price
+        }
     }
 }

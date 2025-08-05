@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public List <GameObject> zombies;
+    [HideInInspector] public bool setDifficulty = true;
+    public List<GameObject> zombies;
     public float roundCount = 3;
     public float zombiesInARound;
     [HideInInspector] public int zombiesSpawned;
 
+    //references
+    private DifficultyManager difficultyManager;
     private TMP_Text roundCountText;
     private TMP_Text pointCountText;
-
     private GameObject player;
     private GameObject roundCountUI;
     private GameObject ammoCountUI;
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     private PlayerHealth playerHealth;
     private PointSystem pointSystem;
 
-    //timer
+    //timers
     public int SpawnTimer = 1;
     [HideInInspector] public float timeBetweenSpawnsTimer;
     [HideInInspector] public bool timerHasFinished;
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         //setting variables
         player = GameObject.FindGameObjectWithTag("Player");
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         roundCountText = GameObject.FindGameObjectWithTag("RoundCountText").GetComponent<TMP_Text>();
         pointCountText = GameObject.FindGameObjectWithTag("PointCountText").GetComponent<TMP_Text>();
         roundCountUI = GameObject.FindGameObjectWithTag("RoundCount");
@@ -75,7 +78,7 @@ public class GameManager : MonoBehaviour
         roundCountText.text = roundCount.ToString();
         pointCountText.text = pointSystem.totalPoints.ToString();
 
-        if(playerHealth.isDead == true)
+        if (playerHealth.isDead == true)
         {
             roundCountUI.SetActive(false);
             ammoCountUI.SetActive(false);

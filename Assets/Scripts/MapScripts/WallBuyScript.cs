@@ -6,19 +6,24 @@ using UnityEngine.UIElements;
 
 public class WallBuyScript : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     public GameObject wallBuyWeapon;
     private GameObject gunHolder;
     private Transform gunHolderTransform;
     private weaponManager weaponManager;
     private GameObject player;
 
-    public int costOfGun;
+    public float costOfGun;
 
     public bool inRange;
     public bool hasAlreadyBeenBought;
 
     public void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfGun = costOfGun * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");
         gunHolderTransform = gunHolder.transform;

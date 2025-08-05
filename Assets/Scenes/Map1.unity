@@ -2108,7 +2108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716668550887328685, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: startingPoints
-      value: 100000
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8808020210408004354, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
@@ -9958,6 +9958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842990a9a23948a41941f22028e9de0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setDifficulty: 1
   zombies: []
   roundCount: 0
   zombiesInARound: 5
@@ -14753,9 +14754,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331890317}
+  - component: {fileID: 1331890318}
   m_Layer: 0
   m_Name: DifficultyManager
-  m_TagString: Untagged
+  m_TagString: DifficultyManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14775,6 +14777,23 @@ Transform:
   m_Father: {fileID: 1398940583}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331890318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331890316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e743733a518354cb54579ff4563e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthMultiplier: 1
+  enemyHealthMultiplier: 1
+  pointsMultiplier: 1
+  enemySpeedMultiplier: 1
+  priceMultiplier: 1
 --- !u!1 &1343691456
 GameObject:
   m_ObjectHideFlags: 0

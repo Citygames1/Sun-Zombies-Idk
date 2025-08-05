@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
+    private HealthBar healthBarScript;
+
     //reducing the players run speed
-    public GameObject player;
+    private GameObject player;
     private Color originalColor;
     private SpriteRenderer sr;
     public TopDownMovement playerTDM;
     public float hitRunSpeedReduction;
     public float originalRunSpeed;
 
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
 
     public bool isDead;
 
@@ -26,14 +29,20 @@ public class PlayerHealth : MonoBehaviour
 
     public void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerTDM = player.GetComponent<TopDownMovement>();
         sr = player.GetComponent<SpriteRenderer>();
         originalRunSpeed = playerTDM.runSpeed;
 
         originalColor = sr.color;
 
+        //setting health with health multiplier from the difficulty manager
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        healthBarScript = GameObject.FindGameObjectWithTag("HealthBarBorder").GetComponent<HealthBar>();
+        maxHealth = maxHealth * difficultyManager.playerHealthMultiplier;
         currentHealth = maxHealth;
-        hitRecallTimer = hitRecallLength;
+        healthBarScript.healthBar.maxValue = maxHealth;
+
         hitTransparencyTimer = hitTransparencyLength;
     }
 

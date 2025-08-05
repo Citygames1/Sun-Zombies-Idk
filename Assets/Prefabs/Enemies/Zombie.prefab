@@ -346,7 +346,7 @@ MonoBehaviour:
   pointsToGive: 100
   canvas: {fileID: 4594398138292158442}
   healthBar: {fileID: 2927065173795630814}
-  enemyMaxHealth: 25
+  enemyMaxHealth: 30
   enemyCurrentHealth: 0
 --- !u!114 &-4914529006118268466
 MonoBehaviour:

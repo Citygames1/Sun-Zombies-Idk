@@ -18,7 +18,7 @@ public class HurtEnemy : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             collision.gameObject.GetComponent<EnemyHealthManager>().UpdateHealthBar();
-            player.GetComponent<PointSystem>().totalPoints += pointsToGive;
+            player.GetComponent<PointSystem>().GivePoints(pointsToGive);
 
             Destroy(gameObject);
         }

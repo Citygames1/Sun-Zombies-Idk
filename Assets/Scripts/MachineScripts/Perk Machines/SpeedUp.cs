@@ -2,16 +2,21 @@ using UnityEngine;
 
 public class SpeedUp : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     private TopDownMovement tdmPlayer;
     private PlayerHealth playerHealth;
     public float multiplier = 1.5f;
     public bool inRangeOfMachine;
     public bool hasBought;
-    public int costOfMachine;
+    public float costOfMachine;
 
     void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         tdmPlayer = player.GetComponent<TopDownMovement>();
         playerHealth = player.GetComponent<PlayerHealth>();

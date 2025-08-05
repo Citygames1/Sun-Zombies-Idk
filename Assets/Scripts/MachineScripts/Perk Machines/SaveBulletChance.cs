@@ -2,17 +2,22 @@ using UnityEngine;
 
 public class SaveBulletChance : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     private GameObject weaponHolder;
     private weaponManager weaponManager;
     [HideInInspector] public Shooting currentGunShooting;
     public bool inRangeOfMachine;
     public bool hasBought;
-    public int costOfMachine;
+    public float costOfMachine;
     public int chanceToSaveBulletOutOf100;
 
     public void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         weaponHolder = GameObject.FindWithTag("GunHolder");
         weaponManager = weaponHolder.GetComponent<weaponManager>();

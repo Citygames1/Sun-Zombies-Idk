@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class DoubleHealthPerk : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     public GameObject healthBar;
     private HealthBar healthBarScript;
     private PlayerHealth playerHS;
     public bool inRangeOfMachine;
     public bool hasBought;
-    public int costOfMachine;
+    public float costOfMachine;
 
     void Start()
     {
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
         player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
         healthBarScript = healthBar.gameObject.GetComponent<HealthBar>();

@@ -56,7 +56,7 @@ public class EnemyHealthManager : MonoBehaviour
         gameManagerScript.zombies.Remove(gameObject);
 
         //giving the player points when they kill an enemy
-        player.GetComponent<PointSystem>().totalPoints += pointsToGive;
+        player.GetComponent<PointSystem>().GivePoints(pointsToGive);
 
     }
     public void SetMaxHealth()

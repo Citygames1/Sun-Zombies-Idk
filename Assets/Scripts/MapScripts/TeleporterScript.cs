@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class TeleporterScript : MonoBehaviour
 {
-    public int costOfTeleportation;
+    private DifficultyManager difficultyManager;
+    public float costOfTeleportation;
 
     public GameObject gameManager;
     public GameObject receptionTeleport;
@@ -21,6 +22,10 @@ public class TeleporterScript : MonoBehaviour
 
     private void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfTeleportation = costOfTeleportation * difficultyManager.priceMultiplier;
+
         gms = gameManager.GetComponent<GameManager>();
         rb = player.GetComponent<Rigidbody2D>();
         rb2 = receptionTeleport.GetComponent<Rigidbody2D>();

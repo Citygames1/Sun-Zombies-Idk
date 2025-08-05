@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class HealthBank : MonoBehaviour
 {
+    private DifficultyManager difficultyManager;
     private GameObject player;
     public bool inRangeOfMachine;
-    public int costOfMachine;
+    public float costOfMachine;
     private PlayerHealth playerHS;
 
     void Start()
     {
+        //setting price increase of difficulty
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+
         player = GameObject.FindWithTag("Player");
         playerHS = player.GetComponent<PlayerHealth>();
     }
