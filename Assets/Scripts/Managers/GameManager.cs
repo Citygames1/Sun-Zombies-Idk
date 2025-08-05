@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector] public bool setDifficulty = true;
     public List<GameObject> zombies;
     public float roundCount = 3;
     public float zombiesInARound;
     [HideInInspector] public int zombiesSpawned;
 
     //references
-    private DifficultyManager difficultyManager;
     private TMP_Text roundCountText;
     private TMP_Text pointCountText;
     private GameObject player;
@@ -35,7 +33,6 @@ public class GameManager : MonoBehaviour
     {
         //setting variables
         player = GameObject.FindGameObjectWithTag("Player");
-        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         roundCountText = GameObject.FindGameObjectWithTag("RoundCountText").GetComponent<TMP_Text>();
         pointCountText = GameObject.FindGameObjectWithTag("PointCountText").GetComponent<TMP_Text>();
         roundCountUI = GameObject.FindGameObjectWithTag("RoundCount");
