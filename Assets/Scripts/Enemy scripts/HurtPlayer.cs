@@ -9,10 +9,10 @@ public class HurtPlayer : MonoBehaviour
     public int damageToGive;
     public bool hit;
 
-    public float hitTimer;
+    private float hitTimer;
     public float timeBetweenHits;
     public float animationTimer;
-    public float animationTimerTime;
+    private float animationTimerTime;
 
     public void Start()
     {

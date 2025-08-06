@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    //for the lunger AI, dont use the enemy pathfind scripting, just make your own. You will have to use ASTAR because of corners n shi.
     public bool isBeingTriggered;
     public Transform[] spawners;
     public GameObject[] zombieVariants;
@@ -69,7 +70,7 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
-
+        //Normal zombie
         if (randomNumber <= 2)
         {
             //spawning the zombies in a random spawner in the room you are in (this spawns the basic zombie)
@@ -86,12 +87,13 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //sprinter
         if (randomNumber == 3 || randomNumber == 4)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[1], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
             enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
 
             //sets the new health based on the difficulty
@@ -101,6 +103,7 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //Tank zombie
         if (randomNumber == 5 || randomNumber == 6)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[2], spawners[randomSpawner].position, Quaternion.identity);
@@ -108,7 +111,7 @@ public class SpawnManager : MonoBehaviour
             //sets the new speed based on the difficulty
             EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
             enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            
+
             //sets the new health based on the difficulty
             EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
             enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;

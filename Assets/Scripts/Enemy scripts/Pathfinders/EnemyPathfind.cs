@@ -3,31 +3,33 @@ using Pathfinding;
 
 public class EnemyPathfind : MonoBehaviour
 {
-    public Animator animator;
-    public SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
+    Seeker seeker;
+    Rigidbody2D rb;
+    IAstarAI ai;
+    Path path;
+    int currentWaypoint = 0;
+
+    //bool reachedEndOfPath = false;
     private Transform target;
-
     private Vector2 relativePoint;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3;
-
-    IAstarAI ai;
-    Path path;
-    int currentWaypoint = 0;
-    //bool reachedEndOfPath = false;
-
-    Seeker seeker;
-    Rigidbody2D rb;
+    public float timeBetweenWaypoints = 0.1f;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
-        InvokeRepeating("UpdatePath", 0f, 0.1f);
+        //Name, When you want it to start, how often you want it to repeat (in seconds)
+        InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
     }
 
     private void Update()
@@ -54,9 +56,9 @@ public class EnemyPathfind : MonoBehaviour
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = usedDirection * speed * Time.deltaTime;
+        Vector2 followForce = usedDirection * speed * Time.deltaTime;
 
-        rb.AddForce(force);
+        rb.AddForce(followForce);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
