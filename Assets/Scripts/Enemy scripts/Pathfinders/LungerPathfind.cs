@@ -1,9 +1,8 @@
 using UnityEngine;
 using Pathfinding;
 
-public class SprinterPathfind : MonoBehaviour
+public class LungerPathfind : MonoBehaviour
 {
-    //private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     Seeker seeker;
@@ -12,26 +11,21 @@ public class SprinterPathfind : MonoBehaviour
     Path path;
     int currentWaypoint = 0;
 
+    //bool reachedEndOfPath = false;
     private Transform target;
     private Vector2 relativePoint;
 
-    public float speed = 50f;
-    public float dashSpeed = 1000f;
-
-    //timers
-    public int dashAmount = 3;
-    private int step = 0;
-    public float inbetweenDashLength = 1f;
-    private float inbetweenDashTimer;
-    public float dashCooldownLength = 5f;
-    private float dashCooldownTimer = 0f;
-
+    public float speed = 200f;
     private float nextWaypointDistance = 3;
     private float timeBetweenWaypoints = 0.1f;
 
+    //timer
+    public float movementTimer;
+    private float movementTimerTime;
+
+
     void Start()
     {
-        //animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +33,7 @@ public class SprinterPathfind : MonoBehaviour
 
         //Name, When you want it to start, how often you want it to repeat (in seconds)
         InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
+        movementTimerTime = movementTimer;
     }
 
     private void Update()
@@ -48,56 +43,39 @@ public class SprinterPathfind : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (path == null){
-            return;
-        }
-        if (currentWaypoint >= path.vectorPath.Count){
-            return;
-        }
-
-        float distanceFromTarget = Vector2.Distance(target.position, rb.position);
-        Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-
-        if (distanceFromTarget < 8)
+        //lunge timer
+        movementTimerTime -= Time.deltaTime;
+        
+        if (path == null)
         {
-            dashCooldownTimer -= Time.deltaTime;
+            return;
+        }
 
-            if (dashCooldownTimer <= 0)
-            {
-                inbetweenDashTimer -= Time.deltaTime;
-
-                if (inbetweenDashTimer <= 0 && step < dashAmount)
-                {
-                    Vector2 dashForce = usedDirection * dashSpeed;
-                    rb.AddForce(dashForce);
-                    step++;
-                    inbetweenDashTimer = inbetweenDashLength;
-                }
-                else if(step >= dashAmount)
-                {
-                    step = 0;
-                    dashCooldownTimer = dashCooldownLength;
-                }
-            }
+        if(currentWaypoint >= path.vectorPath.Count) 
+        {
+            //reachedEndOfPath = true;
+            return;
         }
         else
         {
-            dashCooldownTimer = 0;
-            inbetweenDashTimer = 0;
+            //reachedEndOfPath = false;
         }
 
+        Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 followForce = usedDirection * speed;
-        rb.AddForce(followForce);
+
+        if (movementTimerTime <= 0)
+        {
+            rb.AddForce(followForce);
+            movementTimerTime = movementTimer;
+        }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if (distance < nextWaypointDistance)
+        if(distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
-
-        //animator.SetFloat("Speed", distance);
 
         relativePoint = transform.InverseTransformPoint(target.position);
 

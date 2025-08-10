@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
@@ -53,7 +51,7 @@ public class TestPathfind : MonoBehaviour
             return;
         }
 
-        if(currentWaypoint >= path.vectorPath.Count)
+        if(currentWaypoint >= path.vectorPath.Count) 
         {
             //reachedEndOfPath = true;
             return;
@@ -64,7 +62,7 @@ public class TestPathfind : MonoBehaviour
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 followForce = usedDirection * speed * Time.deltaTime;
+        Vector2 followForce = usedDirection * speed;
 
         if (movementTimerTime <= 0)
         {

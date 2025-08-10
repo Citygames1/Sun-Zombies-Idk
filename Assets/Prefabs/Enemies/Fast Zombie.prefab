@@ -20,10 +20,6 @@ PrefabInstance:
       propertyPath: maxAcceleration
       value: -2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1764375207262706978, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
-      propertyPath: speed
-      value: 1900
-      objectReference: {fileID: 0}
     - target: {fileID: 1846636125810854341, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_LinearDrag
       value: 5
@@ -131,5 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5000
+  lungeSpeed: 1000
+  lungeLength: 1
+  lungeCooldownLength: 5
   nextWaypointDistance: 1
   timeBetweenWaypoints: 2
