@@ -3,7 +3,7 @@ using Pathfinding;
 
 public class SprinterPathfind : MonoBehaviour
 {
-    //private Animator animator;
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     Seeker seeker;
@@ -31,7 +31,7 @@ public class SprinterPathfind : MonoBehaviour
 
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -97,7 +97,7 @@ public class SprinterPathfind : MonoBehaviour
             currentWaypoint++;
         }
 
-        //animator.SetFloat("Speed", distance);
+        animator.SetFloat("Speed", distance);
 
         relativePoint = transform.InverseTransformPoint(target.position);
 

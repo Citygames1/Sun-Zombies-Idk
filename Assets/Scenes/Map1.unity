@@ -2446,9 +2446,12 @@ MonoBehaviour:
   - {fileID: 1528798471}
   - {fileID: 182327007}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
+  chances: 0100000001000000010000000100000001000000
   bossZombies: []
 --- !u!1 &226270940
 GameObject:
@@ -3282,7 +3285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &263309471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5227,9 +5230,12 @@ MonoBehaviour:
   - {fileID: 2036144003}
   - {fileID: 603403524}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!60 &478311566
@@ -5507,9 +5513,12 @@ MonoBehaviour:
   - {fileID: 604294314}
   - {fileID: 981235649}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!60 &508317285
@@ -5799,9 +5808,12 @@ MonoBehaviour:
   - {fileID: 2014929983}
   - {fileID: 212512041}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!60 &544546133
@@ -6252,9 +6264,12 @@ MonoBehaviour:
   - {fileID: 1296711735}
   - {fileID: 981235649}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!1 &593911980
@@ -7583,9 +7598,12 @@ MonoBehaviour:
   - {fileID: 1629112597}
   - {fileID: 194048604}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!1 &652801633
@@ -9949,7 +9967,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928118038}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 842990a9a23948a41941f22028e9de0a, type: 3}
   m_Name: 
@@ -11136,9 +11154,12 @@ MonoBehaviour:
   - {fileID: 1528798471}
   - {fileID: 182327007}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!1 &1012928871
@@ -11451,9 +11472,12 @@ MonoBehaviour:
   - {fileID: 1288181007}
   - {fileID: 194048604}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!1 &1051248534
@@ -14713,9 +14737,12 @@ MonoBehaviour:
   - {fileID: 1662360630}
   - {fileID: 603403524}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!60 &1308541626
@@ -17633,9 +17660,12 @@ MonoBehaviour:
   - {fileID: 594878732}
   - {fileID: 604294314}
   zombieVariants:
-  - {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
+  chances: 0200000001000000010000000100000001000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!60 &1647372333

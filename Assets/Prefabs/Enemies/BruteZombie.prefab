@@ -80,8 +80,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9144299678318229967, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: Boss
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1007275642454411242}
   m_SourcePrefab: {fileID: 100100000, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+--- !u!1 &2160356253701614027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+  m_PrefabInstance: {fileID: 2510433490782031494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1007275642454411242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160356253701614027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c03a29b876ada4bb47e485d6fe4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 850
+  nextWaypointDistance: 3
+  timeBetweenWaypoints: 0.1

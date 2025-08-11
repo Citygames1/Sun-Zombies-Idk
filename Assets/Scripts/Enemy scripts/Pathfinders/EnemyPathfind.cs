@@ -56,7 +56,7 @@ public class EnemyPathfind : MonoBehaviour
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 followForce = usedDirection * speed * Time.deltaTime;
+        Vector2 followForce = usedDirection * speed;
 
         rb.AddForce(followForce);
 
