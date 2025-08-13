@@ -3,6 +3,7 @@ using Pathfinding;
 
 public class LungerPathfind : MonoBehaviour
 {
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     Seeker seeker;
@@ -13,7 +14,7 @@ public class LungerPathfind : MonoBehaviour
 
     //bool reachedEndOfPath = false;
     private Transform target;
-    private Vector2 relativePoint;
+    public Transform enemyGFX;
 
     public float speed = 200f;
     private float nextWaypointDistance = 3;
@@ -22,10 +23,14 @@ public class LungerPathfind : MonoBehaviour
     //timer
     public float movementTimer;
     private float movementTimerTime;
+    public float lengthOfLunge;
+    private float lengthOfLungeTime;
+    private bool lungeActive;
 
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +39,7 @@ public class LungerPathfind : MonoBehaviour
         //Name, When you want it to start, how often you want it to repeat (in seconds)
         InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
         movementTimerTime = movementTimer;
+        lengthOfLungeTime = lengthOfLunge;
     }
 
     private void Update()
@@ -67,7 +73,21 @@ public class LungerPathfind : MonoBehaviour
         if (movementTimerTime <= 0)
         {
             rb.AddForce(followForce);
+            animator.SetBool("Lunge", true);
+            lungeActive = true;
             movementTimerTime = movementTimer;
+        }
+
+        if (lungeActive == true)
+        {
+            lengthOfLungeTime -= Time.deltaTime;
+
+            if (lengthOfLungeTime <= 0)
+            {
+                animator.SetBool("Lunge", false);
+                lungeActive = false;
+                lengthOfLungeTime = lengthOfLunge;
+            }
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -77,17 +97,15 @@ public class LungerPathfind : MonoBehaviour
             currentWaypoint++;
         }
 
-        relativePoint = transform.InverseTransformPoint(target.position);
+        //animator.SetBool("Lunge", false);
 
-        if (relativePoint.x < 0f)
+        if (rb.velocity.x >= 0.01f)
         {
-            //on the right
-            spriteRenderer.flipX = true;
+            enemyGFX.localScale = new Vector3(10f, 10f, 1f);
         }
-        if (relativePoint.x > 0f)
+        if (rb.velocity.x <= -0.01f)
         {
-            //on the left
-            spriteRenderer.flipX = false;
+            enemyGFX.localScale = new Vector3(-10f, 10f, 1f);
         }
     }
 
