@@ -70,7 +70,7 @@ public class SprinterPathfind : MonoBehaviour
                 if (inbetweenDashTimer <= 0 && step < dashAmount)
                 {
                     Vector2 dashForce = usedDirection * dashSpeed;
-                    rb.AddForce(dashForce);
+                    rb.AddForce(dashForce, ForceMode2D.Impulse);
                     step++;
                     inbetweenDashTimer = inbetweenDashLength;
                 }
@@ -88,7 +88,7 @@ public class SprinterPathfind : MonoBehaviour
         }
 
         Vector2 followForce = usedDirection * speed;
-        rb.AddForce(followForce);
+        rb.AddForce(followForce, ForceMode2D.Impulse);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 

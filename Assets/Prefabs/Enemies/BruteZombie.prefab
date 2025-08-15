@@ -109,6 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c03a29b876ada4bb47e485d6fe4945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 850
+  speed: 70
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1

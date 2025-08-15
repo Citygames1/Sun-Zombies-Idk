@@ -30,15 +30,23 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 63785c64be9883440a836b68f57133b3, type: 3}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 15.85045
       objectReference: {fileID: 0}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.217134
       objectReference: {fileID: 0}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_LocalPosition.z
@@ -107,6 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGFX: {fileID: 2131446795077805519}
-  speed: 1250
-  movementTimer: 1.5
+  speed: 30
+  movementTimer: 2.75
   lengthOfLunge: 0.75

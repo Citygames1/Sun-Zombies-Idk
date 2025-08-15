@@ -70,9 +70,13 @@ public class LungerPathfind : MonoBehaviour
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 followForce = usedDirection * speed;
 
+        //issue of tiny jump lies with ^ not being a big enough value to give a lot of force i believe
+        //issue of animation not playing when thing is bumped lies with 
+
         if (movementTimerTime <= 0)
         {
-            rb.AddForce(followForce);
+            rb.velocity = Vector3.zero;
+            rb.AddForce(followForce, ForceMode2D.Impulse);
             animator.SetBool("Lunge", true);
             lungeActive = true;
             movementTimerTime = movementTimer;
@@ -101,11 +105,11 @@ public class LungerPathfind : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            enemyGFX.localScale = new Vector3(10f, 10f, 1f);
+            enemyGFX.localScale = new Vector3(7.5f, 7.5f, 1f);
         }
         if (rb.velocity.x <= -0.01f)
         {
-            enemyGFX.localScale = new Vector3(-10f, 10f, 1f);
+            enemyGFX.localScale = new Vector3(-7.5f, 7.5f, 1f);
         }
     }
 

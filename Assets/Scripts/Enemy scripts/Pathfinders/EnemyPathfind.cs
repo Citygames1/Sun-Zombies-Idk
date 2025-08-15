@@ -58,7 +58,7 @@ public class EnemyPathfind : MonoBehaviour
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 followForce = usedDirection * speed;
 
-        rb.AddForce(followForce);
+        rb.AddForce(followForce, ForceMode2D.Impulse);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
