@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public string mapName = "Map1";
+
     Resolution[] resolutions;
 
     public TMP_Dropdown resolutionDropdown;
@@ -45,9 +47,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void setMapName(string newMapName)
+    {
+        mapName = newMapName;
+    }
+
     public void changeScene()
     {
-        SceneManager.LoadScene("Statione Immortuorum");
+        SceneManager.LoadScene(mapName);
     }
 
     public void SetResolution(int resolutionIndex)
