@@ -50,8 +50,11 @@ public class TopDownMovement : MonoBehaviour
 
         if(canRoll && Input.GetKeyDown(KeyCode.Space))
         {
+            if (isRolling != true)
+            {
+                animator.SetBool("IsRolling", true);
+            }
             isRolling = true;
-            animator.SetBool("IsRolling", true);
         }
     }
 
