@@ -21,6 +21,10 @@ PrefabInstance:
       value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: nameOfGun
+      value: Auto Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 2578463748452256372, guid: 7ccede6fa03fddb4e92bb681963f3d29, type: 3}

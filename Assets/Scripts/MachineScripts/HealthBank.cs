@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HealthBank : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
+    public GameObject textObject;
     public bool inRangeOfMachine;
     public float costOfMachine;
     private PlayerHealth playerHS;
@@ -15,6 +15,7 @@ public class HealthBank : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to heal all injuries for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         playerHS = player.GetComponent<PlayerHealth>();

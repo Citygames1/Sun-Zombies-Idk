@@ -145,8 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bf2eeb06870524fa48a0cb33c55144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 5223158744170131302}
   wallBuyWeapon: {fileID: 0}
   costOfGun: 0
+  nameOfGun: Default
   inRange: 0
   hasAlreadyBeenBought: 0
 --- !u!114 &1949187561995833841

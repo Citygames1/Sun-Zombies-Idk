@@ -25,6 +25,10 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: nameOfGun
+      value: M16A2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 4562221189031436711, guid: 9dd5d36b2f532a4469a8979bbd053dd7, type: 3}

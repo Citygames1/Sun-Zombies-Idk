@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14b97b967a2529469ea75b530e8ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 5161433336908145706}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 2500
@@ -152,3 +153,8 @@ MonoBehaviour:
   regenIntervalTimer: 0
   regenInterval: 0
   regenActive: 0
+--- !u!1 &5161433336908145706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+  m_PrefabInstance: {fileID: 4792210665301612294}
+  m_PrefabAsset: {fileID: 0}

@@ -9,23 +9,24 @@ public class PlayerHealth : MonoBehaviour
     private GameObject player;
     private Color originalColor;
     private SpriteRenderer sr;
-    public TopDownMovement playerTDM;
+    private TopDownMovement playerTDM;
     public float hitRunSpeedReduction;
-    public float originalRunSpeed;
+    [HideInInspector] public float originalRunSpeed;
 
     public float maxHealth;
     public float currentHealth;
 
-    public bool isDead;
+    [HideInInspector] public bool isDead;
 
-    public float hitRecallTimer;
-    public float hitRecallLength;
+    [HideInInspector] public float hitRecallTimer;
+    [HideInInspector] public float hitRecallLength;
 
-    public float hitTransparencyTimer;
-    public float hitTransparencyLength;
+    [HideInInspector] public float hitTransparencyTimer;
+    [HideInInspector] public float hitTransparencyLength;
 
-    public bool hasBeenHitRecently;
-    public bool isSlow;
+    [HideInInspector] public bool hasBeenHitRecently;
+    [HideInInspector] public bool turnTransparent;
+    [HideInInspector] public bool isSlow;
 
     public void Start()
     {
@@ -48,25 +49,16 @@ public class PlayerHealth : MonoBehaviour
 
     public void Update()
     {
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             isDead = true;
             gameObject.SetActive(false);
         }
-        if(hasBeenHitRecently == true)
+        if (hasBeenHitRecently == true)
         {
-            sr.color = new Vector4(1, 1, 1, 0.75f);
-
             hitRecallTimer -= Time.deltaTime;
-            hitTransparencyTimer -= Time.deltaTime;
 
-            if(hitTransparencyTimer <= 0)
-            {
-                sr.color = originalColor;
-            }
-
-            //this works, but its very ugly, find another way of making it so that it only triggers once
-            if(isSlow == false)
+            if (isSlow == false)
             {
                 playerTDM.runSpeed *= hitRunSpeedReduction;
                 isSlow = true;
@@ -81,11 +73,29 @@ public class PlayerHealth : MonoBehaviour
                 hitRecallTimer = hitRecallLength;
             }
         }
+        if(turnTransparent == true)
+        {
+            hitTransparencyTimer -= Time.deltaTime;
+
+            if (hitTransparencyTimer > 0)
+            {
+                sr.color = new Vector4(1, 1, 1, 0.75f);
+            }
+            else
+            {
+                sr.color = originalColor;
+                hitTransparencyTimer = hitTransparencyLength;
+                turnTransparent = false;
+            }
+        }
     }
 
     public void HurtPlayer(int damageToGive)
     {
         currentHealth -= damageToGive;
         hasBeenHitRecently = true;
+        hitRecallTimer = hitRecallLength;
+        turnTransparent = true;
+        hitTransparencyTimer = hitTransparencyLength;
     }
 }

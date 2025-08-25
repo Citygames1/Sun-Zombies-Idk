@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using TMPro;
 
 public class AmmoVault : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
     private GameObject gunHolder;
+    public GameObject textObject;
     public bool inRangeOfMachine;
     public float costOfMachine;
     private weaponManager playerShooting;
@@ -17,6 +16,7 @@ public class AmmoVault : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");

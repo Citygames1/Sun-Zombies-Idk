@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class SpeedUp : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
+    public GameObject textObject;
     private TopDownMovement tdmPlayer;
     private PlayerHealth playerHealth;
     public float multiplier = 1.5f;
@@ -16,6 +18,7 @@ public class SpeedUp : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to permanently increase speed for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         tdmPlayer = player.GetComponent<TopDownMovement>();

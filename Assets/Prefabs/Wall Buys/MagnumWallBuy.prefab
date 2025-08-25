@@ -21,6 +21,10 @@ PrefabInstance:
       value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: nameOfGun
+      value: Magnum
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 5536402450867952159, guid: 5d778fea901a54745b7997bd0b3c14a3, type: 3}

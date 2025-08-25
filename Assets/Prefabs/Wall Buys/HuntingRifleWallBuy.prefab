@@ -29,6 +29,10 @@ PrefabInstance:
       value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: nameOfGun
+      value: Hunting Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: wallBuyWeapon
       value: 
       objectReference: {fileID: 6358297053412344314, guid: ce403f83c411d6e4a9c1cf98f0f07f10, type: 3}

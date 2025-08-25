@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5512053f0b368eb49bb419bcf9b233ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 7693350265542351012}
   currentGunShooting: {fileID: 0}
   inRangeOfMachine: 0
   hasBought: 0

@@ -1300,6 +1300,11 @@ Transform:
   m_Father: {fileID: 576883802}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &148147481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5004494528277517602, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148179522 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1008704684685268499, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
@@ -1691,6 +1696,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &185380409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7962810668562352062, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &194048603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +1988,14 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -6196370789954308718, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: hitRecallLength
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6196370789954308718, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: hitTransparencyLength
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 757595346530179698, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12
@@ -2192,6 +2210,11 @@ MonoBehaviour:
   foodHallTeleport: {fileID: 882070292}
   player: {fileID: 214696167}
   inRange: 0
+--- !u!1 &217105982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7962810668562352062, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &221091936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,6 +2911,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237944274}
   m_CullTransparentMesh: 1
+--- !u!1 &244607877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028233234744409006, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245855776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5572,6 +5600,11 @@ PolygonCollider2D:
       - {x: 23.338604, y: 75.19536}
       - {x: 23.424381, y: 102.2979}
   m_UseDelaunayMesh: 0
+--- !u!1 &521756101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213252931019989816, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &525476715
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,6 +9094,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2331067157749831940, guid: 37811e97760d43441bfa74b831f47a37, type: 3}
   m_PrefabInstance: {fileID: 803453717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &809001505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213252931019989816, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &825008478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 103726775072727680, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &825663072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028233234744409006, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &826687917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9256,6 +9304,11 @@ MonoBehaviour:
   foodHallTeleport: {fileID: 882070292}
   player: {fileID: 214696167}
   inRange: 0
+--- !u!1 &829723687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5004494528277517602, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836486184
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,6 +9981,11 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &909529815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8378596009894654829, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &928118038
 GameObject:
   m_ObjectHideFlags: 0
@@ -9973,7 +10031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombies: []
-  roundCount: 0
+  roundCount: 3
   zombiesInARound: 5
   zombiesSpawned: 0
   SpawnTimer: 1
@@ -10322,6 +10380,11 @@ Transform:
   m_Father: {fileID: 1343691457}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &972498623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213252931019989816, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &981235648
 GameObject:
   m_ObjectHideFlags: 0
@@ -11528,10 +11591,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a1598ebcae9d34196854ad798837db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottomTrain: {fileID: 2037167259}
-  receptionTrain: {fileID: 1647235001}
-  foodHallTrain: {fileID: 1692832178}
-  isReceptionRound: 0
+  doorObjects:
+  - {fileID: 272474661}
+  - {fileID: 886441845}
+  - {fileID: 2091395918}
+  - {fileID: 50432906}
+  - {fileID: 988475454}
+  - {fileID: 160105035}
+  - {fileID: 828758932}
+  - {fileID: 1470730581}
+  - {fileID: 148179522}
+  - {fileID: 1939808838}
+  - {fileID: 384796993}
+  - {fileID: 215301277}
+  - {fileID: 1018528215}
+  - {fileID: 1999736178}
+  - {fileID: 1214965235}
+  - {fileID: 1459431771}
+  - {fileID: 216263447}
+  - {fileID: 1310658218}
+  textsObjects:
+  - {fileID: 185380409}
+  - {fileID: 2102278428}
+  - {fileID: 244607877}
+  - {fileID: 1532341280}
+  - {fileID: 809001505}
+  - {fileID: 1831802270}
+  - {fileID: 217105982}
+  - {fileID: 909529815}
+  - {fileID: 1568015367}
+  - {fileID: 148147481}
+  - {fileID: 521756101}
+  - {fileID: 825008478}
+  - {fileID: 1623749188}
+  - {fileID: 829723687}
+  - {fileID: 825663072}
+  - {fileID: 1292078528}
+  - {fileID: 972498623}
+  - {fileID: 1713463355}
+  isReceptionRound: 1
   isFoodHallRound: 0
 --- !u!95 &1051248537
 Animator:
@@ -12821,7 +12919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -810.00006, y: 420}
+  m_AnchoredPosition: {x: -755, y: 390}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194213488
@@ -12831,7 +12929,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194213486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -13941,6 +14039,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1292078528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8378596009894654829, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1295129515
 GameObject:
   m_ObjectHideFlags: 0
@@ -14389,8 +14492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.49989, y: -50.000004}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 117.17, y: -50.000004}
+  m_SizeDelta: {x: 229.34, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308324260
 MonoBehaviour:
@@ -14412,7 +14515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: round
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14439,8 +14542,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14816,10 +14919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e743733a518354cb54579ff4563e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealthMultiplier: 1
+  StartingPoints: 1500
+  playerHealthMultiplier: 5
   enemyHealthMultiplier: 1
-  pointsMultiplier: 1
   enemySpeedMultiplier: 1
+  pointsMultiplier: 1
   priceMultiplier: 1
 --- !u!114 &1331890319
 MonoBehaviour:
@@ -16605,6 +16709,11 @@ Transform:
   m_Father: {fileID: 1575745652}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1532341280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8378596009894654829, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1539840289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16724,6 +16833,11 @@ Transform:
   m_Father: {fileID: 544546131}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568015367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028233234744409006, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1647234998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575745651
 GameObject:
   m_ObjectHideFlags: 0
@@ -16834,6 +16948,11 @@ Transform:
   m_Father: {fileID: 1308541624}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1623749188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7962810668562352062, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1629112596
 GameObject:
   m_ObjectHideFlags: 0
@@ -16945,7 +17064,7 @@ RectTransform:
   m_GameObject: {fileID: 1634279128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2005469163}
@@ -16954,7 +17073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -160.00006, y: -80}
+  m_AnchoredPosition: {x: -85, y: -35}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634279130
@@ -16977,8 +17096,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 75c3e3de998dd0e46aa754657020aebb, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -17121,6 +17240,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
       propertyPath: m_Name
+      value: ReceptionTrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+      propertyPath: m_TagString
       value: ReceptionTrain
       objectReference: {fileID: 0}
     - target: {fileID: 940168398567524014, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
@@ -17370,11 +17493,6 @@ RectTransform:
 --- !u!23 &1647235000 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 940168398567524014, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
-  m_PrefabInstance: {fileID: 1647234998}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1647235001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
   m_PrefabInstance: {fileID: 1647234998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1647372329
@@ -18175,6 +18293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodHallTrain
       objectReference: {fileID: 0}
+    - target: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+      propertyPath: m_TagString
+      value: FoodHallTrain
+      objectReference: {fileID: 0}
     - target: {fileID: 940168398567524014, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -18416,11 +18538,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 940168398567524014, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
   m_PrefabInstance: {fileID: 1692832175}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1692832178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
-  m_PrefabInstance: {fileID: 1692832175}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1696607645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6556210941506796322, guid: 37811e97760d43441bfa74b831f47a37, type: 3}
@@ -18461,6 +18578,11 @@ Transform:
   m_Father: {fileID: 576883802}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1713463355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 103726775072727680, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 1692832175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1714849845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19270,6 +19392,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2673948445261963662, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
   m_PrefabInstance: {fileID: 2077468562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1831802270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 103726775072727680, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831983537
 GameObject:
@@ -22339,11 +22466,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2037167259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
-  m_PrefabInstance: {fileID: 7048291235725360300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2037167260 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7885661258036486686, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
@@ -22909,6 +23031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e0e087e557c6b4bb42d6428fbe079f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 0}
   multiplier: 1.5
   inRangeOfMachine: 0
   hasBought: 0
@@ -23020,6 +23143,11 @@ MonoBehaviour:
   foodHallTeleport: {fileID: 882070292}
   player: {fileID: 214696167}
   inRange: 0
+--- !u!1 &2102278428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5004494528277517602, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+  m_PrefabInstance: {fileID: 7048291235725360300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104153013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23692,6 +23820,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
       propertyPath: m_Name
+      value: BottomTrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 270194108513928787, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}
+      propertyPath: m_TagString
       value: BottomTrain
       objectReference: {fileID: 0}
     - target: {fileID: 940168398567524014, guid: 654273c4db51d1e499bc61e423192e1e, type: 3}

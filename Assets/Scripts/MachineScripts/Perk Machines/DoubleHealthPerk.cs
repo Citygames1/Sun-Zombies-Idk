@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class DoubleHealthPerk : MonoBehaviour
@@ -5,6 +6,7 @@ public class DoubleHealthPerk : MonoBehaviour
     private DifficultyManager difficultyManager;
     private GameObject player;
     public GameObject healthBar;
+    public GameObject textObject;
     private HealthBar healthBarScript;
     private PlayerHealth playerHS;
     public bool inRangeOfMachine;
@@ -15,6 +17,7 @@ public class DoubleHealthPerk : MonoBehaviour
     {
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to permanently increase health for " + costOfMachine;
         player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
         healthBarScript = healthBar.gameObject.GetComponent<HealthBar>();

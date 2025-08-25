@@ -1,10 +1,12 @@
 using UnityEngine;
+using TMPro;
 
 public class Regeneration : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
     private PlayerHealth playerHS;
+    public GameObject textObject;
     public bool inRangeOfMachine;
     public bool hasBought;
     public float costOfMachine;
@@ -19,6 +21,7 @@ public class Regeneration : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to gain regeneration for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();

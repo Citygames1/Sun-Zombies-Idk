@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e0e087e557c6b4bb42d6428fbe079f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 2673948445261963662}
   multiplier: 1.5
   inRangeOfMachine: 0
   hasBought: 0

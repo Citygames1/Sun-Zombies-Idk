@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using TMPro;
 
 public class WallBuyScript : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
+    public GameObject textObject;
     public GameObject wallBuyWeapon;
     private GameObject gunHolder;
     private Transform gunHolderTransform;
@@ -14,6 +12,7 @@ public class WallBuyScript : MonoBehaviour
     private GameObject player;
 
     public float costOfGun;
+    public string nameOfGun;
 
     public bool inRange;
     public bool hasAlreadyBeenBought;
@@ -23,6 +22,7 @@ public class WallBuyScript : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfGun = costOfGun * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to buy a " + nameOfGun + " for " + costOfGun;
 
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");

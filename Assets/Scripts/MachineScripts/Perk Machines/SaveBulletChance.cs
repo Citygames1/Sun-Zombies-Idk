@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class SaveBulletChance : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
+    public GameObject textObject;
     private GameObject weaponHolder;
     private weaponManager weaponManager;
     [HideInInspector] public Shooting currentGunShooting;
@@ -17,6 +19,7 @@ public class SaveBulletChance : MonoBehaviour
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to gain chance to save ammunition for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         weaponHolder = GameObject.FindWithTag("GunHolder");

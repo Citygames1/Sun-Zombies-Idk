@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdb566b20525b7429fca73c1b83f489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 5221669223006374559}
   inRangeOfMachine: 0
   costOfMachine: 1000
 --- !u!61 &2850024178710300526

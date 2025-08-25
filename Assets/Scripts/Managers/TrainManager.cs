@@ -1,22 +1,21 @@
+using TMPro;
 using UnityEngine;
 
 public class TrainManager : MonoBehaviour
 {
-    public GameObject bottomTrain;
-    public GameObject receptionTrain;
-    public GameObject foodHallTrain;
+    public GameObject[] doorObjects;
+    public GameObject[] textsObjects;
+
     private Animator animator;
 
     public bool isReceptionRound;
     public bool isFoodHallRound;
 
-    private GameObject gameManager;
     private GameManager gms;
 
     private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        gms = gameManager.GetComponent<GameManager>();
+        gms = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
     }
 
@@ -29,6 +28,13 @@ public class TrainManager : MonoBehaviour
                 isReceptionRound = true;
                 animator.SetBool("IsReceptionRound", true);
                 animator.SetBool("IsNextRound", false);
+
+                //Sets the text for each of the train doors
+                for (int i = 0; i < doorObjects.Length; i++)
+                {
+                    float price = doorObjects[i].GetComponent<TeleporterScript>().costOfTeleportation;
+                    textsObjects[i].GetComponentInChildren<TMP_Text>().text = "Press E to travel to The Grafton Hotel for " + price;
+                }
             }
             if (gms.roundCount % 4 == 1)
             {
@@ -41,6 +47,13 @@ public class TrainManager : MonoBehaviour
                 isFoodHallRound = true;
                 animator.SetBool("IsFoodHallRound", true);
                 animator.SetBool("IsNextRound", false);
+
+                //Sets the text for each of the train doors
+                for (int i = 0; i < doorObjects.Length; i++)
+                {
+                    float price = doorObjects[i].GetComponent<TeleporterScript>().costOfTeleportation;
+                    textsObjects[i].GetComponentInChildren<TMP_Text>().text = "Press E to travel to St. Peters Food Hall for " + price;
+                }
             }
             if (gms.roundCount % 4 == 3)
             {

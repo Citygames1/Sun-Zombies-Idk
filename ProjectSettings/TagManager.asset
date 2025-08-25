@@ -23,6 +23,9 @@ TagManager:
   - SplashText
   - FPScount
   - DifficultyManager
+  - BottomTrain
+  - ReceptionTrain
+  - FoodHallTrain
   layers:
   - Default
   - TransparentFX
