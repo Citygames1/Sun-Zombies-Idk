@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicZombie
       objectReference: {fileID: 0}
+    - target: {fileID: 6102471641218890535, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: animationTimer
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643292779477748014, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2085349652, guid: 96ce0d8ce41fa504cbdd0932f2da8938, type: 3}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_RootOrder
       value: 0

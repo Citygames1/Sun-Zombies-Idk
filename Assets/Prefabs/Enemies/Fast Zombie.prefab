@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5347600158081825710, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: -2537943083444744947, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: enemyMaxHealth
       value: 20
@@ -37,13 +41,17 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6102471641218890535, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: animationTimer
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102471641218890535, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: timeBetweenHits
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6643292779477748014, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 800122703, guid: aec0c96434b411743b40884460469de2, type: 3}
+      objectReference: {fileID: 782855535, guid: 3f2b897250801bf40b5b619af3632ccb, type: 3}
     - target: {fileID: 6643292779477748014, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Color.b
       value: 1

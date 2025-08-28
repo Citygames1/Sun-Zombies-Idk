@@ -101,25 +101,30 @@ public class SpawnManager : MonoBehaviour
             gms.zombies.Add(spawnedZombie);
         }
         //Zombies
+        //1
         if (randomNumber <= chance1)
         {
             //spawning the zombies in a random spawner in the room you are in (this spawns the basic zombie)
             GameObject spawnedZombie = Instantiate(zombieVariants[0], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+            {
                 SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
+            {
                 LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
@@ -131,24 +136,29 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //2
         if (randomNumber > chance1 && randomNumber <= chance2)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[1], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+            {
                 SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
+            {
                 LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
@@ -160,24 +170,29 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //3
         if (randomNumber > chance2 && randomNumber <= chance3)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[2], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+            {
                 SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
+            {
                 LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
@@ -189,24 +204,29 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //4
         if (randomNumber > chance3 && randomNumber <= chance4)
         {
-            GameObject spawnedZombie = Instantiate(zombieVariants[1], spawners[randomSpawner].position, Quaternion.identity);
+            GameObject spawnedZombie = Instantiate(zombieVariants[3], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+            {
                 SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
+            {
                 LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
@@ -218,24 +238,29 @@ public class SpawnManager : MonoBehaviour
 
             gms.zombies.Add(spawnedZombie);
         }
+        //5
         if (randomNumber > chance4 && randomNumber <= chance5)
         {
-            GameObject spawnedZombie = Instantiate(zombieVariants[2], spawners[randomSpawner].position, Quaternion.identity);
+            GameObject spawnedZombie = Instantiate(zombieVariants[4], spawners[randomSpawner].position, Quaternion.identity);
 
             //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+            {
                 SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+            {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true){
+            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
+            {
                 LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
