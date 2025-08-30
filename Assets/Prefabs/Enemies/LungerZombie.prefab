@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGFX: {fileID: 2131446795077805519}
-  speed: 30
-  movementTimer: 2.75
+  speed: 45
+  movementTimer: 1.5
   lengthOfLunge: 0.75

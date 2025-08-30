@@ -105,11 +105,13 @@ public class LungerPathfind : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            enemyGFX.localScale = new Vector3(7.5f, 7.5f, 1f);
+            //on the right
+            spriteRenderer.flipX = false;
         }
         if (rb.velocity.x <= -0.01f)
         {
-            enemyGFX.localScale = new Vector3(-7.5f, 7.5f, 1f);
+            //on the left
+            spriteRenderer.flipX = true;
         }
     }
 

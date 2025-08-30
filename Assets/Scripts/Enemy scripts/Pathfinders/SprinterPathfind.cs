@@ -101,15 +101,15 @@ public class SprinterPathfind : MonoBehaviour
 
         relativePoint = transform.InverseTransformPoint(target.position);
 
-        if (relativePoint.x < 0f)
+        if (rb.velocity.x >= 0.01f)
         {
             //on the right
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
-        if (relativePoint.x > 0f)
+        if (rb.velocity.x <= -0.01f)
         {
             //on the left
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
     }
 

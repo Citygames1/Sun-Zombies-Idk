@@ -123,11 +123,6 @@ public class SpawnManager : MonoBehaviour
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
-            {
-                LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
 
             //sets the new health based on the difficulty
             EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
@@ -155,11 +150,6 @@ public class SpawnManager : MonoBehaviour
             if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
             {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
-            {
-                LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
 
@@ -191,11 +181,6 @@ public class SpawnManager : MonoBehaviour
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
-            {
-                LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
 
             //sets the new health based on the difficulty
             EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
@@ -225,11 +210,6 @@ public class SpawnManager : MonoBehaviour
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
-            {
-                LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
 
             //sets the new health based on the difficulty
             EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
@@ -257,11 +237,6 @@ public class SpawnManager : MonoBehaviour
             if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
             {
                 EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Lunger == true)
-            {
-                LungerPathfind enemySpeed = spawnedZombie.GetComponent<LungerPathfind>();
                 enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
             }
 

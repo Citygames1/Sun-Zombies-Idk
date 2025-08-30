@@ -5,28 +5,26 @@ public class StairMovement : MonoBehaviour
     public GameObject Player;
     private TopDownMovement pMovement;
     private float initialSpeed;
+    public float speedReductionMultiplier;
+    private bool hasEffected = false;
 
     private void Start()
     {
         pMovement = Player.GetComponent<TopDownMovement>();
-        initialSpeed = pMovement.runSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pMovement.isRolling = false;
         pMovement.canRoll = false;
+        initialSpeed = pMovement.runSpeed;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (pMovement.movement.y > 0)
+        if (hasEffected == false)
         {
-            pMovement.runSpeed = 5f;
-        }
-        if (pMovement.movement.y < 0)
-        {
-            pMovement.runSpeed = 7.5f;
+            pMovement.runSpeed = pMovement.runSpeed * speedReductionMultiplier;
+            hasEffected = true;
         }
     }
 
@@ -34,5 +32,6 @@ public class StairMovement : MonoBehaviour
     {
         pMovement.canRoll = true;
         pMovement.runSpeed = initialSpeed;
+        hasEffected = false;
     }
 }
