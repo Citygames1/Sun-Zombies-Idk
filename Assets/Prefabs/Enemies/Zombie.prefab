@@ -394,7 +394,7 @@ MonoBehaviour:
   damageToGive: 15
   hit: 0
   timeBetweenHits: 0.5
-  animationTimer: 0
+  animationTimer: 1
 --- !u!114 &-2537943083444744947
 MonoBehaviour:
   m_ObjectHideFlags: 0

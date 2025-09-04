@@ -136,6 +136,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
+        //burst shooting
         if (isBursting == true)
         {
             timeBetweenBurstShotTimer -= Time.deltaTime;
