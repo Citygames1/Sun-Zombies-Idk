@@ -1,22 +1,23 @@
 using UnityEngine;
+using CodeMonkey.Utils;
 
 public class Shooting : MonoBehaviour
 {
     //timers
     public float timeToReload = 3;
-    public float reloadTimer;
-    public bool reloadTimerRunning;
+    [HideInInspector] public float reloadTimer;
+    [HideInInspector] public bool reloadTimerRunning;
     //
     public float timeBetweenShot = 0.5f;
-    public float timeBetweenShotTimer;
-    public bool timeBetweenShotTimerRunning;
+    [HideInInspector] public float timeBetweenShotTimer;
+    [HideInInspector] public bool timeBetweenShotTimerRunning;
     
     //bools
-    public bool canShoot;
-    public bool needsAmmo;
+    [HideInInspector] public bool canShoot;
+    [HideInInspector] public bool needsAmmo;
     public bool isShotgun;
     public bool burstRifle;
-    public bool chanceToSaveBullet;
+    [HideInInspector] public bool chanceToSaveBullet;
 
     //Game Objects
     public Transform firePoint;
@@ -24,11 +25,10 @@ public class Shooting : MonoBehaviour
     [HideInInspector] public Camera cam;
 
     //gun settings
-    public float bulletForce = 20f;
     public int totalPossibleBullets;
-    public int totalBullets;
+    [HideInInspector] public int totalBullets;
     public int magSize;
-    public int bulletsInMag;
+    [HideInInspector] public int bulletsInMag;
     public float rangeOfSpread;
     public int shotgunPelletCount;
     [HideInInspector] public int chanceToSaveBulletInt; 
@@ -37,9 +37,9 @@ public class Shooting : MonoBehaviour
     public int burstShotCount = 3;
     public int totalBurstShotsFired = 0;
     public float timeBetweenBurstShot;
-    public float timeBetweenBurstShotTimer;
-    public bool timeBetweenBurstShotTimerRunning;
-    public bool isBursting;
+    [HideInInspector] public float timeBetweenBurstShotTimer;
+    [HideInInspector] public bool timeBetweenBurstShotTimerRunning;
+    [HideInInspector] public bool isBursting;
 
     public void Start()
     {
@@ -49,7 +49,8 @@ public class Shooting : MonoBehaviour
 
         SetBullets();
     }
-    void Update()
+
+    void FixedUpdate()
     {
         //Enabling shooting
         #region
@@ -187,38 +188,29 @@ public class Shooting : MonoBehaviour
     }
     public void Shoot()
     {
+        float randomNumber = Random.Range(0, rangeOfSpread);
+        float shootError = Random.Range(randomNumber - 90f, -randomNumber - 90f);
+
         //if is a shotgun
-        if(isShotgun == true)
+        if (isShotgun == true)
         {
             for (int i = 1; i < shotgunPelletCount + 1; i++)
             {
-                //points the gun
-                Vector3 mousePos = Input.mousePosition;
-                Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-                //shoots the gun
-                Vector2 error = Random.insideUnitCircle * rangeOfSpread;
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, Quaternion.identity);
-                bullet.transform.LookAt(worldPos + (transform.right * error.x) + (transform.up * error.y));
-                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                rb.velocity = Vector3.zero;
-                bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward * bulletForce, ForceMode2D.Impulse);
+                Vector3 mousePos = UtilsClass.GetMouseWorldPosition();
+                Vector3 aimDirection = (mousePos - transform.position).normalized;
+                float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg + shootError;
+                bullet.transform.localRotation = Quaternion.Euler(0, 0, angle);
             }
         }
         //if is a normal gun
         else
         {
-            //points the gun
-            Vector3 mousePos = Input.mousePosition;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            //shoots the gun
-            Vector2 error = Random.insideUnitCircle * rangeOfSpread;
             GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, Quaternion.identity);
-            bullet.transform.LookAt(worldPos + (transform.right * error.x) + (transform.up * error.y));
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector3.zero;
-            bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward * bulletForce, ForceMode2D.Impulse);
+            Vector3 mousePos = UtilsClass.GetMouseWorldPosition();
+            Vector3 aimDirection = (mousePos - transform.position).normalized;
+            float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg + shootError;
+            bullet.transform.localRotation = Quaternion.Euler(0, 0, angle);
         }
     }
 
