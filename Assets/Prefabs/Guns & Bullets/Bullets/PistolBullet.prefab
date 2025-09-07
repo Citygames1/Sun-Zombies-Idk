@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7814660525342582009, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
+      propertyPath: bulletForce
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 575788214738144654, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3971455278640791982, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
       propertyPath: m_Name
-      value: DefaultBullet
+      value: PistolBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

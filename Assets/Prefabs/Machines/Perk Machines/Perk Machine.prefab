@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 4790251563128995526}
   - component: {fileID: 3390136982816931037}
   - component: {fileID: 7766826867729166021}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Perk Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

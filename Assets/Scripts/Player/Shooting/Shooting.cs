@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
     [HideInInspector] public Camera cam;
 
     //gun settings
+    public int costToReload;
     public int totalPossibleBullets;
     [HideInInspector] public int totalBullets;
     public int magSize;

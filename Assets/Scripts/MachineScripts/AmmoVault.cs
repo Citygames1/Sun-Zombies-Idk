@@ -8,15 +8,12 @@ public class AmmoVault : MonoBehaviour
     private GameObject gunHolder;
     public GameObject textObject;
     public bool inRangeOfMachine;
-    public float costOfMachine;
+    private float costOfMachine;
     private weaponManager playerShooting;
 
     void Start()
     {
-        //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
-        costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");
@@ -25,6 +22,9 @@ public class AmmoVault : MonoBehaviour
 
     void Update()
     {
+        costOfMachine = playerShooting.currentGun.GetComponent<Shooting>().costToReload * difficultyManager.priceMultiplier;
+        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine;
+
         if (inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
         {
             if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && playerShooting.currentGun.GetComponent<Shooting>().needsAmmo == true)

@@ -5,19 +5,25 @@ public class EnablePopUpText : MonoBehaviour
 {
     public List<GameObject> thingsToEnable;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        for (int i = 0; i < thingsToEnable.Count; ++i)
+        if (other.gameObject.CompareTag("Player"))
         {
-            thingsToEnable[i].SetActive(true);
+            for (int i = 0; i < thingsToEnable.Count; ++i)
+            {
+                thingsToEnable[i].SetActive(true);
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        for (int i = 0; i < thingsToEnable.Count; ++i)
+        if (other.gameObject.CompareTag("Player"))
         {
-            thingsToEnable[i].SetActive(false);
+            for (int i = 0; i < thingsToEnable.Count; ++i)
+            {
+                thingsToEnable[i].SetActive(false);
+            }
         }
     }
 }

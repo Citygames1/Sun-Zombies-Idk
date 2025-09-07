@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public float roundCount = 3;
     public float zombiesInARound;
     [HideInInspector] public int zombiesSpawned;
+    public bool canSpawnZombies = true;
 
     //references
     private TMP_Text roundCountText;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     private PointSystem pointSystem;
 
     //timers
-    public int SpawnTimer = 1;
+    public int SpawnTimer = 2;
     [HideInInspector] public float timeBetweenSpawnsTimer;
     [HideInInspector] public bool timerHasFinished;
 

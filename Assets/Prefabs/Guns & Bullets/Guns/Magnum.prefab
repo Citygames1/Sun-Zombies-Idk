@@ -41,6 +41,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 563509349626107605, guid: 540e512b44784144aa6f6bb8a5d03d20, type: 3}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: costToReload
+      value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: rangeOfSpread
       value: 0.025
       objectReference: {fileID: 0}

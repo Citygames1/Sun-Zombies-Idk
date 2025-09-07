@@ -62,13 +62,13 @@ public class SpawnManager : MonoBehaviour
     {
         if(gms.timerHasFinished == true && isBeingTriggered == true)
         {
-            if (gms.zombiesSpawned < gms.zombiesInARound)
+            if (gms.zombiesSpawned < gms.zombiesInARound && gms.canSpawnZombies == true)
             {
                 SpawnZombie();
             }
 
             //if a new round has started
-            if (gms.zombies.Count == 0)
+            if (gms.canSpawnZombies == true && gms.zombies.Count == 0)
             {
                 gms.roundCount++;
                 gms.zombiesSpawned = 0;

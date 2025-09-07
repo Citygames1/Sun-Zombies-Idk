@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7814660525342582009, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
+      propertyPath: bulletForce
+      value: 17.5
+      objectReference: {fileID: 0}
     - target: {fileID: -3471018492762881017, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
       propertyPath: damageToGive
       value: 5

@@ -10,17 +10,23 @@ public class SettingBuildingOpacity : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        for (int i = 0; i < objectsToBeOpaque.Count; ++i)
+        if (other.gameObject.CompareTag("Player"))
         {
-            objectsToBeOpaque[i].GetComponent<SpriteRenderer>().color = opaqueColor;
+            for (int i = 0; i < objectsToBeOpaque.Count; ++i)
+            {
+                objectsToBeOpaque[i].GetComponent<SpriteRenderer>().color = opaqueColor;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other )
     {
-        for (int i = 0; i < objectsToBeOpaque.Count; ++i)
+        if (other.gameObject.CompareTag("Player"))
         {
-            objectsToBeOpaque[i].GetComponent<SpriteRenderer>().color = originalColor;
+            for (int i = 0; i < objectsToBeOpaque.Count; ++i)
+            {
+                objectsToBeOpaque[i].GetComponent<SpriteRenderer>().color = originalColor;
+            }
         }
     }
 }

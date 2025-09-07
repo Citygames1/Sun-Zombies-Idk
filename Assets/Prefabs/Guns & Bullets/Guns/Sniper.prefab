@@ -57,6 +57,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1151891739556094359, guid: 7c71bca24ef5e43449ec2fa1981e49f2, type: 3}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: costToReload
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: timeToReload
       value: 5
       objectReference: {fileID: 0}

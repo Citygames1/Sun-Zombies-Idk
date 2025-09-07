@@ -26,6 +26,9 @@ TagManager:
   - BottomTrain
   - ReceptionTrain
   - FoodHallTrain
+  - StartRoomDoors
+  - Blockade
+  - SecretDoor
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveBullet : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float bulletForce = 10;
+    public float bulletForce = 10;
 
     private void Start()
     {
