@@ -14,7 +14,6 @@ public class EnemyPathfind : MonoBehaviour
 
     //bool reachedEndOfPath = false;
     private Transform target;
-    private Vector2 relativePoint;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3;
@@ -68,8 +67,6 @@ public class EnemyPathfind : MonoBehaviour
         }
 
         animator.SetFloat("Speed", distance);
-
-        relativePoint = transform.InverseTransformPoint(target.position);
 
         if (rb.velocity.x >= 0.01f)
         {

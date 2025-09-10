@@ -13,8 +13,6 @@ public class SprinterPathfind : MonoBehaviour
     int currentWaypoint = 0;
 
     private Transform target;
-    private Vector2 relativePoint;
-
     public float speed = 50f;
     public float dashSpeed = 1000f;
 
@@ -98,8 +96,6 @@ public class SprinterPathfind : MonoBehaviour
         }
 
         animator.SetFloat("Speed", distance);
-
-        relativePoint = transform.InverseTransformPoint(target.position);
 
         if (rb.velocity.x >= 0.01f)
         {

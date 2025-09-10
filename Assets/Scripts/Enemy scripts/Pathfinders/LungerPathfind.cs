@@ -14,8 +14,6 @@ public class LungerPathfind : MonoBehaviour
 
     //bool reachedEndOfPath = false;
     private Transform target;
-    public Transform enemyGFX;
-
     public float speed = 200f;
     private float nextWaypointDistance = 3;
     private float timeBetweenWaypoints = 0.1f;
