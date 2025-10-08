@@ -22,20 +22,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Name
       value: RNGgun
       objectReference: {fileID: 0}
+    - target: {fileID: 2601482287608080544, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a73c45e7181c67e448f124ca03c1d958, type: 2}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize
       value: 1
@@ -71,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fe438b1dfa5a0b44cb56347a8790ab30, type: 3}
+      objectReference: {fileID: 35130740, guid: a2c2ecf39558b1c4183dc21c0c237aa5, type: 3}
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Color.b
       value: 1

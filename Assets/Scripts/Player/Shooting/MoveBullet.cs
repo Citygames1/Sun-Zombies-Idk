@@ -8,6 +8,6 @@ public class MoveBullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.up * bulletForce;
+        rb.linearVelocity = transform.up * bulletForce;
     }
 }

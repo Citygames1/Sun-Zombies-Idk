@@ -68,12 +68,12 @@ public class EnemyPathfind : MonoBehaviour
 
         animator.SetFloat("Speed", distance);
 
-        if (rb.velocity.x >= 0.01f)
+        if (rb.linearVelocity.x >= 0.01f)
         {
             //on the right
             spriteRenderer.flipX = false;
         }
-        if (rb.velocity.x <= -0.01f)
+        if (rb.linearVelocity.x <= -0.01f)
         {
             //on the left
             spriteRenderer.flipX = true;

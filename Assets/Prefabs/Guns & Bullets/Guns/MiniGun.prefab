@@ -10,24 +10,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.591
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 1316194622726317767, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.874
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Name
       value: MiniGun
       objectReference: {fileID: 0}
+    - target: {fileID: 2601482287608080544, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 478fd0c2384955741bc174ca9ba5fa98, type: 2}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize
       value: 100
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: timeToReload
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: rangeOfSpread
@@ -75,18 +79,18 @@ PrefabInstance:
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e854f9a33a4c5dd439c6e59ec63eadb1, type: 3}
+      objectReference: {fileID: 1642573326, guid: b46c8a1c63901a240aa8453ba8ad78f5, type: 3}
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.024
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 7046171263874864256, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.038
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8512616184860825699, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_RootOrder

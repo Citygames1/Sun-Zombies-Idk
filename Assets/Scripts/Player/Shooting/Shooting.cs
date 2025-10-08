@@ -7,7 +7,7 @@ public class Shooting : MonoBehaviour
     public float timeToReload = 3;
     [HideInInspector] public float reloadTimer;
     [HideInInspector] public bool reloadTimerRunning;
-    //
+
     public float timeBetweenShot = 0.5f;
     [HideInInspector] public float timeBetweenShotTimer;
     [HideInInspector] public bool timeBetweenShotTimerRunning;
@@ -23,6 +23,7 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     [HideInInspector] public Camera cam;
+    private Animator animator;
 
     //gun settings
     public int costToReload;
@@ -32,7 +33,7 @@ public class Shooting : MonoBehaviour
     [HideInInspector] public int bulletsInMag;
     public float rangeOfSpread;
     public int shotgunPelletCount;
-    [HideInInspector] public int chanceToSaveBulletInt; 
+    [HideInInspector] public int chanceToSaveBulletInt;
 
     //Burst Shooting
     public int burstShotCount = 3;
@@ -44,6 +45,8 @@ public class Shooting : MonoBehaviour
 
     public void Start()
     {
+        animator = GetComponentInChildren<Animator>();
+
         reloadTimer = timeToReload;
         timeBetweenShotTimer = timeBetweenShot;
         timeBetweenBurstShotTimer = timeBetweenBurstShot;
@@ -82,6 +85,7 @@ public class Shooting : MonoBehaviour
                     bulletsInMag = bulletsInMag + totalBullets;
                     totalBullets = 0;
                 }
+                animator.SetBool("Reload", false);
                 canShoot = true;
                 reloadTimerRunning = false;
                 reloadTimer = timeToReload;
@@ -95,11 +99,13 @@ public class Shooting : MonoBehaviour
 
         if (timeBetweenShotTimerRunning)
         {
+            animator.SetBool("Recoil", true);
             canShoot = false;
             timeBetweenShotTimer -= Time.deltaTime;
 
             if (timeBetweenShotTimer <= 0)
             {
+                animator.SetBool("Recoil",false);
                 canShoot = true;
                 timeBetweenShotTimerRunning = false;
                 timeBetweenShotTimer = timeBetweenShot;
@@ -218,6 +224,7 @@ public class Shooting : MonoBehaviour
 
     public void Reload()
     {
+        animator.SetBool("Reload", true);
         reloadTimerRunning = true;
     }
 
