@@ -17,6 +17,13 @@ public class SpawnManager : MonoBehaviour
     private GameObject gameManager;
     private GameManager gms;
 
+    //health scaling
+    private int scaleRound = 7;
+    private bool isScaling;
+    private float healthScaleFloat = 1f;
+    private float speedScaleFloat = 1f;
+    private int roundBetweenScaleIncreases = 3;
+
     //For chances n shi
     private int arrayLength;
     private int randomNumber;
@@ -157,26 +164,46 @@ public class SpawnManager : MonoBehaviour
 
     public void SetEnemyStats(GameObject spawnedZombie)
     {
+        if (gms.roundCount >= scaleRound && isScaling == false) //health starts scaling on scale round (7)
+        {
+            isScaling = true;
+            healthScaleFloat = 1.15f;
+            speedScaleFloat = 1.05f;
+        }
+        
+        if(isScaling == true)
+        {
+            if(gms.roundCount - scaleRound % roundBetweenScaleIncreases == 0) //every 3 rounds, the scale multiplier increases by 10%
+            {
+                healthScaleFloat *= 1.1f;
+                speedScaleFloat *= 1.1f;
+            }
+        }
+
         //sets the new speed based on the difficulty
         if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
         {
             EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= speedScaleFloat;
         }
         if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
         {
             SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= speedScaleFloat;
         }
         if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
         {
             EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= difficultyManager.enemySpeedMultiplier;
+            enemySpeed.speed *= speedScaleFloat;
         }
 
         //sets the new health based on the difficulty
         EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-        enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+        enemyHealth.enemyMaxHealth *= difficultyManager.enemyHealthMultiplier;
+        enemyHealth.enemyMaxHealth *= healthScaleFloat;
         enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
     }
 }
