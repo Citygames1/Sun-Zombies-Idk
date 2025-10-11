@@ -56,70 +56,24 @@ public class Shooting : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Enabling shooting
-        #region
         if (reloadTimerRunning)
         {
-            canShoot = false;
-            reloadTimer -= Time.deltaTime;
-
-            if (reloadTimer <= 0)
-            {
-                if (totalBullets >= magSize)
-                {
-                    if (bulletsInMag == 0)
-                    {
-                        bulletsInMag = magSize;
-                        totalBullets = totalBullets - magSize;
-                    }
-                    else
-                    {
-                        int bulletsToTake = magSize - bulletsInMag;
-                        bulletsInMag = magSize;
-                        totalBullets = totalBullets - bulletsToTake;
-
-                    }
-                }
-                else
-                {
-                    bulletsInMag = bulletsInMag + totalBullets;
-                    totalBullets = 0;
-                }
-                animator.SetBool("Reload", false);
-                canShoot = true;
-                reloadTimerRunning = false;
-                reloadTimer = timeToReload;
-            }
+            Reload();
         }
 
-        if (bulletsInMag > 0)
+        if (bulletsInMag  == 0)
+        {
+            canShoot = false;
+        }
+        else
         {
             canShoot = true;
         }
 
         if (timeBetweenShotTimerRunning)
         {
-            animator.SetBool("Recoil", true);
-            canShoot = false;
-            timeBetweenShotTimer -= Time.deltaTime;
-
-            if (timeBetweenShotTimer <= 0)
-            {
-                animator.SetBool("Recoil",false);
-                canShoot = true;
-                timeBetweenShotTimerRunning = false;
-                timeBetweenShotTimer = timeBetweenShot;
-            }
+            TimeBetweenShots();
         }
-        #endregion
-
-        //Disabling shooting
-        #region
-        if (bulletsInMag <= 0)
-        {
-            canShoot = false;
-        }
-        #endregion
 
         //shooting
         if (canShoot == true && !reloadTimerRunning && Input.GetButton("Fire1"))
@@ -131,7 +85,7 @@ public class Shooting : MonoBehaviour
             else
             {
                 Shoot();
-                TimeBetweenShots();
+                timeBetweenShotTimerRunning = true;
                 if (chanceToSaveBullet == true)
                 {
                     SaveBulletChance();
@@ -143,45 +97,22 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        //burst shooting
-        if (isBursting == true)
+        if (timeBetweenBurstShotTimerRunning)
         {
-            timeBetweenBurstShotTimer -= Time.deltaTime;
-            timeBetweenBurstShotTimerRunning = true;
-
-            if (timeBetweenBurstShotTimerRunning == true)
-            {
-                if (timeBetweenBurstShotTimer <= 0)
-                {
-                    if (totalBurstShotsFired < burstShotCount)
-                    {
-                        Shoot();
-                        totalBurstShotsFired++;
-                        if (chanceToSaveBullet == true)
-                        {
-                            SaveBulletChance();
-                        }
-                        else
-                        {
-                            bulletsInMag--;
-                        }
-                        timeBetweenBurstShotTimer = timeBetweenBurstShot;
-                    }
-                    else
-                    {
-                        isBursting = false;
-                        totalBurstShotsFired = 0;
-                        timeBetweenBurstShotTimerRunning = false;
-                        TimeBetweenShots();
-                    }
-                }
-            }
+            TimeBetweenBurstShots();
         }
+
+        //burst shooting
+            if (isBursting == true)
+            {
+                TimeBetweenBurstShots();
+            }
 
         //reloading
         if (totalBullets > 0 && bulletsInMag != magSize && Input.GetKeyDown(KeyCode.R))
         {
-            Reload();
+            animator.SetBool("Reload", true);
+            reloadTimerRunning = true;
         }
 
         //for ammo machine
@@ -224,13 +155,87 @@ public class Shooting : MonoBehaviour
 
     public void Reload()
     {
-        animator.SetBool("Reload", true);
-        reloadTimerRunning = true;
+        canShoot = false;
+        reloadTimer -= Time.deltaTime;
+
+        if (reloadTimer <= 0)
+        {
+            if (totalBullets >= magSize)
+            {
+                if (bulletsInMag == 0)
+                {
+                    bulletsInMag = magSize;
+                    totalBullets = totalBullets - magSize;
+                }
+                else
+                {
+                    int bulletsToTake = magSize - bulletsInMag;
+                    bulletsInMag = magSize;
+                    totalBullets = totalBullets - bulletsToTake;
+                }
+            }
+            else
+            {
+                bulletsInMag = bulletsInMag + totalBullets;
+                totalBullets = 0;
+            }
+            animator.SetBool("Reload", false);
+            canShoot = true;
+            reloadTimerRunning = false;
+            reloadTimer = timeToReload;
+        }
     }
 
     public void TimeBetweenShots()
     {
         timeBetweenShotTimerRunning = true;
+
+        animator.SetBool("Recoil", true);
+        canShoot = false;
+        timeBetweenShotTimer -= Time.deltaTime;
+        
+        if (timeBetweenShotTimer <= 0)
+        {
+            animator.SetBool("Recoil", false);
+            canShoot = true;
+            timeBetweenShotTimerRunning = false;
+            timeBetweenShotTimer = timeBetweenShot;
+        }
+    }
+
+    public void TimeBetweenBurstShots()
+    {
+        timeBetweenBurstShotTimer -= Time.deltaTime;
+        timeBetweenBurstShotTimerRunning = true;
+
+        if (timeBetweenBurstShotTimerRunning == true)
+        {
+            if (timeBetweenBurstShotTimer <= 0)
+            {
+                if (totalBurstShotsFired < burstShotCount)
+                {
+                    Shoot();
+                    totalBurstShotsFired++;
+                    if (chanceToSaveBullet == true)
+                    {
+                        SaveBulletChance();
+                    }
+                    else
+                    {
+                        bulletsInMag--;
+                    }
+
+                    timeBetweenBurstShotTimer = timeBetweenBurstShot;
+                }
+                else
+                {
+                    isBursting = false;
+                    totalBurstShotsFired = 0;
+                    timeBetweenBurstShotTimerRunning = false;
+                    TimeBetweenShots();
+                }
+            }
+        }
     }
 
     public void SetBullets()

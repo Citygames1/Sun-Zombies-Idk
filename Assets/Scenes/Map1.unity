@@ -23075,7 +23075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingPoints: 2000
   playerHealthMultiplier: 100
-  enemyHealthMultiplier: 0.1
+  enemyHealthMultiplier: 1
   enemySpeedMultiplier: 0.5
   pointsMultiplier: 1
   priceMultiplier: 1

@@ -60,7 +60,7 @@ public class SpawnManager : MonoBehaviour
 
     public void Update()
     {
-        if(gms.timerHasFinished == true && isBeingTriggered == true)
+        if (gms.timerHasFinished == true && isBeingTriggered == true)
         {
             if (gms.zombiesSpawned < gms.zombiesInARound && gms.canSpawnZombies == true)
             {
@@ -86,18 +86,11 @@ public class SpawnManager : MonoBehaviour
         if (gms.zombiesSpawned == 5 && gms.roundCount % 5 == 0)
         {
             //every 5 rounds it spawns a boss zombie
-            GameObject spawnedZombie = Instantiate(bossZombies[0], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
-            gms.zombies.Add(spawnedZombie);
+            GameObject spawnedBoss = Instantiate(bossZombies[0], spawners[randomSpawner].position, Quaternion.identity);
+            //setting stats from difficulty
+            SetBossStats(spawnedBoss);
+            //adding the zombie to the list of zombies to keep track of them
+            gms.zombies.Add(spawnedBoss);
         }
         //Zombies
         //1
@@ -105,148 +98,85 @@ public class SpawnManager : MonoBehaviour
         {
             //spawning the zombies in a random spawner in the room you are in (this spawns the basic zombie)
             GameObject spawnedZombie = Instantiate(zombieVariants[0], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
-            {
-                SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
+            //setting stats from difficulty
+            SetEnemyStats(spawnedZombie);
+            //adding the zombie to the list of zombies to keep track of them
             gms.zombies.Add(spawnedZombie);
         }
         //2
         if (randomNumber > chance1 && randomNumber <= chance2)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[1], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
-            {
-                SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
+            //setting stats from difficulty
+            SetEnemyStats(spawnedZombie);
+            //adding the zombie to the list of zombies to keep track of them
             gms.zombies.Add(spawnedZombie);
         }
         //3
         if (randomNumber > chance2 && randomNumber <= chance3)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[2], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
-            {
-                SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
+            //setting stats from difficulty
+            SetEnemyStats(spawnedZombie);
+            //adding the zombie to the list of zombies to keep track of them
             gms.zombies.Add(spawnedZombie);
         }
         //4
         if (randomNumber > chance3 && randomNumber <= chance4)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[3], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
-            {
-                SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
+            //setting stats from difficulty
+            SetEnemyStats(spawnedZombie);
+            //adding the zombie to the list of zombies to keep track of them
             gms.zombies.Add(spawnedZombie);
         }
         //5
         if (randomNumber > chance4 && randomNumber <= chance5)
         {
             GameObject spawnedZombie = Instantiate(zombieVariants[4], spawners[randomSpawner].position, Quaternion.identity);
-
-            //sets the new speed based on the difficulty
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
-            {
-                SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-            if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
-            {
-                EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
-                enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
-            }
-
-            //sets the new health based on the difficulty
-            EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
-            enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
-            enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
-
+            //setting stats from difficulty
+            SetEnemyStats(spawnedZombie);
+            //adding the zombie to the list of zombies to keep track of them
             gms.zombies.Add(spawnedZombie);
         }
 
         gms.zombiesSpawned++;
+    }
+
+    public void SetBossStats(GameObject spawnedBoss)
+    {
+        //sets the new speed based on the difficulty
+        EnemyPathfind enemySpeed = spawnedBoss.GetComponent<EnemyPathfind>();
+        enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+
+        //sets the new health based on the difficulty
+        EnemyHealthManager enemyHealth = spawnedBoss.GetComponent<EnemyHealthManager>();
+        enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+        enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
+    }
+
+    public void SetEnemyStats(GameObject spawnedZombie)
+    {
+        //sets the new speed based on the difficulty
+        if (spawnedZombie.GetComponent<EnemyTypeSetter>().Basic == true)
+        {
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+        }
+        if (spawnedZombie.GetComponent<EnemyTypeSetter>().Sprinter == true)
+        {
+            SprinterPathfind enemySpeed = spawnedZombie.GetComponent<SprinterPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+        }
+        if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
+        {
+            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
+        }
+
+        //sets the new health based on the difficulty
+        EnemyHealthManager enemyHealth = spawnedZombie.GetComponent<EnemyHealthManager>();
+        enemyHealth.enemyMaxHealth = enemyHealth.enemyMaxHealth * difficultyManager.enemyHealthMultiplier;
+        enemyHealth.enemyCurrentHealth = enemyHealth.enemyMaxHealth;
     }
 }
