@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PointSystem : MonoBehaviour
@@ -10,6 +10,8 @@ public class PointSystem : MonoBehaviour
 
     private float endPointsToGain;
     private float currentPointAdditionQueue;
+    public Transform pointsTextObjectSpawnLocation;
+    public GameObject pointsTextObject;
 
     //text increase coroutine
     public float numIncreaseSpeed = 0.001f;
@@ -30,6 +32,9 @@ public class PointSystem : MonoBehaviour
 
         //starts the score increase effect
         scoreIncreaseCoroutine = StartCoroutine(ScoreIncreaseEffect());
+
+        GameObject spawnedPointsTextObject = Instantiate(pointsTextObject, pointsTextObjectSpawnLocation);
+        spawnedPointsTextObject.GetComponent<TMP_Text>().text = "+" + endPointsToGain; //sets the text of the instantiated points object
     }
 
     public IEnumerator ScoreIncreaseEffect()

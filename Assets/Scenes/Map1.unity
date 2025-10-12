@@ -3050,6 +3050,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8716668550887328685, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: pointsTextObject
+      value: 
+      objectReference: {fileID: 7207883729817436982, guid: 2b9fa136da945f74e827a1a842baa062, type: 3}
+    - target: {fileID: 8716668550887328685, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: pointsTextObjectSpawnLocation
+      value: 
+      objectReference: {fileID: 606719404}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7979100259333652133, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
@@ -7208,10 +7216,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3890329359208600441, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
 --- !u!4 &416043319 stripped
 Transform:
@@ -10639,6 +10644,41 @@ MonoBehaviour:
   - {fileID: 271633245}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
   opaqueColor: {r: 1, g: 1, b: 1, a: 0.4627451}
+--- !u!1 &606719403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606719404}
+  m_Layer: 5
+  m_Name: PointsIncreaseTextBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &606719404
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606719403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 879216405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 348, y: 53}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &607396677
 GameObject:
   m_ObjectHideFlags: 0
@@ -13809,10 +13849,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5221669223006374559, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
 --- !u!4 &793271449 stripped
 Transform:
@@ -14505,6 +14542,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 482855768}
+  - {fileID: 606719404}
   m_Father: {fileID: 1016444277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -27762,10 +27800,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5221669223006374559, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
 --- !u!4 &1653504673 stripped
 Transform:
@@ -29602,10 +29637,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5221669223006374559, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
 --- !u!4 &1776310984 stripped
 Transform:

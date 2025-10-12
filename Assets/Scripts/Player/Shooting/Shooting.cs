@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     [HideInInspector] public bool timeBetweenShotTimerRunning;
     
     //bools
-    [HideInInspector] public bool canShoot;
+     public bool canShoot;
     [HideInInspector] public bool needsAmmo;
     public bool isShotgun;
     public bool burstRifle;
@@ -61,7 +61,7 @@ public class Shooting : MonoBehaviour
             Reload();
         }
 
-        if (bulletsInMag  == 0)
+        if (bulletsInMag <= 0)
         {
             canShoot = false;
         }
@@ -180,7 +180,16 @@ public class Shooting : MonoBehaviour
                 totalBullets = 0;
             }
             animator.SetBool("Reload", false);
-            canShoot = true;
+            
+            if (bulletsInMag <= 0)
+            {
+                canShoot = false;
+            }
+            else
+            {
+                canShoot = true;
+            }
+
             reloadTimerRunning = false;
             reloadTimer = timeToReload;
         }
@@ -197,7 +206,7 @@ public class Shooting : MonoBehaviour
         if (timeBetweenShotTimer <= 0)
         {
             animator.SetBool("Recoil", false);
-            canShoot = true;
+            
             timeBetweenShotTimerRunning = false;
             timeBetweenShotTimer = timeBetweenShot;
         }
@@ -231,6 +240,16 @@ public class Shooting : MonoBehaviour
                 {
                     isBursting = false;
                     totalBurstShotsFired = 0;
+
+                    if (bulletsInMag <= 0)
+                    {
+                        canShoot = false;
+                    }
+                    else
+                    {
+                        canShoot = true;
+                    }
+
                     timeBetweenBurstShotTimerRunning = false;
                     TimeBetweenShots();
                 }

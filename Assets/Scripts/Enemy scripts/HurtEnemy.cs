@@ -17,10 +17,14 @@ public class HurtEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy" && hasHit == false)
         {
+            //this is done to stop the player from recieving death points and hit points at the same time.
+            if (collision.gameObject.GetComponent<EnemyHealthManager>().enemyCurrentHealth > damageToGive)
+            {
+                player.GetComponent<PointSystem>().GivePoints(pointsToGive);
+            }
             
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             collision.gameObject.GetComponent<EnemyHealthManager>().UpdateHealthBar();
-            player.GetComponent<PointSystem>().GivePoints(pointsToGive);
 
             Destroy(gameObject);
             hasHit = true;
