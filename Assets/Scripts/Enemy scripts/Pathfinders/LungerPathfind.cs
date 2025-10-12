@@ -16,7 +16,7 @@ public class LungerPathfind : MonoBehaviour
     private Transform target;
     public float speed = 200f;
     private float nextWaypointDistance = 3;
-    private float timeBetweenWaypoints = 0.1f;
+    private float timeBetweenWaypoints = 1f;
 
     //timer
     public float movementTimer;
@@ -68,9 +68,6 @@ public class LungerPathfind : MonoBehaviour
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 followForce = usedDirection * speed;
 
-        //issue of tiny jump lies with ^ not being a big enough value to give a lot of force i believe
-        //issue of animation not playing when thing is bumped lies with 
-
         if (movementTimerTime <= 0)
         {
             rb.linearVelocity = Vector3.zero;
@@ -98,8 +95,6 @@ public class LungerPathfind : MonoBehaviour
         {
             currentWaypoint++;
         }
-
-        //animator.SetBool("Lunge", false);
 
         if (rb.linearVelocity.x >= 0.01f)
         {

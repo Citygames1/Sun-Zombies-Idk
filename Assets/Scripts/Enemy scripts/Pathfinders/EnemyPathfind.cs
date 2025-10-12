@@ -17,7 +17,7 @@ public class EnemyPathfind : MonoBehaviour
 
     public float speed = 200f;
     public float nextWaypointDistance = 3;
-    public float timeBetweenWaypoints = 0.1f;
+    public float timeBetweenWaypoints = 0.5f;
 
     void Start()
     {

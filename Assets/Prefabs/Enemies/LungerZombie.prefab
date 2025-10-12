@@ -96,11 +96,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -6899209008178436499}
   m_SourcePrefab: {fileID: 100100000, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
---- !u!4 &2131446795077805519 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
-  m_PrefabInstance: {fileID: 8832263877414814356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5025868028247549401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
@@ -118,7 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f523d4d06dc9a418a24a6c76d4a4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyGFX: {fileID: 2131446795077805519}
-  speed: 45
-  movementTimer: 1.5
+  speed: 75
+  movementTimer: 2.5
   lengthOfLunge: 0.75
