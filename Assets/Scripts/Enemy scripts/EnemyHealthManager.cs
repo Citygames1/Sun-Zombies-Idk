@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class EnemyHealthManager : MonoBehaviour
 
     private GameObject gameManager;
     private GameManager gameManagerScript;
+
+    public Transform damageTextSpawnLocation;
+    public GameObject damageTextObject;
 
     void Start()
     {
@@ -31,17 +35,17 @@ public class EnemyHealthManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    void Update()
+    public void HurtEnemy(int damageToGive)
     {
+        enemyCurrentHealth -= damageToGive;
+
+        GameObject spawnedDamageTextObject = Instantiate(damageTextObject, damageTextSpawnLocation);
+        spawnedDamageTextObject.GetComponent<TMP_Text>().text = "-" + damageToGive;
+
         if(enemyCurrentHealth <= 0)
         {
             Die();
         }
-    }
-
-    public void HurtEnemy(int damageToGive)
-    {
-        enemyCurrentHealth -= damageToGive;
     }
 
     public void UpdateHealthBar()
