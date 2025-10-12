@@ -62,13 +62,13 @@ public class TopDownMovement : MonoBehaviour
     {
         if(isRolling == false)
         {
-            body.MovePosition(body.position + movement * runSpeed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
         }
         if(isRolling == true)
         {
             if(rollLength > rollSpeed)
             {
-                body.MovePosition(body.position + rollDirection * rollSpeed * Time.fixedDeltaTime);
+                body.MovePosition(body.position + rollDirection.normalized * rollSpeed * Time.fixedDeltaTime);
                 rollLength -= Time.deltaTime;
             }
             else
