@@ -13,10 +13,7 @@ public class PointSystem : MonoBehaviour
     public Transform pointsTextObjectSpawnLocation;
     public GameObject pointsTextObject;
 
-    //text increase coroutine
-    public float numIncreaseSpeed = 0.001f;
     private Coroutine scoreIncreaseCoroutine;
-    [HideInInspector] public bool canContinueIncreasing;
 
     private void Start()
     {
