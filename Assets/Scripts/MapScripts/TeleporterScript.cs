@@ -44,7 +44,8 @@ public class TeleporterScript : MonoBehaviour
 
                 foreach (GameObject zombie in gms.zombies)
                 {
-                    Destroy(zombie); // this can be changed to teleport them to a random active spawn location
+                    Destroy(zombie);
+                    gms.zombiesSpawned -= 1;
                 }
                 gms.zombies.Clear();
             }
@@ -59,7 +60,8 @@ public class TeleporterScript : MonoBehaviour
 
                 foreach (GameObject zombie in gms.zombies)
                 {
-                    Destroy(zombie); // this can be changed to teleport them to a random active spawn location
+                    Destroy(zombie);
+                    gms.zombiesSpawned -= 1;
                 }
                 gms.zombies.Clear();
             }
