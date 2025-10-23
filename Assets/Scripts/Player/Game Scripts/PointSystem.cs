@@ -5,7 +5,6 @@ using UnityEngine;
 public class PointSystem : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
-    public int startingPoints;
     public float totalPoints;
 
     private float endPointsToGain;
@@ -18,7 +17,7 @@ public class PointSystem : MonoBehaviour
     private void Start()
     {
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
-        totalPoints = startingPoints;
+        totalPoints = difficultyManager.startingPoints;
         endPointsToGain = 0;
     }
     public void GivePoints(int pointsToGain)

@@ -8,7 +8,7 @@ public class DifficultyManager : MonoBehaviour
     private Scene currentScene;
 
     //StartingPoints
-    [Space] public float StartingPoints;
+    [Space] public float startingPoints;
 
     //PlayerHealth
     [Space] public float playerHealthMultiplier = 1;

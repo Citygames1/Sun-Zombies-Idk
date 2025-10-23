@@ -3021,11 +3021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 20.9
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.7
+      value: 175.5
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3058,6 +3058,10 @@ PrefabInstance:
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132631361821797441, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: runSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8716668550887328685, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: pointsTextObject
@@ -23176,9 +23180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e743733a518354cb54579ff4563e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingPoints: 2000
+  startingPoints: 10000
   playerHealthMultiplier: 100
-  enemyHealthMultiplier: 1
+  enemyHealthMultiplier: 0.01
   enemySpeedMultiplier: 0.5
   pointsMultiplier: 1
   priceMultiplier: 1
@@ -25136,11 +25140,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1435399224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4867841050327373996, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
-  m_PrefabInstance: {fileID: 2077468562}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1441437910
 GameObject:
   m_ObjectHideFlags: 0
@@ -37375,33 +37374,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4867841050327373996, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2077468568}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
 --- !u!4 &2077468563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5656550699418830757, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
   m_PrefabInstance: {fileID: 2077468562}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2077468568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435399224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e0e087e557c6b4bb42d6428fbe079f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObject: {fileID: 0}
-  multiplier: 1.5
-  inRangeOfMachine: 0
-  hasBought: 0
-  costOfMachine: 1500
 --- !u!1 &2079693841
 GameObject:
   m_ObjectHideFlags: 0

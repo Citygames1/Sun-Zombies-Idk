@@ -22,10 +22,10 @@ public class weaponManager : MonoBehaviour
 
     void Update()
     {
-        totalWeapons = weaponHolder.transform.childCount;
+        totalWeapons = guns.Count;
         currentGunShooting = currentGun.GetComponent<Shooting>();
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2)) //move to next weapon
         {
             //next weapon
             if(currentWeaponIndex < totalWeapons-1)
@@ -37,7 +37,7 @@ public class weaponManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1)) //move to previous weapon
         {
             //previous weapon
             if (currentWeaponIndex > 0) //if not the first weapon
@@ -59,6 +59,15 @@ public class weaponManager : MonoBehaviour
         {
             guns[i] = weaponHolder.transform.GetChild(i).gameObject;
             guns[i].SetActive(false);
+        }
+    }
+
+    public void RefreshGunList()
+    {
+        guns.Clear();
+        for (int i = 0; i < weaponHolder.transform.childCount; i++)
+        {
+            guns.Add(weaponHolder.transform.GetChild(i).gameObject);
         }
     }
 }

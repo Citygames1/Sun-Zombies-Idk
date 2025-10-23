@@ -29,7 +29,7 @@ public class SettingDifficulty : MonoBehaviour
     public void SetStartingCash(GameObject thisSlider)
     {
         float startingCash = thisSlider.GetComponent<Slider>().value;
-        difficultyManager.StartingPoints = startingCash;
+        difficultyManager.startingPoints = startingCash;
         string resultString = System.Convert.ToString(startingCash);
         startingCashString = resultString;
     }

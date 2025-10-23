@@ -81,7 +81,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766826867729166021, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: thingsToEnable.Array.data[0]
+      propertyPath: 'thingsToEnable.Array.data[0]'
       value: 
       objectReference: {fileID: 2673948445261963662}
     - target: {fileID: 7979144226618479879, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
@@ -135,6 +135,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972483503686373970}
+    - targetCorrespondingSourceObject: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5075080777266556851}
   m_SourcePrefab: {fileID: 100100000, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
 --- !u!1 &2673948445261963662 stripped
 GameObject:
@@ -147,6 +150,23 @@ GameObject:
   m_PrefabInstance: {fileID: 2322599025857843874}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &972483503686373970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867841050327373996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e0e087e557c6b4bb42d6428fbe079f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textObject: {fileID: 2673948445261963662}
+  multiplier: 1.5
+  inRangeOfMachine: 0
+  hasBought: 0
+  costOfMachine: 1500
+--- !u!114 &5075080777266556851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
