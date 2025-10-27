@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Enemy
   - Bullet
@@ -29,6 +29,17 @@ TagManager:
   - StartRoomDoors
   - Blockade
   - SecretDoor
+  - Hunting Rifle
+  - M16A2
+  - Magnum
+  - Minigun
+  - Semi-Auto Shotgun
+  - Sniper
+  - Starter Pistol
+  - Uzi
+  - AK-47
+  - RNG gun
+  - EnemyCollision
   layers:
   - Default
   - TransparentFX
@@ -44,7 +55,7 @@ TagManager:
   - Obstacle
   - bullet
   - Enemy
-  - 
+  - EnemyCollision
   - 
   - 
   - 
@@ -75,3 +86,5 @@ TagManager:
   - name: UI
     uniqueID: 3240268489
     locked: 0
+  m_RenderingLayers:
+  - Default

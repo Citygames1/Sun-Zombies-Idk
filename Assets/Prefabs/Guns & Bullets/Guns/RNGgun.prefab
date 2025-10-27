@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RNGgun
       objectReference: {fileID: 0}
+    - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_TagString
+      value: RNG gun
+      objectReference: {fileID: 0}
     - target: {fileID: 2601482287608080544, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Controller
       value: 
@@ -86,6 +90,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}

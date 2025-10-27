@@ -20,10 +20,26 @@ PrefabInstance:
       propertyPath: enemyMaxHealth
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 191643238114437839, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ea0810be7fd8b34c869a95b86e87787, type: 2}
+    - target: {fileID: 592784685455922379, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.21333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 592784685455922379, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.21333334
+      objectReference: {fileID: 0}
     - target: {fileID: 1764375207262706978, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: speed
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 2475442774773528992, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ea0810be7fd8b34c869a95b86e87787, type: 2}
     - target: {fileID: 4441903659415179793, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Controller
       value: 
@@ -51,6 +67,22 @@ PrefabInstance:
     - target: {fileID: 6643292779477748014, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927058808237594204, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Size.x
+      value: 0.08670991
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927058808237594204, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Size.y
+      value: 0.15530622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927058808237594204, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.005868133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927058808237594204, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0751467
       objectReference: {fileID: 0}
     - target: {fileID: 7423879018506807131, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_RootOrder
@@ -133,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c03a29b876ada4bb47e485d6fe4945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   speed: 2
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1

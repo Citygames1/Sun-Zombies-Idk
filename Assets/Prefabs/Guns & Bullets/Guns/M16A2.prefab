@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M16A2
       objectReference: {fileID: 0}
+    - target: {fileID: 1389374773817187665, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_TagString
+      value: M16A2
+      objectReference: {fileID: 0}
     - target: {fileID: 2601482287608080544, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_Controller
       value: 
@@ -88,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 609912069, guid: 5a773f35206b58c4288f0bda9857b374, type: 3}
+    - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6224002081292879851, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

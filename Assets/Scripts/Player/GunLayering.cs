@@ -41,9 +41,9 @@ public class GunLayering : MonoBehaviour
             SpriteRenderer bulletSpriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
             bulletSpriteRenderer.sortingOrder -= 1;
         }
-        if (collision.gameObject.tag == "Enemy" && layerEnemy == true)
+        if (collision.gameObject.tag == "EnemyCollision" && layerEnemy == true)
         {
-            SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponentInParent<SpriteRenderer>();
             enemySpriteRenderer.sortingOrder -= 2;
 
         }
@@ -64,9 +64,9 @@ public class GunLayering : MonoBehaviour
             SpriteRenderer bulletSpriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
             bulletSpriteRenderer.sortingOrder += 1;
         }
-        if (collision.gameObject.tag == "Enemy" && layerEnemy == true)
+        if (collision.gameObject.tag == "EnemyCollision" && layerEnemy == true)
         {
-            SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponentInParent<SpriteRenderer>();
             enemySpriteRenderer.sortingOrder += 2;
 
         }
