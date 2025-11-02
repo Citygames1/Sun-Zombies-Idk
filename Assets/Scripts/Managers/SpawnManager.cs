@@ -1,7 +1,11 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public string nameOfRoom;
+
     public bool isBeingTriggered;
     public Transform[] spawners;
 
@@ -16,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     private DifficultyManager difficultyManager;
     private GameObject gameManager;
     private GameManager gms;
+    private GameObject roomNameUI;
 
     //health scaling
     private int scaleRound = 7;
@@ -33,21 +38,18 @@ public class SpawnManager : MonoBehaviour
     private int chance4;
     private int chance5;
 
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        isBeingTriggered = true;
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        isBeingTriggered = false;
-    }
+    private float nameChangeTimer = 1f;
+    private float nameChangeTimerTime;
+    private bool nameChangeTimerActive = false;
 
     private void Start()
     {
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         gms = gameManager.GetComponent<GameManager>();
+        roomNameUI = GameObject.FindGameObjectWithTag("RoomName");
+
+        nameChangeTimerTime = nameChangeTimer;
 
         //I know lol
         arrayLength = spawners.Length;
@@ -65,8 +67,36 @@ public class SpawnManager : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(nameChangeTimerActive == false)
+        {
+            roomNameUI.GetComponent<TMP_Text>().text = nameOfRoom;
+        }
+        nameChangeTimerActive = true;
+    }
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        isBeingTriggered = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        isBeingTriggered = false;
+    }
+
     public void Update()
     {
+        if (nameChangeTimerActive == true)
+        {
+            nameChangeTimerTime -= Time.deltaTime;
+
+            if(nameChangeTimerTime <= 0)
+            {
+                nameChangeTimerActive = false;
+            }
+        }
+
         if (gms.timerHasFinished == true && isBeingTriggered == true)
         {
             if (gms.zombiesSpawned < gms.zombiesInARound && gms.canSpawnZombies == true)
@@ -86,8 +116,8 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnZombie()
     {
-        int randomSpawner = Random.Range(0, arrayLength);
-        randomNumber = Random.Range(0, totalChanceInt);
+        int randomSpawner = UnityEngine.Random.Range(0, arrayLength);
+        randomNumber = UnityEngine.Random.Range(0, totalChanceInt);
 
         //Boss zombie
         if (gms.zombiesSpawned == 5 && gms.roundCount % 5 == 0)

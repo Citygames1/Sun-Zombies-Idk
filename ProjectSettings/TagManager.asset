@@ -40,6 +40,7 @@ TagManager:
   - AK-47
   - RNG gun
   - EnemyCollision
+  - RoomName
   layers:
   - Default
   - TransparentFX
