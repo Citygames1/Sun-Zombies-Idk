@@ -26,6 +26,7 @@ public class Shooting : MonoBehaviour
     private Animator animator;
 
     //gun settings
+    public float weight = 1f; //multiplier that reduces movement speed. (1 = normal speed.)
     public int costToReload;
     public int totalPossibleBullets;
     [HideInInspector] public int totalBullets;

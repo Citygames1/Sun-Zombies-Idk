@@ -12,12 +12,18 @@ public class weaponManager : MonoBehaviour
     public GameObject currentGun;
     public TMP_Text bulletCountText;
     private Shooting currentGunShooting;
+    private GameObject player;
+    [HideInInspector] public float originalRunSpeed;
 
-    void Start()
+    void Start() //sets up the starting gun
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        originalRunSpeed = player.GetComponent<TopDownMovement>().runSpeed;
+
         guns[0].SetActive(true);
         currentGun = guns[0];
         currentWeaponIndex = 0;
+        player.GetComponent<TopDownMovement>().runSpeed *= currentGun.GetComponent<Shooting>().weight;
     }
 
     void Update()
@@ -30,10 +36,12 @@ public class weaponManager : MonoBehaviour
             //next weapon
             if(currentWeaponIndex < totalWeapons-1)
             {
+                player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex++;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                player.GetComponent<TopDownMovement>().runSpeed *= currentGun.GetComponent<Shooting>().weight;
             }
         }
 
@@ -42,10 +50,12 @@ public class weaponManager : MonoBehaviour
             //previous weapon
             if (currentWeaponIndex > 0) //if not the first weapon
             {
+                player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex--;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                player.GetComponent<TopDownMovement>().runSpeed *= currentGun.GetComponent<Shooting>().weight;
             }
         }
 

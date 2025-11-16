@@ -49,6 +49,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: b5fcd10c7579f46458c45269b84d6923, type: 2}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: weight
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize
       value: 5
       objectReference: {fileID: 0}
