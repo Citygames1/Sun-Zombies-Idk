@@ -38,18 +38,12 @@ public class SpawnManager : MonoBehaviour
     private int chance4;
     private int chance5;
 
-    private float nameChangeTimer = 1f;
-    private float nameChangeTimerTime;
-    private bool nameChangeTimerActive = false;
-
     private void Start()
     {
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         gms = gameManager.GetComponent<GameManager>();
         roomNameUI = GameObject.FindGameObjectWithTag("RoomName");
-
-        nameChangeTimerTime = nameChangeTimer;
 
         //I know lol
         arrayLength = spawners.Length;
@@ -67,16 +61,12 @@ public class SpawnManager : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        if(nameChangeTimerActive == false)
+        if(collision.gameObject.CompareTag("Player"))
         {
             roomNameUI.GetComponent<TMP_Text>().text = nameOfRoom;
         }
-        nameChangeTimerActive = true;
-    }
-    public void OnTriggerStay2D(Collider2D collision)
-    {
         isBeingTriggered = true;
     }
 
@@ -87,16 +77,6 @@ public class SpawnManager : MonoBehaviour
 
     public void Update()
     {
-        if (nameChangeTimerActive == true)
-        {
-            nameChangeTimerTime -= Time.deltaTime;
-
-            if(nameChangeTimerTime <= 0)
-            {
-                nameChangeTimerActive = false;
-            }
-        }
-
         if (gms.timerHasFinished == true && isBeingTriggered == true)
         {
             if (gms.zombiesSpawned < gms.zombiesInARound && gms.canSpawnZombies == true)

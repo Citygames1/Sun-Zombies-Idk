@@ -3021,11 +3021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.53
+      value: 19.6
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.35
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 3139340372504520607, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3408,7 +3408,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -7273,6 +7273,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.17863788
       objectReference: {fileID: 0}
+    - target: {fileID: 1303971862997059402, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+    - target: {fileID: 1303971862997059402, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956109364524892604, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
     - target: {fileID: 2988127785585448264, guid: 3ffd2e611fdfbaf4fb8074cc5a23b348, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8313,7 +8325,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -8871,7 +8883,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -9450,7 +9462,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -9831,7 +9843,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -11810,7 +11822,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -12970,16 +12982,16 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -1.6062098, y: 1.9810421}
-      - {x: -1.6002444, y: -1.0860529}
-      - {x: 1.1922468, y: -1.0868515}
-      - {x: 1.5759839, y: -1.0779585}
+      - {x: -1.6049589, y: -0.8740234}
+      - {x: 1.180824, y: -0.8965371}
+      - {x: 1.6007854, y: -0.899705}
       - {x: 1.5975578, y: 1.9284395}
     - - {x: 0.19936359, y: -0.7373794}
       - {x: -1.005018, y: 1.6667123}
-      - {x: 1.1826231, y: -1.0751421}
-      - {x: 1.2958628, y: -1.0139346}
-      - {x: 1.365246, y: -1.0503148}
-      - {x: 1.4, y: -0.90000004}
+      - {x: 0.84991777, y: -0.72202295}
+      - {x: 1.1057861, y: -0.7125283}
+      - {x: 1.2019401, y: -0.70919526}
+      - {x: 1.3385036, y: -0.72158974}
       - {x: 1.1, y: -0.6}
       - {x: 1, y: -0.6}
       - {x: 1.2, y: -0.3}
@@ -12992,33 +13004,34 @@ PolygonCollider2D:
       - {x: 1.2, y: 1.2}
       - {x: 1, y: 1.4}
       - {x: 1.4, y: 1.7}
-      - {x: 1.4, y: 1.9}
-      - {x: 1.1529143, y: 1.9291978}
+      - {x: 1.3821119, y: 1.8101177}
+      - {x: 1.1225857, y: 1.8025767}
       - {x: 0.7135497, y: 1.912404}
       - {x: 0.5, y: 1.9}
       - {x: -0.5, y: 1.9}
-      - {x: -0.7062478, y: 1.9591862}
-      - {x: -1.1037465, y: 1.9466956}
+      - {x: -0.7049219, y: 1.8995544}
+      - {x: -1.0996971, y: 1.9136354}
       - {x: -1.4, y: 1.9}
-      - {x: -1.4, y: 1.7}
+      - {x: -1.4591848, y: 1.3805054}
       - {x: -1, y: 1.4}
       - {x: -1.2, y: 1.2}
       - {x: -1.2, y: 1.1}
       - {x: -0.90000004, y: 0.8}
-      - {x: -0.6, y: 0.8}
+      - {x: -0.8509018, y: 0.52960044}
       - {x: -1.1, y: 0.8}
       - {x: -1.4, y: 0.5}
-      - {x: -1.4, y: 0.3}
+      - {x: -1.4509587, y: 0.055474877}
       - {x: -1, y: 0}
       - {x: -1.2, y: -0.2}
       - {x: -1.2, y: -0.3}
       - {x: -0.90000004, y: -0.6}
       - {x: -0.6, y: -0.6}
-      - {x: -1.1, y: -0.6}
-      - {x: -1.4, y: -0.90000004}
-      - {x: -1.4, y: -1.1}
-      - {x: -1.3119606, y: -1.0404365}
-      - {x: -1.2, y: -1.1}
+      - {x: -1.085561, y: -0.71543026}
+      - {x: -1.2469066, y: -0.670069}
+      - {x: -1.2048305, y: -0.77801466}
+      - {x: -1.0557631, y: -0.78089803}
+      - {x: -0.94395727, y: -0.7733703}
+      - {x: -0.80976206, y: -0.78100455}
   m_UseDelaunayMesh: 0
 --- !u!1001 &727044602
 PrefabInstance:
@@ -14360,14 +14373,14 @@ RectTransform:
   m_GameObject: {fileID: 826687917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.17935789}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05714286, y: 0.090909086, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1240695880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.714, y: -2.116}
+  m_AnchoredPosition: {x: 0.42628568, y: 0.051817477}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826687919
@@ -14393,7 +14406,7 @@ MonoBehaviour:
   m_text: Press E to open train station for 500 points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14417,8 +14430,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14455,7 +14468,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.03996277, y: 0, z: 19.401217, w: 4.7010746}
+  m_margin: {x: -0.03996277, y: 0, z: 14.898223, w: 3.5749283}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -14489,7 +14502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18264,7 +18277,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -18593,7 +18606,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -20724,7 +20737,7 @@ MonoBehaviour:
   m_text: Press E to open train station for 500 points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20748,8 +20761,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20786,7 +20799,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.03996277, y: 0, z: 19.37629, w: 4.509915}
+  m_margin: {x: -0.03996277, y: 0, z: 14.878368, w: 3.696815}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -20820,7 +20833,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20850,16 +20863,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176856161}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0}
   m_LocalPosition: {x: 0, y: 0, z: -0.17935789}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05714286, y: 0.090909086, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1961035856}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.709, y: -2.13}
+  m_AnchoredPosition: {x: -0.427433, y: 0.050908685}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1182275689
@@ -23001,7 +23014,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.11436844, y: 11.728686}
+  m_Offset: {x: -0.11436844, y: 5.238074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.27575535}
@@ -23011,7 +23024,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 43.821358, y: 18.078413}
+  m_Size: {x: 43.821358, y: 5.097186}
   m_EdgeRadius: 0
 --- !u!114 &1295129519
 MonoBehaviour:
@@ -23532,7 +23545,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -26445,7 +26458,7 @@ BoxCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -28501,7 +28514,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16127
+    m_Bits: 32511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -28678,6 +28691,42 @@ PrefabInstance:
     - target: {fileID: 841273104811739444, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
       propertyPath: m_Name
       value: Ammo Vault
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649039756519970794, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+    - target: {fileID: 5221669223006374559, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062454431482494563, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_text
+      value: Press E to fill the Ammunition of your current gun for xxxx points
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062454431482494563, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062454431482494563, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_margin.z
+      value: 4.872231
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062454431482494563, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062454431482494563, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+    - target: {fileID: 8561620199752008073, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561620199752008073, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32513,7 +32562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerPlayer: 1
-  layerGun: 0
+  layerGun: 1
   layerBullets: 0
   layerEnemy: 1
 --- !u!1 &1858499919
@@ -34995,7 +35044,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.26026726, y: 6.351385}
+  m_Offset: {x: -0.26026726, y: 6.4217973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -35005,7 +35054,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 40.991657, y: 8.260414}
+  m_Size: {x: 40.991657, y: 8.11959}
   m_EdgeRadius: 0
 --- !u!68 &1969932298
 EdgeCollider2D:
@@ -37595,7 +37644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerPlayer: 1
-  layerGun: 0
+  layerGun: 1
   layerBullets: 0
   layerEnemy: 1
 --- !u!1 &2051069340
@@ -39109,7 +39158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerPlayer: 1
-  layerGun: 0
+  layerGun: 1
   layerBullets: 0
   layerEnemy: 1
 --- !u!1 &2128983051

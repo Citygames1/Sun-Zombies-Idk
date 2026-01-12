@@ -25,15 +25,21 @@ public class GunLayering : MonoBehaviour
         cGunSpriteRenderer = currentGun.GetComponentInChildren<SpriteRenderer>();
     }
 
+    //Reductions in sorting order:
+    //Player = 3
+    //Gun    = 3
+    //Bullet = 1
+    //Enemy  = 2
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && layerPlayer == true)
         {
-            playerSpriteRenderer.sortingOrder -= 2;
+            playerSpriteRenderer.sortingOrder -= 3;
 
             if (layerGun == true)
             {
-                cGunSpriteRenderer.sortingOrder -= 2;
+                cGunSpriteRenderer.sortingOrder -= 3;
             }
         }
         if (collision.gameObject.tag == "Bullet" && layerBullets == true)
@@ -52,11 +58,11 @@ public class GunLayering : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && layerPlayer == true)
         {
-            playerSpriteRenderer.sortingOrder += 2;
+            playerSpriteRenderer.sortingOrder += 3;
 
             if (layerGun == true)
             {
-                cGunSpriteRenderer.sortingOrder += 2;
+                cGunSpriteRenderer.sortingOrder += 3;
             }
         }
         if (collision.gameObject.tag == "Bullet" && layerBullets == true)

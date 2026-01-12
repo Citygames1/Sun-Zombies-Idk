@@ -13,7 +13,8 @@ public class Shooting : MonoBehaviour
     [HideInInspector] public bool timeBetweenShotTimerRunning;
     
     //bools
-     public bool canShoot;
+    public bool canShoot;
+    public bool canReload;
     [HideInInspector] public bool needsAmmo;
     public bool isShotgun;
     public bool burstRifle;
@@ -110,7 +111,15 @@ public class Shooting : MonoBehaviour
             }
 
         //reloading
-        if (totalBullets > 0 && bulletsInMag != magSize && Input.GetKeyDown(KeyCode.R))
+        if(totalBullets > 0 && bulletsInMag != magSize)
+        {
+            canReload = true;
+        }
+        else
+        {
+            canReload = false;
+        }
+        if (canReload && Input.GetKeyDown(KeyCode.R))
         {
             animator.SetBool("Reload", true);
             reloadTimerRunning = true;

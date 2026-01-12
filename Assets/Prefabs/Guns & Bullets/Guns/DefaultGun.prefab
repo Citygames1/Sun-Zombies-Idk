@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 981129739
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   timeBetweenShotTimer: 0
   timeBetweenShotTimerRunning: 0
   canShoot: 0
+  canReload: 0
   needsAmmo: 0
   isShotgun: 0
   burstRifle: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   firePoint: {fileID: 7046171263874864256}
   bulletPrefab: {fileID: 3971455278640791982, guid: 3b73ad18da5204b44864918775b2db81, type: 3}
   cam: {fileID: 0}
+  weight: 1
   costToReload: 1000
   totalPossibleBullets: 0
   totalBullets: 0

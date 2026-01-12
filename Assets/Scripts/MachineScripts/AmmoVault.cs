@@ -23,7 +23,7 @@ public class AmmoVault : MonoBehaviour
     void Update()
     {
         costOfMachine = playerShooting.currentGun.GetComponent<Shooting>().costToReload * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine;
+        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine + " points";
 
         if (inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
         {
