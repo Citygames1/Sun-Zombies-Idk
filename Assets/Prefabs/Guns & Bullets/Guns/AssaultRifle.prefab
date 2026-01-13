@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 1323178653256102697, guid: 0bcfb8e38b63422409d33ba522be1348, type: 3}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: timeToReload
-      value: 2.6
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: rangeOfSpread

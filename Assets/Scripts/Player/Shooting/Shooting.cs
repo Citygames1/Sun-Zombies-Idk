@@ -150,6 +150,9 @@ public class Shooting : MonoBehaviour
                 Vector3 aimDirection = (mousePos - transform.position).normalized;
                 float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg + shootError;
                 bullet.transform.localRotation = Quaternion.Euler(0, 0, angle);
+                
+                //reset error angle for each pellet
+                shootError = Random.Range(randomNumber - 90f, -randomNumber - 90f);
             }
         }
         //if is a normal gun

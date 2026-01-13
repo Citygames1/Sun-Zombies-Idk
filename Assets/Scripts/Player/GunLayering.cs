@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GunLayering : MonoBehaviour
 {
+    // error with the enemies getting killed while being layered which throws an error. I dont think it actually makes a difference lol
+
     private GameObject player;
     private weaponManager weaponManagerScript;
     private GameObject currentGun;
