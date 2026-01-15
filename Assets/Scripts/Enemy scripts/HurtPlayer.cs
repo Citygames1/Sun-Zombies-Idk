@@ -10,18 +10,17 @@ public class HurtPlayer : MonoBehaviour
     private bool firstHit = false;
     private bool hit;
 
-    private float firstHitTime;
+    public float firstHitTime;
     private float firstHitTimeTimer;
     private float hitTimer;
     public float timeBetweenHits;
-    public float animationTimer;
-    private float animationTimerTime;
 
     public void Start()
     {
         animator = GetComponent<Animator>();
 
         hitTimer = timeBetweenHits;
+        firstHitTimeTimer = firstHitTime;
     }
 
     public void OnTriggerStay2D(Collider2D other)
