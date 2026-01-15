@@ -7,8 +7,11 @@ public class HurtPlayer : MonoBehaviour
     private Animator animator;
 
     public int damageToGive;
-    public bool hit;
+    private bool firstHit = false;
+    private bool hit;
 
+    private float firstHitTime;
+    private float firstHitTimeTimer;
     private float hitTimer;
     public float timeBetweenHits;
     public float animationTimer;
@@ -25,16 +28,29 @@ public class HurtPlayer : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            hitTimer -= Time.deltaTime;
-
-            if(hitTimer <= 0)
+            if(firstHit == false)
             {
-                hit = true;
+                firstHitTimeTimer -= Time.deltaTime;
 
-                animator.SetTrigger("Attack");
+                if(firstHitTimeTimer <= 0)
+                {
+                    firstHit = true;
+                    other.gameObject.GetComponent<PlayerHealth>().HurtPlayer(damageToGive);
+                }
+            }
+            else
+            {
+                hitTimer -= Time.deltaTime;
 
-                other.gameObject.GetComponent<PlayerHealth>().HurtPlayer(damageToGive);
-                hitTimer = timeBetweenHits;
+                if(hitTimer <= 0)
+                {
+                    hit = true;
+
+                    animator.SetTrigger("Attack");
+
+                    other.gameObject.GetComponent<PlayerHealth>().HurtPlayer(damageToGive);
+                    hitTimer = timeBetweenHits;
+                }
             }
         }
     }
@@ -44,6 +60,8 @@ public class HurtPlayer : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             hitTimer = timeBetweenHits;
+            firstHit = false;
+            firstHitTimeTimer = firstHitTime;
         }
     }
 }

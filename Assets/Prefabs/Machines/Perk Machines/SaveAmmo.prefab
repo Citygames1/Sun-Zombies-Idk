@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 5354492464309715655, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.308
+      objectReference: {fileID: 0}
     - target: {fileID: 5971867362261361777, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -81,7 +85,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766826867729166021, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: thingsToEnable.Array.data[0]
+      propertyPath: 'thingsToEnable.Array.data[0]'
       value: 
       objectReference: {fileID: 7693350265542351012}
     - target: {fileID: 7979144226618479879, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}

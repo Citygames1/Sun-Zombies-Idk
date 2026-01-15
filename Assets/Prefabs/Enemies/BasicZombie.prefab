@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ed1336e0c6b98cd4d809b4219dfec800, type: 2}
+    - target: {fileID: 898104307441235813, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2475442774773528992, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Controller
       value: 
@@ -23,6 +27,10 @@ PrefabInstance:
     - target: {fileID: 6102471641218890535, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: animationTimer
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537349530524083389, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: damageToGive
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6643292779477748014, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Sprite
@@ -101,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c03a29b876ada4bb47e485d6fe4945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  speed: 5
+  speed: 4.5
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1

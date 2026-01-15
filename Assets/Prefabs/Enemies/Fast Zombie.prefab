@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
       value: 0.157609
       objectReference: {fileID: 0}
+    - target: {fileID: 898104307441235813, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 1846636125810854341, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_LinearDrag
       value: 5
@@ -226,9 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2763270f473d2384b846dbbf9e43d37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   speed: 6.5
-  dashSpeed: 45
+  dashSpeed: 52
   dashAmount: 3
   inbetweenDashLength: 1
   dashCooldownLength: 5
