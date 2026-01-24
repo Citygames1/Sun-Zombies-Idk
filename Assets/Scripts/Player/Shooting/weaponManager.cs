@@ -36,11 +36,13 @@ public class weaponManager : MonoBehaviour
             //next weapon
             if(currentWeaponIndex < totalWeapons-1)
             {
+                int currentSortingOrder = currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex++;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder = currentSortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed *= currentGun.GetComponent<Shooting>().weight;
             }
         }
@@ -50,11 +52,13 @@ public class weaponManager : MonoBehaviour
             //previous weapon
             if (currentWeaponIndex > 0) //if not the first weapon
             {
+                int currentSortingOrder = currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex--;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder = currentSortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed *= currentGun.GetComponent<Shooting>().weight;
             }
         }
