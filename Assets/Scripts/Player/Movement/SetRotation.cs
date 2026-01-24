@@ -8,6 +8,12 @@ public class SetRotation : MonoBehaviour
 
     private Vector3 vel = Vector3.zero;
 
+    public void Start() 
+    {
+        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
+        //sets the cameras initial position
+    }
+
     public void Update()
     {
         Vector3 targetPosition = player.position + offset;

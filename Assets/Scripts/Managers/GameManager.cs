@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //Handles the different game components
     public List<GameObject> zombies;
     public float roundCount = 3;
     public float zombiesInARound;
