@@ -38,11 +38,10 @@ public class GunLayering : MonoBehaviour
         if (collision.gameObject.tag == "Player" && layerPlayer == true)
         {
             playerSpriteRenderer.sortingOrder -= 3;
-
-            if (layerGun == true)
-            {
-                cGunSpriteRenderer.sortingOrder -= 3;
-            }
+        }
+        if(collision.gameObject.tag == "Player" && layerGun == true)
+        {
+            cGunSpriteRenderer.sortingOrder -= 3;
         }
         if (collision.gameObject.tag == "Bullet" && layerBullets == true)
         {
@@ -53,7 +52,6 @@ public class GunLayering : MonoBehaviour
         {
             SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponentInParent<SpriteRenderer>();
             enemySpriteRenderer.sortingOrder -= 2;
-
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -61,11 +59,10 @@ public class GunLayering : MonoBehaviour
         if (collision.gameObject.tag == "Player" && layerPlayer == true)
         {
             playerSpriteRenderer.sortingOrder += 3;
-
-            if (layerGun == true)
-            {
-                cGunSpriteRenderer.sortingOrder += 3;
-            }
+        }
+        if (collision.gameObject.tag == "Player" && layerGun == true)
+        {
+            cGunSpriteRenderer.sortingOrder += 3;
         }
         if (collision.gameObject.tag == "Bullet" && layerBullets == true)
         {
@@ -76,7 +73,6 @@ public class GunLayering : MonoBehaviour
         {
             SpriteRenderer enemySpriteRenderer = collision.gameObject.GetComponentInParent<SpriteRenderer>();
             enemySpriteRenderer.sortingOrder += 2;
-
         }
     }
 }
