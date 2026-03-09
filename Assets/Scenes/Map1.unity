@@ -4790,6 +4790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6132631361821797441, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
+      propertyPath: roll
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8716668550887328685, guid: 2e0bfd72bb7973a4886673466629813e, type: 3}
       propertyPath: pointsTextObjectSpawnLocation
       value: 
@@ -20866,7 +20870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1208}
+  m_AnchoredPosition: {x: 0, y: 254362.5}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -21691,6 +21695,139 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 45944036190517843, guid: e9298aa3805d44c49925f3b286b52c82, type: 3}
   m_PrefabInstance: {fileID: 793271448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &800755288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800755289}
+  - component: {fileID: 800755290}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800755289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800755288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1398940583}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800755290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800755288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2997598d7ce23e4ca04e9638c1c701d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  AllSounds:
+  - Type: 0
+    Clip: {fileID: 8300000, guid: 764feca2ad14e4c449adf509d61fd776, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 1
+    Clip: {fileID: 8300000, guid: 764feca2ad14e4c449adf509d61fd776, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 2
+    Clip: {fileID: 8300000, guid: 46906d3e03c1ca542a39efb6c21915a8, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 3
+    Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 4
+    Clip: {fileID: 8300000, guid: d8114daebef3c704cbdcd03d4c8606ba, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 5
+    Clip: {fileID: 8300000, guid: 62d4b94bdcd1df04d9f2a6b73e2aacc8, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 6
+    Clip: {fileID: 8300000, guid: a96c0bcaf7a87fa4da9c4caff7708cd9, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 7
+    Clip: {fileID: 8300000, guid: f619cf7cb6a41f044beb4a8bf6ab26e3, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 8
+    Clip: {fileID: 8300000, guid: b99e7f6d515989b47b1c5c445bb6e39b, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 9
+    Clip: {fileID: 8300000, guid: 43a14ffba265e2b4da8c6c162249ff85, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 10
+    Clip: {fileID: 8300000, guid: ff679b4790050e54798ba8ff95216ac2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 11
+    Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 12
+    Clip: {fileID: 8300000, guid: ff679b4790050e54798ba8ff95216ac2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 13
+    Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 14
+    Clip: {fileID: 8300000, guid: df45a8f2c514a3c439c8fe1d629d5255, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 15
+    Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 16
+    Clip: {fileID: 8300000, guid: 697ab461d14caa64e82419756eec559b, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 17
+    Clip: {fileID: 8300000, guid: d030c9996830837428175e1cecf2aee0, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 18
+    Clip: {fileID: 8300000, guid: df45a8f2c514a3c439c8fe1d629d5255, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 19
+    Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 20
+    Clip: {fileID: 8300000, guid: f680cc8a1a6f8d84bbb8492f8935690e, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 21
+    Clip: {fileID: 8300000, guid: 4e357ef5fbadc174ca532e34a9755719, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
 --- !u!1 &801101769
 GameObject:
   m_ObjectHideFlags: 0
@@ -36573,6 +36710,7 @@ Transform:
   - {fileID: 1051248535}
   - {fileID: 1331890317}
   - {fileID: 1096860453}
+  - {fileID: 800755289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399698237

@@ -3,6 +3,8 @@ using CodeMonkey.Utils;
 
 public class Shooting : MonoBehaviour
 {
+    public string gunName;
+
     //timers
     public float timeToReload = 3;
     [HideInInspector] public float reloadTimer;
@@ -19,6 +21,7 @@ public class Shooting : MonoBehaviour
     public bool isShotgun;
     public bool burstRifle;
     [HideInInspector] public bool chanceToSaveBullet;
+    private bool playedSound = false;
 
     //Game Objects
     public Transform firePoint;
@@ -137,6 +140,7 @@ public class Shooting : MonoBehaviour
     }
     public void Shoot()
     {
+        GetComponent<GunSound>().PlayShot(gunName);
         float randomNumber = Random.Range(0, rangeOfSpread);
         float shootError = Random.Range(randomNumber - 90f, -randomNumber - 90f);
 
@@ -168,6 +172,12 @@ public class Shooting : MonoBehaviour
 
     public void Reload()
     {
+        if(playedSound == false)
+        {
+            GetComponent<GunSound>().PlayReload(gunName); 
+            playedSound = true;
+        }
+
         canShoot = false;
         reloadTimer -= Time.deltaTime;
 
@@ -204,6 +214,7 @@ public class Shooting : MonoBehaviour
             }
 
             reloadTimerRunning = false;
+            playedSound = false;
             reloadTimer = timeToReload;
         }
     }

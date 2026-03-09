@@ -35,6 +35,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6224002081292879851
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -80,6 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 981129739
   m_SortingLayer: 2
   m_SortingOrder: 2
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -89,7 +91,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2601482287608080544
 Animator:
@@ -124,6 +125,7 @@ GameObject:
   - component: {fileID: 8512616184860825699}
   - component: {fileID: 5611191695135060474}
   - component: {fileID: -3264009962888310590}
+  - component: {fileID: 5037053825029609101}
   m_Layer: 0
   m_Name: DefaultGun
   m_TagString: Untagged
@@ -160,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be69237dea349b4ea32f5529e6a82d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunName: DefaultGun
   timeToReload: 3
   reloadTimer: 0
   reloadTimerRunning: 0
@@ -202,6 +205,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5604e46f93632a4a9b76cf4b19fa654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5037053825029609101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389374773817187665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e71a1979f5d4a47af80ee4a8d6e696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunSound
 --- !u!1 &8860993629201468104
 GameObject:
   m_ObjectHideFlags: 0

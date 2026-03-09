@@ -37,6 +37,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 9fd397f93eb8a9d4b8394a36cb98ed46, type: 2}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: gunName
+      value: Uzi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize
       value: 30
       objectReference: {fileID: 0}

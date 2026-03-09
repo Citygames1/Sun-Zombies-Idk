@@ -18,6 +18,8 @@ public class TopDownMovement : MonoBehaviour
     private float rollLengthRevert;
     public float runSpeed;
 
+    public AudioSource roll;
+
     private void Start()
     {
         canRoll = true;
@@ -37,13 +39,11 @@ public class TopDownMovement : MonoBehaviour
             rollDirection = movement;
         }
 
-        if (movement.x < 0)
-        {
+        if (movement.x < 0){
             spriteRenderer.flipX = true;
             flipGuns = true;
         }
-        if(movement.x > 0)
-        {
+        if(movement.x > 0){
             spriteRenderer.flipX = false;
             flipGuns = false;
         }
@@ -53,6 +53,7 @@ public class TopDownMovement : MonoBehaviour
             if (isRolling != true)
             {
                 animator.SetBool("IsRolling", true);
+                AudioManager.Instance.Play(AudioManager.SoundType.Roll);
             }
             isRolling = true;
         }
