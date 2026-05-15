@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1846636125810854341, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      propertyPath: m_LinearDamping
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2475442774773528992, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       propertyPath: m_Controller
       value: 
@@ -239,3 +243,4 @@ MonoBehaviour:
   dashAmount: 3
   inbetweenDashLength: 1
   dashCooldownLength: 5
+  timeBetweenSteps: 0.2

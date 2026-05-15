@@ -27,6 +27,11 @@ public class SprinterPathfind : MonoBehaviour
     private float nextWaypointDistance = 3;
     private float timeBetweenWaypoints = 0.1f;
 
+    //footsteps
+    public float timeBetweenSteps;
+    private float timeBetweenStepsTimer;
+    private bool isTriggered;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -67,10 +72,19 @@ public class SprinterPathfind : MonoBehaviour
 
                 if (inbetweenDashTimer <= 0 && step < dashAmount)
                 {
+                    isTriggered = false;
                     Vector2 dashForce = usedDirection * dashSpeed;
                     rb.AddForce(dashForce, ForceMode2D.Impulse);
                     step++;
+
+                    if(isTriggered == false)
+                    {
+                        AudioManager.Instance.Play(AudioManager.SoundType.FastDash);
+                        isTriggered = true;
+                    }
+
                     inbetweenDashTimer = inbetweenDashLength;
+
                 }
                 else if(step >= dashAmount)
                 {
@@ -87,6 +101,23 @@ public class SprinterPathfind : MonoBehaviour
 
         Vector2 followForce = usedDirection * speed;
         rb.AddForce(followForce, ForceMode2D.Impulse);
+
+        timeBetweenStepsTimer -= Time.deltaTime;
+
+        if(timeBetweenStepsTimer <= 0)
+        {
+            int randomInt = Random.Range(1,100);
+
+            if(randomInt == 1){
+                AudioManager.Instance.Play(AudioManager.SoundType.FastGroan1);
+            }
+            else if(randomInt == 2){
+                AudioManager.Instance.Play(AudioManager.SoundType.FastGroan2);
+            }  
+
+            AudioManager.Instance.Play(AudioManager.SoundType.FastWalk);
+            timeBetweenStepsTimer = timeBetweenSteps;
+        }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 

@@ -10,7 +10,7 @@ public class TopDownMovement : MonoBehaviour
     public bool flipGuns;
     public bool canRoll;
 
-    [HideInInspector] public Vector2 movement;
+    [HideInInspector] public Vector2 movement; 
     Vector2 rollDirection;
 
     public float rollSpeed;
@@ -18,12 +18,17 @@ public class TopDownMovement : MonoBehaviour
     private float rollLengthRevert;
     public float runSpeed;
 
-    public AudioSource roll;
+    //audio variables
+    private float timeBetweenStepsTimer;
+    public float timeBetweenSteps;
+    private bool hasReset;
+
 
     private void Start()
     {
         canRoll = true;
         rollLengthRevert = rollLength;
+        timeBetweenStepsTimer = timeBetweenSteps;
     }
 
     void Update()
@@ -64,6 +69,26 @@ public class TopDownMovement : MonoBehaviour
         if(isRolling == false)
         {
             body.MovePosition(body.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
+            if(movement != new Vector2(0,0))
+            {
+                if(hasReset == true)
+                {
+                    AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                }
+                hasReset = false;
+                timeBetweenStepsTimer -= Time.deltaTime;
+
+                if(timeBetweenStepsTimer <= 0)
+                {
+                    AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                    timeBetweenStepsTimer = timeBetweenSteps;
+                }
+            }
+            else if(hasReset == false)
+            {
+                timeBetweenStepsTimer = timeBetweenSteps;
+                hasReset = true;
+            }
         }
         if(isRolling == true)
         {

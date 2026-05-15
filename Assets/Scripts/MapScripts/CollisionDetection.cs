@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour
@@ -8,6 +9,12 @@ public class CollisionDetection : MonoBehaviour
     public bool isInRange = false;
     private PointSystem totalPointsNumber;
     private Animator animator;
+    public string nameOfDoor;
+
+    private bool playSound = false;
+    private bool soundHasPlayed = false;
+    public float timeBeforeSound;
+    private float timeBeforeSoundTimer;
 
     private void Start()
     {
@@ -15,9 +22,10 @@ public class CollisionDetection : MonoBehaviour
         totalPointsNumber = Player.GetComponent<PointSystem>();
 
         animator = GetComponent<Animator>();
+        timeBeforeSoundTimer = timeBeforeSound;
     }
 
-    private void Update()
+    void Update()
     {
         if (isInRange == true)
         {
@@ -34,11 +42,22 @@ public class CollisionDetection : MonoBehaviour
                         hasBeenBought = true;
                         GetComponent<EdgeCollider2D>().enabled = false;
                         animator.SetTrigger("Open");
+                        playSound = true;
                     }
 
                     //taking away the cost of the door from the total points of the player
                     totalPointsNumber.totalPoints = totalPointsNumber.totalPoints - costToOpen;
                 }
+            }
+        }
+
+        if(playSound == true && soundHasPlayed == false)
+        {
+            timeBeforeSoundTimer -= Time.deltaTime;
+            if(timeBeforeSoundTimer <= 0)
+            {
+                GetComponent<DoorSound>().PlayOpen(nameOfDoor);
+                soundHasPlayed = true;
             }
         }
     }

@@ -59,7 +59,7 @@ public class Shooting : MonoBehaviour
         SetBullets();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (reloadTimerRunning)
         {

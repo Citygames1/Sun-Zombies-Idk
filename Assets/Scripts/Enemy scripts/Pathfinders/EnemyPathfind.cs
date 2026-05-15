@@ -12,12 +12,15 @@ public class EnemyPathfind : MonoBehaviour
     Path path;
     int currentWaypoint = 0;
 
-    //bool reachedEndOfPath = false;
     private Transform target;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3;
     public float timeBetweenWaypoints = 0.5f;
+
+    //footsteps
+    public float timeBetweenSteps;
+    private float timeBetweenStepsTimer;
 
     void Start()
     {
@@ -29,6 +32,8 @@ public class EnemyPathfind : MonoBehaviour
 
         //Name, When you want it to start, how often you want it to repeat (in seconds)
         InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
+
+        timeBetweenStepsTimer = timeBetweenSteps;
     }
 
     private void Update()
@@ -56,6 +61,23 @@ public class EnemyPathfind : MonoBehaviour
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 followForce = usedDirection * speed;
+
+        timeBetweenStepsTimer -= Time.deltaTime;
+
+        if(timeBetweenStepsTimer <= 0)
+        {
+            int randomInt = Random.Range(1,100);
+
+            if(randomInt == 1){
+                AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan1);
+            }
+            else if(randomInt == 2){
+                AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan2);
+            }
+
+            AudioManager.Instance.Play(AudioManager.SoundType.DefaultWalk);
+            timeBetweenStepsTimer = timeBetweenSteps;
+        }
 
         rb.AddForce(followForce, ForceMode2D.Impulse);
 

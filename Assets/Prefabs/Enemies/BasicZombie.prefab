@@ -120,3 +120,4 @@ MonoBehaviour:
   speed: 4.5
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1
+  timeBetweenSteps: 0.38

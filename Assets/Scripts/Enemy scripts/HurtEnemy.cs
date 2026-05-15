@@ -26,6 +26,23 @@ public class HurtEnemy : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             collision.gameObject.GetComponent<EnemyHealthManager>().UpdateHealthBar();
 
+            int randomInt = Random.Range(1,4);
+            if(randomInt == 1){
+                AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+            }
+            else if(randomInt == 2){
+                AudioManager.Instance.Play(AudioManager.SoundType.Hurt2);
+            }
+            else if(randomInt == 3){
+                AudioManager.Instance.Play(AudioManager.SoundType.Hurt3);
+            }
+            else if(randomInt == 4){
+                AudioManager.Instance.Play(AudioManager.SoundType.Hurt4);
+            }
+            else{
+                AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+            }
+
             Destroy(gameObject);
             hasHit = true;
         }

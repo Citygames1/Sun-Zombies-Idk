@@ -15,6 +15,15 @@ public class AudioManager : MonoBehaviour
         HuntingRifleShot, HuntingRifleReload, AutoShotgunShoot, AutoShotgunReload,
         M16A2shot, M16A2reload, AssaultRifleShot, AssaultRifleReload, UziShot, UziReload,
         MagnumShot, MagnumReload, MinigunShot, MinigunReload, RNGgunShot, RNGgunReload,
+
+        //doors
+        StartRoomOpen, GardenOpen, KitchenOpen, ReceptionOpen, SecurityRoomOpen,
+        FoodHallOpen, MainHallOpen, BreakfastHallOpen, SecretOpen,
+
+        //enemy
+        DefaultWalk, FastWalk, FastDash, TankWalk, BruteWalk,
+        DefaultGroan1, DefaultGroan2, FastGroan1, FastGroan2, TankGroan1, TankGroan2, BruteGroan1, BruteGroan2,
+        Hurt1, Hurt2, Hurt3, Hurt4,
         
         //music
         Music_Menu, 

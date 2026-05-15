@@ -410,14 +410,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1579779641199639321}
+      addedObject: {fileID: 8233876155337629281}
   m_SourcePrefab: {fileID: 100100000, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
 --- !u!1 &5576630128968974176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
   m_PrefabInstance: {fileID: 8235345299452500013}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-1579779641199639321
+--- !u!114 &8233876155337629281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,9 +426,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5576630128968974176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c03a29b876ada4bb47e485d6fe4945, type: 3}
+  m_Script: {fileID: 11500000, guid: b0ddbc47fbaeb8941921fd803d65949e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankPathfind
   speed: 2.75
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1
+  timeBetweenSteps: 1
