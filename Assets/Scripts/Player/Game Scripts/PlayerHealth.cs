@@ -3,10 +3,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
-    private HealthBar healthBarScript;
 
     //reducing the players run speed
-    private GameObject player;
     private Color originalColor;
     private SpriteRenderer sr;
     private TopDownMovement playerTDM;
@@ -28,21 +26,21 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public bool turnTransparent;
     [HideInInspector] public bool isSlow;
 
+    public void Awake()
+    {
+        //setting health with health multiplier from the difficulty manager
+        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        maxHealth = maxHealth * difficultyManager.playerHealthMultiplier;
+        currentHealth = maxHealth;
+    }
+
     public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerTDM = player.GetComponent<TopDownMovement>();
-        sr = player.GetComponent<SpriteRenderer>();
+        playerTDM = GetComponent<TopDownMovement>();
+        sr = GetComponent<SpriteRenderer>();
         originalRunSpeed = playerTDM.runSpeed;
 
         originalColor = sr.color;
-
-        //setting health with health multiplier from the difficulty manager
-        difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
-        healthBarScript = GameObject.FindGameObjectWithTag("HealthBarBorder").GetComponent<HealthBar>();
-        maxHealth = maxHealth * difficultyManager.playerHealthMultiplier;
-        currentHealth = maxHealth;
-        healthBarScript.healthBar.maxValue = maxHealth;
 
         hitTransparencyTimer = hitTransparencyLength;
     }
