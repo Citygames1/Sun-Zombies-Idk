@@ -12,6 +12,14 @@ public class HealthBar : MonoBehaviour
     private GameObject player;
     private PlayerHealth playerHealth;
 
+    //colors
+    public Color goodHealthColor;
+    public Color goodHealthColorFade;
+    public Color badHealthColor;
+    public Color badHealthColorFade;
+    public Color criticalHealthColor;
+    public Color criticalHealthColorFade;
+
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,6 +49,22 @@ public class HealthBar : MonoBehaviour
     public void SetHealth()
     {
         healthBar.value = playerHealth.currentHealth;
+        float currentPercentage = (playerHealth.currentHealth / playerHealth.maxHealth) * 100;
+        if(currentPercentage > 55)
+        {
+            healthBar.GetComponentInChildren<Image>().color = goodHealthColor;
+            delayedBar.GetComponentInChildren<Image>().color = goodHealthColorFade;
+        }
+        else if(currentPercentage > 25)
+        {
+            healthBar.GetComponentInChildren<Image>().color = badHealthColor;
+            delayedBar.GetComponentInChildren<Image>().color = badHealthColorFade;
+        }
+        else
+        {
+            healthBar.GetComponentInChildren<Image>().color = criticalHealthColor;
+            delayedBar.GetComponentInChildren<Image>().color = criticalHealthColorFade;
+        }
     }
     public void SetHealthStart()
     {

@@ -26451,7 +26451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2742052.2}
+  m_AnchoredPosition: {x: 0, y: 2765156.2}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -67522,6 +67522,12 @@ MonoBehaviour:
   healthBar: {fileID: 1875149441}
   delayedBar: {fileID: 772014484}
   delay: 0.7
+  goodHealthColor: {r: 0.2088099, g: 0.8396226, b: 0.20198467, a: 1}
+  goodHealthColorFade: {r: 0.616545, g: 0.8018868, b: 0.616545, a: 1}
+  badHealthColor: {r: 0.8962264, g: 0.55376285, b: 0.14796188, a: 1}
+  badHealthColorFade: {r: 0.8962264, g: 0.7259528, b: 0.5284354, a: 1}
+  criticalHealthColor: {r: 0.6886792, g: 0.08770915, b: 0.08770915, a: 1}
+  criticalHealthColorFade: {r: 0.7924528, g: 0.34015664, b: 0.34015664, a: 1}
 --- !u!1 &2013008710
 GameObject:
   m_ObjectHideFlags: 0
