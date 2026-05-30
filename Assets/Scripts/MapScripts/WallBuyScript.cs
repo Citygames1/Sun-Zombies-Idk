@@ -39,11 +39,15 @@ public class WallBuyScript : MonoBehaviour
     {
         if(inRange)
         {
-            currentDetails.GetComponent<TMP_Text>().text = "Press E to buy a " + nameOfGun + " for " + costOfGun;
+            if(hasGun == false)
+            {
+                currentDetails.GetComponent<TMP_Text>().text = "Press E to buy a " + nameOfGun + " for " + costOfGun;
+            }
 
             if (player.GetComponent<PointSystem>().totalPoints >= costOfGun && hasGun == false && Input.GetKeyDown(KeyCode.E))
             {
                 hasGun = true;
+                currentDetails.SetActive(false);
 
                 if (weaponManager.guns.Count >= 3)
                 {
@@ -82,7 +86,6 @@ public class WallBuyScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
-            currentDetails.SetActive(true);
 
             //checking if the player already has the gun
             for (int i = 0; i < weaponManager.guns.Count; i++)
@@ -92,6 +95,11 @@ public class WallBuyScript : MonoBehaviour
                     hasGun = true;
                 }
             }
+
+            if(hasGun == false)
+            {
+                currentDetails.SetActive(true);
+            }
         }
     }
 
@@ -100,7 +108,7 @@ public class WallBuyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
-            hasGun = false; //auto assumes the player doesnt have the gun anymore, as it will be checked again regardless
+            hasGun = false;
             currentDetails.SetActive(false);
         }
     }

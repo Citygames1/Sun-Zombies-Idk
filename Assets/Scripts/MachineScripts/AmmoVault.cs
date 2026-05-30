@@ -31,7 +31,7 @@ public class AmmoVault : MonoBehaviour
 
         if (inRangeOfMachine)
         {
-            currentDetails.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your" + playerShooting.currentGun.name + " for " + costOfMachine + " points";
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your " + playerShooting.currentGun.name + " for " + costOfMachine + " points";
 
             if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && playerShooting.currentGun.GetComponent<Shooting>().needsAmmo == true && Input.GetKeyDown(KeyCode.E))
             {

@@ -23736,7 +23736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6529686611559027518, guid: 00d96de211f8aef4eab1ea57ef84110f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.52
+      value: 29.72
       objectReference: {fileID: 0}
     - target: {fileID: 6529686611559027518, guid: 00d96de211f8aef4eab1ea57ef84110f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25893,7 +25893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3660428.5}
+  m_AnchoredPosition: {x: 0, y: 3756692}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -30146,6 +30146,10 @@ EdgeCollider2D:
   - {x: -13.708654, y: 184.10342}
   - {x: -1.279448, y: 183.93748}
   - {x: -1.2478628, y: 183.16551}
+  - {x: -11.123615, y: 183.29929}
+  - {x: -11.176853, y: 181.63013}
+  - {x: -14.499317, y: 181.6552}
+  - {x: -14.461603, y: 183.22525}
   - {x: -19.434284, y: 183.24725}
   - {x: -19.490433, y: 182.92957}
   - {x: -20.480297, y: 182.83221}
@@ -30207,8 +30211,8 @@ EdgeCollider2D:
   - {x: 7.281583, y: 19.53448}
   - {x: 7.3428955, y: 18.231924}
   - {x: 1.1683662, y: 18.306376}
-  - {x: 1.1290178, y: 19.435717}
-  - {x: -1.1519918, y: 19.423254}
+  - {x: -1.053021, y: 18.31521}
+  - {x: -1.2404528, y: 18.391209}
   - {x: -1.1842408, y: 7.6339517}
   - {x: 1.6954415, y: 5.045503}
   - {x: 2.0434885, y: 2.5906122}
@@ -30266,9 +30270,9 @@ EdgeCollider2D:
   - {x: 37.081654, y: 83.919876}
   - {x: 37.032486, y: 82.80764}
   - {x: 36.16859, y: 82.79473}
-  - {x: 36.13332, y: 80.7108}
-  - {x: 29.914206, y: 80.71366}
-  - {x: 30.029984, y: 82.69626}
+  - {x: 36.13332, y: 81.10552}
+  - {x: 28.217426, y: 81.00452}
+  - {x: 28.229322, y: 82.76551}
   - {x: 26.439821, y: 82.78144}
   - {x: 26.495428, y: 83.83006}
   - {x: 26.519077, y: 84.433014}
@@ -30295,6 +30299,7 @@ EdgeCollider2D:
   - {x: 51.34091, y: 141.35393}
   - {x: 53.78001, y: 146.64104}
   - {x: 63.452457, y: 173.07568}
+  - {x: 63.376793, y: 179.32416}
   - {x: 63.34692, y: 181.79124}
   - {x: 60.694935, y: 181.79137}
   - {x: 60.687687, y: 183.18097}
@@ -30307,8 +30312,9 @@ EdgeCollider2D:
   - {x: 51.429916, y: 181.7816}
   - {x: 51.393433, y: 183.2485}
   - {x: 44.62205, y: 183.25081}
-  - {x: 44.573463, y: 181.84735}
-  - {x: 38.540325, y: 181.9459}
+  - {x: 44.640724, y: 181.64557}
+  - {x: 41.66794, y: 181.7059}
+  - {x: 41.657005, y: 183.17867}
   - {x: 38.42188, y: 183.2844}
   - {x: 37.145355, y: 183.35594}
   - {x: 37.10686, y: 183.9815}
@@ -46600,7 +46606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 227}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486967023
@@ -46650,8 +46656,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -46689,7 +46695,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -206.49368, y: 12.699039, z: -207.39923, w: 0}
+  m_margin: {x: -262.23462, y: 12.699039, z: -263.1403, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -68784,7 +68790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656550699418830757, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.91388
+      value: -12.8
       objectReference: {fileID: 0}
     - target: {fileID: 5656550699418830757, guid: 48f4793cf7cd5444f9b752775e9a00aa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -69602,7 +69608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 803378059545819882, guid: 3f26433346150b447b08334e9fec758b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6638813
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 803378059545819882, guid: 3f26433346150b447b08334e9fec758b, type: 3}
       propertyPath: m_LocalPosition.y
