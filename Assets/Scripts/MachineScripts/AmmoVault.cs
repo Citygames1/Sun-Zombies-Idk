@@ -6,10 +6,15 @@ public class AmmoVault : MonoBehaviour
     private DifficultyManager difficultyManager;
     private GameObject player;
     private GameObject gunHolder;
-    public GameObject textObject;
+    private GameObject currentDetails;
     public bool inRangeOfMachine;
     private float costOfMachine;
     private weaponManager playerShooting;
+
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
 
     void Start()
     {
@@ -23,11 +28,12 @@ public class AmmoVault : MonoBehaviour
     void Update()
     {
         costOfMachine = playerShooting.currentGun.GetComponent<Shooting>().costToReload * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your current gun for " + costOfMachine + " points";
 
-        if (inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
+        if (inRangeOfMachine)
         {
-            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && playerShooting.currentGun.GetComponent<Shooting>().needsAmmo == true)
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to fill the Ammunition of your" + playerShooting.currentGun.name + " for " + costOfMachine + " points";
+
+            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && playerShooting.currentGun.GetComponent<Shooting>().needsAmmo == true && Input.GetKeyDown(KeyCode.E))
             {
                 playerShooting.currentGun.GetComponent<Shooting>().SetBullets();
                 player.GetComponent<PointSystem>().totalPoints -= costOfMachine;
@@ -40,6 +46,7 @@ public class AmmoVault : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRangeOfMachine = true;
+            currentDetails.SetActive(true);
         }
     }
 
@@ -48,6 +55,7 @@ public class AmmoVault : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRangeOfMachine = false;
+            currentDetails.SetActive(false);
         }
     }
 }

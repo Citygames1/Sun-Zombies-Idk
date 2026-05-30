@@ -5,7 +5,7 @@ public class SpeedUp : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
-    public GameObject textObject;
+    private GameObject currentDetails;
     private TopDownMovement tdmPlayer;
     private PlayerHealth playerHealth;
     public float multiplier = 1.5f;
@@ -13,12 +13,16 @@ public class SpeedUp : MonoBehaviour
     public bool hasBought;
     public float costOfMachine;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
+
     void Start()
     {
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to permanently increase speed for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         tdmPlayer = player.GetComponent<TopDownMovement>();
@@ -27,9 +31,11 @@ public class SpeedUp : MonoBehaviour
 
     void Update()
     {
-        if (hasBought == false && inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
+        if (hasBought == false && inRangeOfMachine)
         {
-            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine)
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to permanently increase speed for " + costOfMachine;
+
+            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && Input.GetKeyDown(KeyCode.E))
             {
                 tdmPlayer.runSpeed *= multiplier;
                 playerHealth.originalRunSpeed = tdmPlayer.runSpeed;
@@ -44,6 +50,7 @@ public class SpeedUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRangeOfMachine = true;
+            currentDetails.SetActive(true);
         }
     }
 
@@ -52,6 +59,7 @@ public class SpeedUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRangeOfMachine = false;
+            currentDetails.SetActive(false);
         }
     }
 }

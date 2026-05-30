@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: UIphoto
+      value: 
+      objectReference: {fileID: 2826763325009800818, guid: e9446235aeebfec4ab4cd9656468ec87, type: 3}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: gunName
       value: RNGgun
       objectReference: {fileID: 0}

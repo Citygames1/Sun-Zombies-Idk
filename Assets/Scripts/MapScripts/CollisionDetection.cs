@@ -1,9 +1,11 @@
-using System;
 using UnityEngine;
+using TMPro;
 
 public class CollisionDetection : MonoBehaviour
 {
     public GameObject Player;
+    private GameObject currentDetails;
+
     public int costToOpen;
     [HideInInspector] public bool hasBeenBought;
     public bool isInRange = false;
@@ -15,6 +17,11 @@ public class CollisionDetection : MonoBehaviour
     private bool soundHasPlayed = false;
     public float timeBeforeSound;
     private float timeBeforeSoundTimer;
+
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
 
     private void Start()
     {
@@ -29,6 +36,8 @@ public class CollisionDetection : MonoBehaviour
     {
         if (isInRange == true)
         {
+            currentDetails.GetComponentInChildren<TMP_Text>().text = "Press E to open the " + nameOfDoor + " for " + costToOpen;
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if(totalPointsNumber.totalPoints >= costToOpen)
@@ -67,6 +76,10 @@ public class CollisionDetection : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isInRange = true;
+            if(hasBeenBought == false)
+            {
+                currentDetails.SetActive(true);
+            }
         }
     }
 
@@ -75,6 +88,7 @@ public class CollisionDetection : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isInRange = false;
+            currentDetails.SetActive(false);
         }
     }
 }

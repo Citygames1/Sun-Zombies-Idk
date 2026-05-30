@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunName: DefaultGun
+  UIphoto: {fileID: 1914641026204231675, guid: a9e95d8b6952b0c4580ba6eb3172d46d, type: 3}
   timeToReload: 3
   reloadTimer: 0
   reloadTimerRunning: 0

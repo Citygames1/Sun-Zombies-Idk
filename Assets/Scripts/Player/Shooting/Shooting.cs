@@ -4,6 +4,7 @@ using CodeMonkey.Utils;
 public class Shooting : MonoBehaviour
 {
     public string gunName;
+    public Sprite UIphoto;
 
     //timers
     public float timeToReload = 3;

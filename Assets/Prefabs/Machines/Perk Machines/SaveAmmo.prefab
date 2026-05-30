@@ -84,10 +84,6 @@ PrefabInstance:
       propertyPath: thingsToEnable.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7766826867729166021, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-      propertyPath: 'thingsToEnable.Array.data[0]'
-      value: 
-      objectReference: {fileID: 7693350265542351012}
     - target: {fileID: 7979144226618479879, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -133,7 +129,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
@@ -157,14 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5512053f0b368eb49bb419bcf9b233ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObject: {fileID: 7693350265542351012}
+  textObject: {fileID: 0}
   currentGunShooting: {fileID: 0}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 2000
   chanceToSaveBulletOutOf100: 3
---- !u!1 &7693350265542351012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-  m_PrefabInstance: {fileID: 8062577193994152840}
-  m_PrefabAsset: {fileID: 0}

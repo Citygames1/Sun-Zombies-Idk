@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2692520153621108761}
   - component: {fileID: -2477640675203711967}
   - component: {fileID: -1687078021077634789}
-  - component: {fileID: 8619860030681631429}
   - component: {fileID: 3475791316075761618}
   m_Layer: 0
   m_Name: Door
@@ -113,6 +112,7 @@ MonoBehaviour:
   hasBeenBought: 0
   isInRange: 0
   nameOfDoor: 
+  timeBeforeSound: 0
 --- !u!61 &-2477640675203711967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,19 +202,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &8619860030681631429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3024635071430558275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c67089905a4f84484bb6e6430f9a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thingsToEnable: []
 --- !u!114 &3475791316075761618
 MonoBehaviour:
   m_ObjectHideFlags: 0

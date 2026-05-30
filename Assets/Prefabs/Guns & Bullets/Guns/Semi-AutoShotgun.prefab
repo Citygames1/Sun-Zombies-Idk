@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: UIphoto
+      value: 
+      objectReference: {fileID: 9210535987577759833, guid: 1862b87a70e69fb46a89959feeaf9c8d, type: 3}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: gunName
       value: Semi-AutoShotgun
       objectReference: {fileID: 0}

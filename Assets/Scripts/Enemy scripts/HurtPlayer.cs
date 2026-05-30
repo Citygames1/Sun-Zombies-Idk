@@ -8,7 +8,6 @@ public class HurtPlayer : MonoBehaviour
 
     public int damageToGive;
     private bool firstHit = false;
-    private bool hit;
 
     public float firstHitTime;
     private float firstHitTimeTimer;
@@ -43,8 +42,6 @@ public class HurtPlayer : MonoBehaviour
 
                 if(hitTimer <= 0)
                 {
-                    hit = true;
-
                     animator.SetTrigger("Attack");
 
                     other.gameObject.GetComponent<PlayerHealth>().HurtPlayer(damageToGive);

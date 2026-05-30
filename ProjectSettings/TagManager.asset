@@ -41,6 +41,8 @@ TagManager:
   - RNG gun
   - EnemyCollision
   - RoomName
+  - GunImage
+  - CurrentDetails
   layers:
   - Default
   - TransparentFX

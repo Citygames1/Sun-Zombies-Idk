@@ -41,6 +41,10 @@ PrefabInstance:
       value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
+      propertyPath: UIphoto
+      value: 
+      objectReference: {fileID: 5253183169044235327, guid: b6d4131ed20ba104daad9fc4a02852a1, type: 3}
+    - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: gunName
       value: HuntingRifle
       objectReference: {fileID: 0}

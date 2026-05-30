@@ -6,7 +6,7 @@ public class Regeneration : MonoBehaviour
     private DifficultyManager difficultyManager;
     private GameObject player;
     private PlayerHealth playerHS;
-    public GameObject textObject;
+    private GameObject currentDetails;
     public bool inRangeOfMachine;
     public bool hasBought;
     public float costOfMachine;
@@ -16,12 +16,16 @@ public class Regeneration : MonoBehaviour
     public float regenInterval;
     public bool regenActive;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
+
     void Start()
     {
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to gain regeneration for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         playerHS = player.gameObject.GetComponent<PlayerHealth>();
@@ -31,9 +35,11 @@ public class Regeneration : MonoBehaviour
     void Update()
     {
         //taking points and achknowledging purchase
-        if (hasBought == false && inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
+        if (hasBought == false && inRangeOfMachine)
         {
-            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine)
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to gain regeneration for " + costOfMachine;
+
+            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && Input.GetKeyDown(KeyCode.E))
             {
                 player.GetComponent<PointSystem>().totalPoints -= costOfMachine;
                 hasBought = true;
@@ -79,6 +85,7 @@ public class Regeneration : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRangeOfMachine = true;
+            currentDetails.SetActive(true);
         }
     }
 
@@ -87,6 +94,7 @@ public class Regeneration : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRangeOfMachine = false;
+            currentDetails.SetActive(false);
         }
     }
 }

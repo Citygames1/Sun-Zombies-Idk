@@ -17,7 +17,6 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] bossZombies;
 
     private DifficultyManager difficultyManager;
-    private GameObject gameManager;
     private GameManager gms;
     private GameObject roomNameUI;
 
@@ -40,8 +39,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        gms = gameManager.GetComponent<GameManager>();
+        gms = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         roomNameUI = GameObject.FindGameObjectWithTag("RoomName");
 
         //I know lol
@@ -162,7 +160,7 @@ public class SpawnManager : MonoBehaviour
     public void SetBossStats(GameObject spawnedBoss)
     {
         //sets the new speed based on the difficulty
-        EnemyPathfind enemySpeed = spawnedBoss.GetComponent<EnemyPathfind>();
+        BrutePathfind enemySpeed = spawnedBoss.GetComponent<BrutePathfind>();
         enemySpeed.speed = enemySpeed.speed * difficultyManager.enemySpeedMultiplier;
 
         //sets the new health based on the difficulty
@@ -204,7 +202,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (spawnedZombie.GetComponent<EnemyTypeSetter>().Tank == true)
         {
-            EnemyPathfind enemySpeed = spawnedZombie.GetComponent<EnemyPathfind>();
+            TankPathfind enemySpeed = spawnedZombie.GetComponent<TankPathfind>();
             enemySpeed.speed *= difficultyManager.enemySpeedMultiplier;
             enemySpeed.speed *= speedScaleFloat;
         }

@@ -129,7 +129,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7184802878869932558, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
@@ -154,12 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  textObject: {fileID: 6970994992932641985}
+  textObject: {fileID: 0}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 1500
---- !u!1 &6970994992932641985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 369368234226414380, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
-  m_PrefabInstance: {fileID: 7322203666531102701}
-  m_PrefabAsset: {fileID: 0}

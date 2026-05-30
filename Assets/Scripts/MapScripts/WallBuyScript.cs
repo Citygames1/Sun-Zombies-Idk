@@ -5,7 +5,7 @@ public class WallBuyScript : MonoBehaviour
 {
 
     private DifficultyManager difficultyManager;
-    public GameObject textObject;
+    private GameObject currentDetails;
     public GameObject wallBuyWeapon;
     private GameObject gunHolder;
     private Transform gunHolderTransform;
@@ -18,12 +18,16 @@ public class WallBuyScript : MonoBehaviour
     public bool inRange;
     public bool hasGun = false;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
+
     public void Start()
     {
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfGun = costOfGun * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to buy a " + nameOfGun + " for " + costOfGun;
 
         player = GameObject.FindWithTag("Player");
         gunHolder = GameObject.FindWithTag("GunHolder");
@@ -33,9 +37,11 @@ public class WallBuyScript : MonoBehaviour
 
     public void Update()
     {
-        if(inRange && Input.GetKeyDown(KeyCode.E))
+        if(inRange)
         {
-            if (player.GetComponent<PointSystem>().totalPoints >= costOfGun && hasGun == false)
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to buy a " + nameOfGun + " for " + costOfGun;
+
+            if (player.GetComponent<PointSystem>().totalPoints >= costOfGun && hasGun == false && Input.GetKeyDown(KeyCode.E))
             {
                 hasGun = true;
 
@@ -76,6 +82,7 @@ public class WallBuyScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
+            currentDetails.SetActive(true);
 
             //checking if the player already has the gun
             for (int i = 0; i < weaponManager.guns.Count; i++)
@@ -94,6 +101,7 @@ public class WallBuyScript : MonoBehaviour
         {
             inRange = false;
             hasGun = false; //auto assumes the player doesnt have the gun anymore, as it will be checked again regardless
+            currentDetails.SetActive(false);
         }
     }
 

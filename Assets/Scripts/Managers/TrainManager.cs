@@ -4,7 +4,7 @@ using UnityEngine;
 public class TrainManager : MonoBehaviour
 {
     public GameObject[] doorObjects;
-    public GameObject[] textsObjects;
+    private GameObject currentDetails;
 
     private Animator animator;
 
@@ -13,10 +13,17 @@ public class TrainManager : MonoBehaviour
 
     private GameManager gms;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
+
     private void Start()
     {
         gms = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
+
+        currentDetails.SetActive(false);
     }
 
     private void Update()
@@ -29,12 +36,8 @@ public class TrainManager : MonoBehaviour
                 animator.SetBool("IsReceptionRound", true);
                 animator.SetBool("IsNextRound", false);
 
-                //Sets the text for each of the train doors
-                for (int i = 0; i < doorObjects.Length; i++)
-                {
-                    float price = doorObjects[i].GetComponent<TeleporterScript>().costOfTeleportation;
-                    textsObjects[i].GetComponentInChildren<TMP_Text>().text = "Press E to travel to The Grafton Hotel for " + price;
-                }
+                float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
+                currentDetails.GetComponentInChildren<TMP_Text>().text = "Press E to travel to The Grafton Hotel for " + price;
             }
             if (gms.roundCount % 4 == 1)
             {
@@ -48,12 +51,8 @@ public class TrainManager : MonoBehaviour
                 animator.SetBool("IsFoodHallRound", true);
                 animator.SetBool("IsNextRound", false);
 
-                //Sets the text for each of the train doors
-                for (int i = 0; i < doorObjects.Length; i++)
-                {
-                    float price = doorObjects[i].GetComponent<TeleporterScript>().costOfTeleportation;
-                    textsObjects[i].GetComponentInChildren<TMP_Text>().text = "Press E to travel to St. Peters Food Hall for " + price;
-                }
+                float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
+                currentDetails.GetComponentInChildren<TMP_Text>().text = "Press E to travel to St. Peters Food Hall for " + price;
             }
             if (gms.roundCount % 4 == 3)
             {

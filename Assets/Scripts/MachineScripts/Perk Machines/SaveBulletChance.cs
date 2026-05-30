@@ -5,7 +5,7 @@ public class SaveBulletChance : MonoBehaviour
 {
     private DifficultyManager difficultyManager;
     private GameObject player;
-    public GameObject textObject;
+    private GameObject currentDetails;
     private GameObject weaponHolder;
     private weaponManager weaponManager;
     [HideInInspector] public Shooting currentGunShooting;
@@ -14,12 +14,16 @@ public class SaveBulletChance : MonoBehaviour
     public float costOfMachine;
     public int chanceToSaveBulletOutOf100;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
+
     public void Start()
     {
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         costOfMachine = costOfMachine * difficultyManager.priceMultiplier;
-        textObject.GetComponent<TMP_Text>().text = "Press E to gain chance to save ammunition for " + costOfMachine;
 
         player = GameObject.FindWithTag("Player");
         weaponHolder = GameObject.FindWithTag("GunHolder");
@@ -30,9 +34,11 @@ public class SaveBulletChance : MonoBehaviour
     {
         currentGunShooting = weaponManager.currentGun.GetComponent<Shooting>();
 
-        if (hasBought == false && inRangeOfMachine && Input.GetKeyDown(KeyCode.E))
+        if (hasBought == false && inRangeOfMachine)
         {
-            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine)
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to gain chance to save ammunition for " + costOfMachine;    
+
+            if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && Input.GetKeyDown(KeyCode.E))
             {
                 currentGunShooting.chanceToSaveBulletInt = chanceToSaveBulletOutOf100;
                 currentGunShooting.chanceToSaveBullet = true;
@@ -47,6 +53,7 @@ public class SaveBulletChance : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRangeOfMachine = true;
+            currentDetails.SetActive(true);
         }
     }
 
@@ -55,6 +62,7 @@ public class SaveBulletChance : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRangeOfMachine = false;
+            currentDetails.SetActive(false);
         }
     }
 }

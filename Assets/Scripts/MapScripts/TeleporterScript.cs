@@ -9,6 +9,7 @@ public class TeleporterScript : MonoBehaviour
     public GameObject receptionTeleport;
     public GameObject foodHallTeleport;
     public GameObject player;
+    private GameObject currentDetails;
 
     private Rigidbody2D rb;
     private Rigidbody2D rb2;
@@ -19,6 +20,11 @@ public class TeleporterScript : MonoBehaviour
     private TrainManager tms;
 
     public bool inRange;
+
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+    }
 
     private void Start()
     {
@@ -73,6 +79,7 @@ public class TeleporterScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = true;
+            currentDetails.SetActive(true);
         }
     }
 
@@ -81,6 +88,7 @@ public class TeleporterScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = false;
+            currentDetails.SetActive(false);
         }
     }
 }
