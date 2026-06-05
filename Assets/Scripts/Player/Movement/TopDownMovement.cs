@@ -58,7 +58,8 @@ public class TopDownMovement : MonoBehaviour
             if (isRolling != true)
             {
                 animator.SetBool("IsRolling", true);
-                AudioManager.Instance.Play(AudioManager.SoundType.Roll);
+                GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Roll);
+                soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             isRolling = true;
         }
@@ -73,14 +74,16 @@ public class TopDownMovement : MonoBehaviour
             {
                 if(hasReset == true)
                 {
-                    AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                    GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                    soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
                 }
                 hasReset = false;
                 timeBetweenStepsTimer -= Time.deltaTime;
 
                 if(timeBetweenStepsTimer <= 0)
                 {
-                    AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                    GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Walk);
+                    soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
                     timeBetweenStepsTimer = timeBetweenSteps;
                 }
             }

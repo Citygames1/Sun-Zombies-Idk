@@ -69,14 +69,17 @@ public class TankPathfind : MonoBehaviour
             int randomInt = Random.Range(1,100);
 
             if(randomInt == 1){
-                AudioManager.Instance.Play(AudioManager.SoundType.TankGroan1);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.TankGroan1);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                AudioManager.Instance.Play(AudioManager.SoundType.TankGroan2);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.TankGroan2);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }  
 
 
-            AudioManager.Instance.Play(AudioManager.SoundType.TankWalk);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.TankWalk);
+            soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             timeBetweenStepsTimer = timeBetweenSteps;
         }
 

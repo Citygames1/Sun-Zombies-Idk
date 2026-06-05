@@ -9,16 +9,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4545455
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.54545456
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 374925142, guid: 94ac160bc2c81a04c901269f3320b97a, type: 3}
+      objectReference: {fileID: 374925142, guid: 02693dc928cb8574696aa00daf418c2c, type: 3}
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323321379206817225, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Name
       value: AK-47 WallBuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1302247872888316462, guid: c72fba35a91eb2343830901428b2b35c, type: 3}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
@@ -88,6 +120,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.107
       objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_text
       value: Press E to buy AK-47 (1000 points)
@@ -111,6 +147,14 @@ PrefabInstance:
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Offset.y
       value: -0.1167537
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.4545455
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.54545456
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

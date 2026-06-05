@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 410fa4af431899346a98385e5bad28e3, type: 3}
+      objectReference: {fileID: 21300000, guid: 72073b5bda6f94a4da457eb0eeebfea4, type: 3}
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -24,9 +32,33 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323321379206817225, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Name
       value: Sniper Wall Buy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6246304995824642988, guid: 91685c283f2e5be48b21b6b6a82471eb, type: 3}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
@@ -116,6 +148,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_text
       value: Press E to buy Sniper (1500 points)
@@ -139,6 +187,14 @@ PrefabInstance:
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Offset.y
       value: -0.08207971
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

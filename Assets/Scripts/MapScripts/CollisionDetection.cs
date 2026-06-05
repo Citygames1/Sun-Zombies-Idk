@@ -65,7 +65,7 @@ public class CollisionDetection : MonoBehaviour
             timeBeforeSoundTimer -= Time.deltaTime;
             if(timeBeforeSoundTimer <= 0)
             {
-                GetComponent<DoorSound>().PlayOpen(nameOfDoor);
+                GetComponent<DoorSound>().PlayOpen(nameOfDoor, GetComponent<Transform>().position);
                 soundHasPlayed = true;
             }
         }

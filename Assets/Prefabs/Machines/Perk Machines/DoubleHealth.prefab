@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5971867362261361777, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7132042099030640098, guid: c0e7ac2c01be8f443b9cb602ba1efaef, type: 3}
       propertyPath: m_text
       value: Press E to permanently increase health (1500 points)
@@ -155,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  textObject: {fileID: 0}
   inRangeOfMachine: 0
   hasBought: 0
   costOfMachine: 1500

@@ -69,13 +69,16 @@ public class BrutePathfind : MonoBehaviour
             int randomInt = Random.Range(1,100);
 
             if(randomInt == 1){
-                AudioManager.Instance.Play(AudioManager.SoundType.BruteGroan1);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.BruteGroan1);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                AudioManager.Instance.Play(AudioManager.SoundType.BruteGroan2);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.BruteGroan2);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }   
 
-            AudioManager.Instance.Play(AudioManager.SoundType.BruteWalk);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.BruteWalk);
+            soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             timeBetweenStepsTimer = timeBetweenSteps;
         }
 

@@ -9,20 +9,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8f894d4bb35f11544aea08f895576ed4, type: 3}
+      objectReference: {fileID: 21300000, guid: 43e03d5a230671a4dae7f0894e3a23a4, type: 3}
+    - target: {fileID: -9162331792338886910, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1949187561995833841, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: thingsToEnable.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1949187561995833841, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-      propertyPath: thingsToEnable.Array.data[0]
-      value: 
-      objectReference: {fileID: 3890329359208600441}
+    - target: {fileID: 2323321379206817225, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2832697311922978055, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_Name
       value: HuntingRifleWallBuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2202466956991699467, guid: 286a93922ffd1eb469afeae80fe73145, type: 3}
+    - target: {fileID: 3846849366660993838, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4588327380445432239, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: costOfGun
@@ -92,6 +120,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.112
       objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461373825164756707, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0051
+      objectReference: {fileID: 0}
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_text
       value: Press E to buy Hunting Rifle (850 points)
@@ -99,6 +135,14 @@ PrefabInstance:
     - target: {fileID: 8041732683829738325, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_margin.z
       value: 2.9744735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 8280683179536862821, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -113,8 +157,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
---- !u!1 &3890329359208600441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5223158744170131302, guid: 9daf526ea2d1ea44294e629328b90d77, type: 3}
-  m_PrefabInstance: {fileID: 9043609328713120799}
-  m_PrefabAsset: {fileID: 0}

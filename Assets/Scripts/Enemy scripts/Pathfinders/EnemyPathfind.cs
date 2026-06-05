@@ -69,13 +69,16 @@ public class EnemyPathfind : MonoBehaviour
             int randomInt = Random.Range(1,100);
 
             if(randomInt == 1){
-                AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan1);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan1);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan2);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan2);
+                soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
 
-            AudioManager.Instance.Play(AudioManager.SoundType.DefaultWalk);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.DefaultWalk);
+            soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             timeBetweenStepsTimer = timeBetweenSteps;
         }
 

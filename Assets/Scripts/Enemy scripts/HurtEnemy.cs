@@ -28,19 +28,24 @@ public class HurtEnemy : MonoBehaviour
 
             int randomInt = Random.Range(1,4);
             if(randomInt == 1){
-                AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+                GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+                soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                AudioManager.Instance.Play(AudioManager.SoundType.Hurt2);
+                GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Hurt2);
+                soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 3){
-                AudioManager.Instance.Play(AudioManager.SoundType.Hurt3);
+                GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Hurt3);
+                soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 4){
-                AudioManager.Instance.Play(AudioManager.SoundType.Hurt4);
+                GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.Hurt4);
+                soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else{
-                AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+               GameObject soundObj =  AudioManager.Instance.Play(AudioManager.SoundType.Hurt1);
+               soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
 
             Destroy(gameObject);

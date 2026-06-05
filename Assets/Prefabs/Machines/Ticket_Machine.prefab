@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 5534193796427487122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0009, y: 1.605, z: -0.17935789}
-  m_LocalScale: {x: 2.5121539, y: 3.3028529, z: 1}
+  m_LocalPosition: {x: -0.0023, y: 0.17, z: -0.17935789}
+  m_LocalScale: {x: 0.4287599, y: 0.56686145, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7150704593049833700}
@@ -79,9 +79,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 981129739
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2868101353237766674, guid: b1487e2d23de5d94798833dea41db420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &6727319965899070389
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 7309359675945502812}
   - component: {fileID: 8150557565518907680}
   - component: {fileID: 6057206508937944982}
+  - component: {fileID: 8450885006250008087}
   m_Layer: 11
   m_Name: Ticket_Machine
   m_TagString: Untagged
@@ -173,7 +174,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 981129739
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 210415185d4da694981f4956f15ecf31, type: 3}
   m_Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
@@ -267,3 +268,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.7630918, y: -0.42648196}
   m_Radius: 3.0385125
+--- !u!114 &8450885006250008087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727319965899070389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c67089905a4f84484bb6e6430f9a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnablePopUpText
+  thingsToEnable:
+  - {fileID: 5534193796427487122}

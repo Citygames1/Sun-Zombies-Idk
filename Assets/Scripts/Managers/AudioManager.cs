@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour
         public SoundType Type;
         public AudioClip Clip;
         [Range(0f, 1f)] public float Volume = 1f;
+        public float MaxDistance = 5f;
         [HideInInspector] public AudioSource Source;
     }
  
@@ -56,24 +57,26 @@ public class AudioManager : MonoBehaviour
         }
     }
  
- 
- 
     //Call this method to play a sound
-    public void Play(SoundType type)
+    public GameObject Play(SoundType type)
     {
         if (!_soundDictionary.TryGetValue(type, out Sound s))
         {
             Debug.LogWarning($"Sound type {type} not found!");
-            return;
+            return null;
         }
  
         var soundObj = new GameObject($"Sound_{type}");
         var audioSrc = soundObj.AddComponent<AudioSource>();
+        soundObj.AddComponent<SetVolume>();
+        soundObj.GetComponent<SetVolume>().maxDistance = s.MaxDistance;
  
         audioSrc.clip = s.Clip;
         audioSrc.volume = s.Volume;
         audioSrc.Play();
         Destroy(soundObj, s.Clip.length);
+
+        return soundObj;
     }
  
     //Call this method to change music tracks

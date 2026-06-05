@@ -2,43 +2,52 @@ using UnityEngine;
 
 public class DoorSound : MonoBehaviour
 {
-    public void PlayOpen(string nameOfDoor)
+    public void PlayOpen(string nameOfDoor, Vector3 objectPos)
     {
         if(nameOfDoor == "StartRoom")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.StartRoomOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.StartRoomOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "Garden")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.GardenOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.GardenOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "SecurityRoom")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.SecurityRoomOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.SecurityRoomOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "Kitchen")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.KitchenOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.KitchenOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "BreakfastHall")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.BreakfastHallOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.BreakfastHallOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "FoodHall")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.FoodHallOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.FoodHallOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "Reception")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.ReceptionOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.ReceptionOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "MainHall")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.MainHallOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.MainHallOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
         if(nameOfDoor == "Secret")
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.SecretOpen);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.SecretOpen);
+            soundObj.GetComponent<Transform>().position = objectPos;
         }
     }
 }
