@@ -1090,6 +1090,7 @@ Transform:
   m_Children:
   - {fileID: 1949374679}
   - {fileID: 882070293}
+  - {fileID: 1391740025}
   m_Father: {fileID: 197032618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &45776182
@@ -1268,7 +1269,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &50646886
 GameObject:
@@ -4513,7 +4514,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &150540689
 GameObject:
@@ -4990,7 +4991,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &172227456
 GameObject:
@@ -6690,7 +6691,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &216263447 stripped
 GameObject:
@@ -6713,7 +6714,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &221091936
 GameObject:
@@ -9220,7 +9221,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &277503914
 GameObject:
@@ -13910,7 +13911,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &385124487
 GameObject:
@@ -26706,7 +26707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4943373}
+  m_AnchoredPosition: {x: 0, y: 5303321}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -27864,241 +27865,289 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 764feca2ad14e4c449adf509d61fd776, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 1
     Clip: {fileID: 8300000, guid: e79bcf11c3d66b4489456bd6c2cc643b, type: 3}
     Volume: 0.3
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 2
     Clip: {fileID: 8300000, guid: 46906d3e03c1ca542a39efb6c21915a8, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 3
     Clip: {fileID: 8300000, guid: 2f78326b82b2d6d4cb3cdcc65a579c1e, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 4
     Clip: {fileID: 8300000, guid: d8114daebef3c704cbdcd03d4c8606ba, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 5
     Clip: {fileID: 8300000, guid: 62d4b94bdcd1df04d9f2a6b73e2aacc8, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 6
     Clip: {fileID: 8300000, guid: a96c0bcaf7a87fa4da9c4caff7708cd9, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 7
     Clip: {fileID: 8300000, guid: f619cf7cb6a41f044beb4a8bf6ab26e3, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 8
     Clip: {fileID: 8300000, guid: b99e7f6d515989b47b1c5c445bb6e39b, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 9
     Clip: {fileID: 8300000, guid: 43a14ffba265e2b4da8c6c162249ff85, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 10
     Clip: {fileID: 8300000, guid: f3393254f376ab349b63c39c16a1f385, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 11
     Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 12
     Clip: {fileID: 8300000, guid: f3393254f376ab349b63c39c16a1f385, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 13
     Clip: {fileID: 8300000, guid: fd1c3297b4cd3ed40b2201707112f8b2, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 14
     Clip: {fileID: 8300000, guid: df45a8f2c514a3c439c8fe1d629d5255, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 15
     Clip: {fileID: 8300000, guid: c4b8fb37ef9553f4d96de271f93efbdc, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 16
     Clip: {fileID: 8300000, guid: 697ab461d14caa64e82419756eec559b, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 17
     Clip: {fileID: 8300000, guid: d030c9996830837428175e1cecf2aee0, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 18
     Clip: {fileID: 8300000, guid: 160f1d9718c04184db17d22b9da86864, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 19
     Clip: {fileID: 8300000, guid: 72ab04c6e56138d428657f04968dbed9, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 20
     Clip: {fileID: 8300000, guid: f680cc8a1a6f8d84bbb8492f8935690e, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 21
     Clip: {fileID: 8300000, guid: 4e357ef5fbadc174ca532e34a9755719, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 1
     Source: {fileID: 0}
   - Type: 22
     Clip: {fileID: 8300000, guid: 9471c3e395c7a7a43943df3f43eaff4d, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 23
     Clip: {fileID: 8300000, guid: ab7645d9a66f5b74faac9c5d4d9b7ff4, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 24
     Clip: {fileID: 8300000, guid: 588fe4ce67d54d34a8c9ba465ece3473, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 25
     Clip: {fileID: 8300000, guid: be243c8d42335394395f970561d43da3, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 26
     Clip: {fileID: 8300000, guid: 5b1363cf8f89a0c45ba70b1c824718e6, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 27
     Clip: {fileID: 8300000, guid: 9da7300c94c8f4544846e8f942c494ad, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 30
     Clip: {fileID: 8300000, guid: 9471c3e395c7a7a43943df3f43eaff4d, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 29
     Clip: {fileID: 8300000, guid: be243c8d42335394395f970561d43da3, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 28
     Clip: {fileID: 8300000, guid: 2423aa8a431c55a448f1604eb6935201, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 31
     Clip: {fileID: 8300000, guid: adfff6c9d11d0744b9d42d115258c474, type: 3}
     Volume: 0.05
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 32
     Clip: {fileID: 8300000, guid: eaed15802db3b6944bed0fbf94f5bb52, type: 3}
     Volume: 0.3
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 33
     Clip: {fileID: 8300000, guid: 3930c5c41ef668241bd00d2d31ffb452, type: 3}
     Volume: 0.6
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 34
     Clip: {fileID: 8300000, guid: cddfa755e4fe58e41acc6030e7565674, type: 3}
     Volume: 0.05
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 35
     Clip: {fileID: 8300000, guid: e4e3d5eb89297f940b3ea69088e5b954, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 36
     Clip: {fileID: 8300000, guid: ce4decdd26ee033438da00982c015c36, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 37
     Clip: {fileID: 8300000, guid: ce4decdd26ee033438da00982c015c36, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 38
     Clip: {fileID: 8300000, guid: 0cfdd8892f4978a498ae175ae056933f, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 39
     Clip: {fileID: 8300000, guid: 2552623cb9a2b1049b2f5d934d9b551c, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 40
     Clip: {fileID: 8300000, guid: fc729ebdc7827774883cf1f24d919756, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 41
     Clip: {fileID: 8300000, guid: 7f8617297b9d6944189b0db335d28d42, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 42
     Clip: {fileID: 8300000, guid: 3aaf70ddb651ef74fbe36ec82ce11ced, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 43
     Clip: {fileID: 8300000, guid: 9d760ccebe6e7a549950c437b424e14a, type: 3}
     Volume: 1
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 44
     Clip: {fileID: 8300000, guid: 261178b65cae4514b9074c8949a6a87a, type: 3}
     Volume: 0.2
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 45
     Clip: {fileID: 8300000, guid: 6ead878d2bd5a76409f0c270e39b0023, type: 3}
     Volume: 0.2
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 46
     Clip: {fileID: 8300000, guid: d9fa3994cc3543645914b561590c838f, type: 3}
     Volume: 0.2
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
   - Type: 47
     Clip: {fileID: 8300000, guid: 3d7286f6902c410469acf68566dd42d3, type: 3}
     Volume: 0.2
     MaxDistance: 5
+    followsPlayer: 0
     Source: {fileID: 0}
 --- !u!1 &801101769
 GameObject:
@@ -29392,7 +29441,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &830096614
 GameObject:
@@ -30476,7 +30525,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &892053050
 GameObject:
@@ -34430,7 +34479,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &989790057
 GameObject:
@@ -35465,7 +35514,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1038467830
 GameObject:
@@ -35811,6 +35860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a1598ebcae9d34196854ad798837db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trainArrivalRound: 1
   doorObjects:
   - {fileID: 272474661}
   - {fileID: 886441845}
@@ -35830,8 +35880,7 @@ MonoBehaviour:
   - {fileID: 1459431771}
   - {fileID: 216263447}
   - {fileID: 1310658218}
-  isReceptionRound: 1
-  isFoodHallRound: 0
+  currentLocation: startArea
 --- !u!95 &1051248537
 Animator:
   serializedVersion: 7
@@ -41333,7 +41382,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1215081330
 GameObject:
@@ -44080,7 +44129,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1311591918
 GameObject:
@@ -46238,6 +46287,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390316566}
   m_CullTransparentMesh: 1
+--- !u!1 &1391740024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1391740025}
+  - component: {fileID: 1391740026}
+  m_Layer: 0
+  m_Name: StartAreaTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1391740025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391740024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.57, y: -68.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39401850}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1391740026
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391740024}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1391810477
 GameObject:
   m_ObjectHideFlags: 0
@@ -47845,7 +47953,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1461990135
 GameObject:
@@ -47959,7 +48067,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1472126559
 GameObject:
@@ -65036,7 +65144,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &1941793099
 GameObject:
@@ -67969,7 +68077,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &2000789569
 GameObject:
@@ -71859,7 +71967,7 @@ MonoBehaviour:
   gameManager: {fileID: 928118038}
   receptionTeleport: {fileID: 1949374678}
   foodHallTeleport: {fileID: 882070292}
-  player: {fileID: 214696167}
+  startAreaTeleport: {fileID: 1391740024}
   inRange: 0
 --- !u!1 &2097503567
 GameObject:

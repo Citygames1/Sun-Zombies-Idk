@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour
         public AudioClip Clip;
         [Range(0f, 1f)] public float Volume = 1f;
         public float MaxDistance = 5f;
+        public bool followsPlayer;
         [HideInInspector] public AudioSource Source;
     }
  
@@ -70,6 +71,7 @@ public class AudioManager : MonoBehaviour
         var audioSrc = soundObj.AddComponent<AudioSource>();
         soundObj.AddComponent<SetVolume>();
         soundObj.GetComponent<SetVolume>().maxDistance = s.MaxDistance;
+        soundObj.GetComponent<SetVolume>().followsPlayer = s.followsPlayer;
  
         audioSrc.clip = s.Clip;
         audioSrc.volume = s.Volume;

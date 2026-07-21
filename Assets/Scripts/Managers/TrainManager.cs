@@ -1,15 +1,19 @@
 using TMPro;
 using UnityEngine;
 
+//function: Manages how the trains arrive and depart the station
+//Schedule: Every 4 rounds the train arrives at the start room and the hotel, 2 rounds later it arrives at the foodhall and repeat (cant travel back to spawn)
+//new shecdule: Train moves from location to location. (Can travel back to the spawn area)
+
 public class TrainManager : MonoBehaviour
 {
+    public int trainArrivalRound;
+
     public GameObject[] doorObjects;
     private GameObject currentDetails;
+    public string currentLocation = "startArea";
 
     private Animator animator;
-
-    public bool isReceptionRound;
-    public bool isFoodHallRound;
 
     private GameManager gms;
 
@@ -28,38 +32,10 @@ public class TrainManager : MonoBehaviour
 
     private void Update()
     {
-        if(gms.roundCount > 3)
+        if(gms.roundCount  >= trainArrivalRound)
         {
-            if (gms.roundCount % 4 == 0)
-            {
-                isReceptionRound = true;
-                animator.SetBool("IsReceptionRound", true);
-                animator.SetBool("IsNextRound", false);
-
-                float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
-                currentDetails.GetComponentInChildren<TMP_Text>().text = "Press E to travel to The Grafton Hotel for " + price;
-            }
-            if (gms.roundCount % 4 == 1)
-            {
-                isReceptionRound = false;
-                animator.SetBool("IsReceptionRound", false);
-                animator.SetBool("IsNextRound", true);
-            }
-            if (gms.roundCount % 4 == 2)
-            {
-                isFoodHallRound = true;
-                animator.SetBool("IsFoodHallRound", true);
-                animator.SetBool("IsNextRound", false);
-
-                float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
-                currentDetails.GetComponentInChildren<TMP_Text>().text = "Press E to travel to St. Peters Food Hall for " + price;
-            }
-            if (gms.roundCount % 4 == 3)
-            {
-                isFoodHallRound = false;
-                animator.SetBool("IsFoodHallRound", false);
-                animator.SetBool("IsNextRound", true);
-            }
+            animator.SetBool("IsReceptionRound", true);
+            float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
         }
     }
 }
