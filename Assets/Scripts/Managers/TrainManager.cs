@@ -1,8 +1,7 @@
-using TMPro;
 using UnityEngine;
 
 //function: Manages how the trains arrive and depart the station
-//Schedule: Every 4 rounds the train arrives at the start room and the hotel, 2 rounds later it arrives at the foodhall and repeat (cant travel back to spawn)
+//old Schedule: Every 4 rounds the train arrives at the start room and the hotel, 2 rounds later it arrives at the foodhall and repeat (cant travel back to spawn)
 //new shecdule: Train moves from location to location. (Can travel back to the spawn area)
 
 public class TrainManager : MonoBehaviour

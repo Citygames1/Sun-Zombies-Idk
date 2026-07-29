@@ -24,6 +24,9 @@ public class AudioManager : MonoBehaviour
         DefaultWalk, FastWalk, FastDash, TankWalk, BruteWalk,
         DefaultGroan1, DefaultGroan2, FastGroan1, FastGroan2, TankGroan1, TankGroan2, BruteGroan1, BruteGroan2,
         Hurt1, Hurt2, Hurt3, Hurt4,
+
+        //Ui
+        RoundBeep,
         
         //music
         Music_Menu, 
