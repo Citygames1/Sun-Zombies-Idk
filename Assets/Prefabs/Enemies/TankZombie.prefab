@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ddbc47fbaeb8941921fd803d65949e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankPathfind
-  speed: 2.75
-  nextWaypointDistance: 3
+  speed: 12
+  nextWaypointDistance: 0.5
   timeBetweenWaypoints: 0.1
   timeBetweenSteps: 1

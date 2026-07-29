@@ -13,24 +13,22 @@ public class SprinterPathfind : MonoBehaviour
     int currentWaypoint = 0;
 
     private Transform target;
-    public float speed = 50f;
-    public float dashSpeed = 1000f;
 
-    //timers
-    public int dashAmount = 3;
-    private int step = 0;
-    public float inbetweenDashLength = 1f;
-    private float inbetweenDashTimer;
-    public float dashCooldownLength = 5f;
-    private float dashCooldownTimer = 0f;
+    public float speed = 200f;
+    public float nextWaypointDistance = 3;
+    public float timeBetweenWaypoints = 0.5f;
 
-    private float nextWaypointDistance = 3;
-    private float timeBetweenWaypoints = 0.1f;
+    //dash stuff
+    public float dashSpeed;
+    public float dashLength = 0.65f;
+    private float dashLengthTimer;
+    public float dashCooldown = 1;
+    private float dashCooldownTimer;
+    private bool isOnCooldown = false;
 
     //footsteps
     public float timeBetweenSteps;
     private float timeBetweenStepsTimer;
-    private bool isTriggered;
 
     void Start()
     {
@@ -42,6 +40,10 @@ public class SprinterPathfind : MonoBehaviour
 
         //Name, When you want it to start, how often you want it to repeat (in seconds)
         InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
+
+        timeBetweenStepsTimer = timeBetweenSteps;
+        dashLengthTimer = dashLength;
+        dashCooldownTimer = dashCooldown;
     }
 
     private void Update()
@@ -51,56 +53,61 @@ public class SprinterPathfind : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (path == null){
-            return;
-        }
-        if (currentWaypoint >= path.vectorPath.Count){
+        if(path == null)
+        {
             return;
         }
 
-        float distanceFromTarget = Vector2.Distance(target.position, rb.position);
+        if(currentWaypoint >= path.vectorPath.Count)
+        {
+            //reachedEndOfPath = true;
+            return;
+        }
+        else
+        {
+            //reachedEndOfPath = false;
+        }
+
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
-        if (distanceFromTarget < 8)
+        float distanceFromTarget = Vector2.Distance(transform.position, target.transform.position);
+
+        if(distanceFromTarget < 8)
         {
-            dashCooldownTimer -= Time.deltaTime;
-
-            if (dashCooldownTimer <= 0)
+            if(isOnCooldown == false)
             {
-                inbetweenDashTimer -= Time.deltaTime;
+                dashLengthTimer -= Time.deltaTime;
 
-                if (inbetweenDashTimer <= 0 && step < dashAmount)
+                Vector2 desiredVelocity = usedDirection * dashSpeed;
+                rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, desiredVelocity, 10f * Time.fixedDeltaTime);
+
+                if(dashLengthTimer <= 0)
                 {
-                    isTriggered = false;
-                    Vector2 dashForce = usedDirection * dashSpeed;
-                    rb.AddForce(dashForce, ForceMode2D.Impulse);
-                    step++;
-
-                    if(isTriggered == false)
-                    {
-                        AudioManager.Instance.Play(AudioManager.SoundType.FastDash);
-                        isTriggered = true;
-                    }
-
-                    inbetweenDashTimer = inbetweenDashLength;
-
+                    isOnCooldown = true;
+                    dashLengthTimer = dashLength;
                 }
-                else if(step >= dashAmount)
+            }
+            else
+            {
+                Vector2 desiredVelocity = usedDirection * speed;
+                rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, desiredVelocity, 10f * Time.fixedDeltaTime);
+
+                dashCooldownTimer -= Time.deltaTime;
+
+                if(dashCooldownTimer <= 0)
                 {
-                    step = 0;
-                    dashCooldownTimer = dashCooldownLength;
+                    isOnCooldown = false;
                 }
             }
         }
         else
         {
-            dashCooldownTimer = 0;
-            inbetweenDashTimer = 0;
-        }
+            Vector2 desiredVelocity = usedDirection * speed;
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, desiredVelocity, 10f * Time.fixedDeltaTime);
 
-        Vector2 followForce = usedDirection * speed;
-        rb.AddForce(followForce, ForceMode2D.Impulse);
+            dashLengthTimer = dashLength;
+            dashCooldownTimer = dashCooldown;
+        }
 
         timeBetweenStepsTimer -= Time.deltaTime;
 
@@ -109,37 +116,34 @@ public class SprinterPathfind : MonoBehaviour
             int randomInt = Random.Range(1,100);
 
             if(randomInt == 1){
-                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.FastGroan1);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan1);
                 soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.FastGroan2);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan2);
                 soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
-            }  
+            }
 
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.FastWalk);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.DefaultWalk);
             soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             timeBetweenStepsTimer = timeBetweenSteps;
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if (distance < nextWaypointDistance)
+        if(distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
 
         animator.SetFloat("Speed", distance);
 
-        if (rb.linearVelocity.x >= 0.01f)
+        //Flipping the sprite based on bigger movements rather than small
+        float xDifference = target.position.x - transform.position.x;
+
+        if (Mathf.Abs(xDifference) > 0.15f)
         {
-            //on the right
-            spriteRenderer.flipX = false;
-        }
-        if (rb.linearVelocity.x <= -0.01f)
-        {
-            //on the left
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = xDifference < 0;
         }
     }
 

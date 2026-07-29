@@ -15,8 +15,8 @@ public class LungerPathfind : MonoBehaviour
     //bool reachedEndOfPath = false;
     private Transform target;
     public float speed = 200f;
-    private float nextWaypointDistance = 3;
-    private float timeBetweenWaypoints = 1f;
+    public float nextWaypointDistance = 3;
+    public float timeBetweenWaypoints = 1f;
 
     //timer
     public float movementTimer;
@@ -66,13 +66,10 @@ public class LungerPathfind : MonoBehaviour
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 followForce = usedDirection * speed;
 
         if (movementTimerTime <= 0)
         {
-            rb.linearVelocity = Vector3.zero;
-            rb.AddForce(followForce, ForceMode2D.Impulse);
-            animator.SetBool("Lunge", true);
+            animator.SetTrigger("lunge");
             lungeActive = true;
             movementTimerTime = movementTimer;
         }
@@ -81,10 +78,13 @@ public class LungerPathfind : MonoBehaviour
         {
             lengthOfLungeTime -= Time.deltaTime;
 
+            Vector2 desiredVelocity = usedDirection * speed;
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, desiredVelocity, 10f * Time.fixedDeltaTime);
+
             if (lengthOfLungeTime <= 0)
             {
-                animator.SetBool("Lunge", false);
                 lungeActive = false;
+                rb.linearVelocity = Vector2.zero;
                 lengthOfLungeTime = lengthOfLunge;
             }
         }
@@ -96,15 +96,12 @@ public class LungerPathfind : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (rb.linearVelocity.x >= 0.01f)
+        //Flipping the sprite based on bigger movements rather than small
+        float xDifference = target.position.x - transform.position.x;
+
+        if (Mathf.Abs(xDifference) > 0.15f)
         {
-            //on the right
-            spriteRenderer.flipX = false;
-        }
-        if (rb.linearVelocity.x <= -0.01f)
-        {
-            //on the left
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = xDifference < 0;
         }
     }
 

@@ -4590,7 +4590,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -7050,12 +7082,12 @@ MonoBehaviour:
   - {fileID: 1528798471}
   - {fileID: 182327007}
   zombieVariants:
-  - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
+  - {fileID: 5025868028247549401, guid: 6f92f5f8410351444b3fb8078e98f9dd, type: 3}
   - {fileID: 3838861027363301985, guid: 1457004fa1bbdcd4c93872d32c898d66, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
   - {fileID: 5576630128968974176, guid: 73212736cd2e6ba4eb9e55917b031a84, type: 3}
   - {fileID: 8933746020382107855, guid: f3a630e0531eb1c43a26bdfdf8341af3, type: 3}
-  chances: 0300000001000000020000000200000001000000
+  chances: 0100000000000000000000000000000000000000
   bossZombies:
   - {fileID: 2160356253701614027, guid: 9e15c2e9e1b8bda419eb136f8fa48a87, type: 3}
 --- !u!1 &224121916
@@ -26707,7 +26739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 5763011}
+  m_AnchoredPosition: {x: 0, y: 5941629}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210

@@ -60,7 +60,9 @@ public class TankPathfind : MonoBehaviour
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 followForce = usedDirection * speed;
+        Vector2 desiredVelocity = usedDirection * speed;
+
+        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, desiredVelocity, 10f * Time.fixedDeltaTime);
 
         timeBetweenStepsTimer -= Time.deltaTime;
 
@@ -69,21 +71,18 @@ public class TankPathfind : MonoBehaviour
             int randomInt = Random.Range(1,100);
 
             if(randomInt == 1){
-                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.TankGroan1);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan1);
                 soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
             }
             else if(randomInt == 2){
-                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.TankGroan2);
+                GameObject soundObj1 = AudioManager.Instance.Play(AudioManager.SoundType.DefaultGroan2);
                 soundObj1.GetComponent<Transform>().position = GetComponent<Transform>().position;
-            }  
+            }
 
-
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.TankWalk);
+            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.DefaultWalk);
             soundObj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             timeBetweenStepsTimer = timeBetweenSteps;
         }
-
-        rb.AddForce(followForce, ForceMode2D.Impulse);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
@@ -94,15 +93,12 @@ public class TankPathfind : MonoBehaviour
 
         animator.SetFloat("Speed", distance);
 
-        if (rb.linearVelocity.x >= 0.01f)
+        //Flipping the sprite based on bigger movements rather than small
+        float xDifference = target.position.x - transform.position.x;
+
+        if (Mathf.Abs(xDifference) > 0.15f)
         {
-            //on the right
-            spriteRenderer.flipX = false;
-        }
-        if (rb.linearVelocity.x <= -0.01f)
-        {
-            //on the left
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = xDifference < 0;
         }
     }
 
