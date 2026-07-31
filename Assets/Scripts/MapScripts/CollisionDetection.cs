@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Pathfinding.Examples;
 
 public class CollisionDetection : MonoBehaviour
 {
@@ -48,10 +49,37 @@ public class CollisionDetection : MonoBehaviour
                     }
                     else
                     {
-                        hasBeenBought = true;
-                        GetComponent<EdgeCollider2D>().enabled = false;
-                        animator.SetTrigger("Open");
-                        playSound = true;
+                        //purchase both start doors
+                        if(tag == "StartRoomDoors")
+                        {
+                            GameObject[] doors = GameObject.FindGameObjectsWithTag("StartRoomDoors");
+                            foreach(GameObject door in doors)
+                            {
+                                door.GetComponent<CollisionDetection>().hasBeenBought = true;
+                                door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                                door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
+                                door.GetComponent<CollisionDetection>().playSound = true;
+                            }
+                        }
+                        //purchase both breakfast hall doors
+                        else if(tag == "BreakfastHallDoors")
+                        {
+                            GameObject[] doors = GameObject.FindGameObjectsWithTag("BreakfastHallDoors");
+                            foreach(GameObject door in doors)
+                            {
+                                door.GetComponent<CollisionDetection>().hasBeenBought = true;
+                                door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                                door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
+                                door.GetComponent<CollisionDetection>().playSound = true;
+                            }
+                        }
+                        else
+                        {
+                            hasBeenBought = true;
+                            GetComponent<EdgeCollider2D>().enabled = false;
+                            animator.SetTrigger("Open");
+                            playSound = true;
+                        }
                     }
 
                     //taking away the cost of the door from the total points of the player

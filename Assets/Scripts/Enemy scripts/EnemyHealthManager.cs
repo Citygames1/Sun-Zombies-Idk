@@ -58,6 +58,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         Destroy(gameObject);
         gameManagerScript.zombies.Remove(gameObject);
+        gameManagerScript.zombiesKilledThisRound++;
 
         //giving the player points when they kill an enemy
         player.GetComponent<PointSystem>().GivePoints(pointsToGive);

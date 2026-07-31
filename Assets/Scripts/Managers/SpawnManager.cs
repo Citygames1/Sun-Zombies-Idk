@@ -85,6 +85,7 @@ public class SpawnManager : MonoBehaviour
             if (gms.canSpawnZombies == true && gms.zombies.Count == 0)
             {
                 gms.roundCount++;
+                gms.zombiesKilledThisRound = 0;
                 GameObject.FindGameObjectWithTag("RoundCount").GetComponent<Animator>().SetTrigger("RoundUp");
                 AudioManager.Instance.Play(AudioManager.SoundType.RoundBeep);
                 gms.zombiesSpawned = 0;

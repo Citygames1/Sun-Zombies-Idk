@@ -43,6 +43,7 @@ TagManager:
   - RoomName
   - GunImage
   - CurrentDetails
+  - BreakfastHallDoors
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Pathfinding.Ionic.Zip;
 using TMPro;
 using UnityEngine;
 
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
     public int SpawnTimer = 2;
     [HideInInspector] public float timeBetweenSpawnsTimer;
     [HideInInspector] public bool timerHasFinished;
+
+    [HideInInspector] public int zombiesKilledThisRound;
 
     public void Start()
     {
@@ -74,7 +77,17 @@ public class GameManager : MonoBehaviour
             timeBetweenSpawnsTimer = SpawnTimer;
         }
 
-        roundCountText.text = roundCount.ToString();
+        float roundCompletionDivision = Mathf.Round(60 / zombiesInARound);
+        int currentCountMinutes = Mathf.RoundToInt(roundCompletionDivision * zombiesKilledThisRound);
+        
+        if(currentCountMinutes < 10)
+        {
+            roundCountText.text = roundCount.ToString() + ":0" + currentCountMinutes;
+        }
+        else
+        {
+            roundCountText.text = roundCount.ToString() + ":" + currentCountMinutes;
+        }
         pointCountText.text = pointSystem.totalPoints.ToString();
 
         if (playerHealth.isDead == true)
