@@ -2237,15 +2237,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6057206508937944982, guid: b4055f680b656db4696ccf78d948f55f, type: 3}
       propertyPath: m_Radius
-      value: 2.875699
+      value: 2.348805
       objectReference: {fileID: 0}
     - target: {fileID: 6057206508937944982, guid: b4055f680b656db4696ccf78d948f55f, type: 3}
       propertyPath: m_Offset.x
-      value: -0.9511738
+      value: -0.83408785
       objectReference: {fileID: 0}
     - target: {fileID: 6057206508937944982, guid: b4055f680b656db4696ccf78d948f55f, type: 3}
       propertyPath: m_Offset.y
-      value: -0.30120564
+      value: 0.3427744
       objectReference: {fileID: 0}
     - target: {fileID: 6057206508937944982, guid: b4055f680b656db4696ccf78d948f55f, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -26935,7 +26935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 6700525}
+  m_AnchoredPosition: {x: 0, y: 6787821}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -36060,7 +36060,7 @@ GameObject:
   - component: {fileID: 1051248537}
   m_Layer: 0
   m_Name: TrainManager
-  m_TagString: Untagged
+  m_TagString: TrainManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

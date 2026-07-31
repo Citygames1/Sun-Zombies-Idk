@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnablePopUpText : MonoBehaviour
 {
     public List<GameObject> thingsToEnable;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

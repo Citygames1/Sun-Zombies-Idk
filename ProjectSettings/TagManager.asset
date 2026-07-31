@@ -44,6 +44,8 @@ TagManager:
   - GunImage
   - CurrentDetails
   - BreakfastHallDoors
+  - TicketMachine
+  - TrainManager
   layers:
   - Default
   - TransparentFX

@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 8150557565518907680}
   - component: {fileID: 6057206508937944982}
   - component: {fileID: 8450885006250008087}
+  - component: {fileID: -6276344703719106539}
   m_Layer: 11
   m_Name: Ticket_Machine
-  m_TagString: Untagged
+  m_TagString: TicketMachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,3 +283,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnablePopUpText
   thingsToEnable:
   - {fileID: 5534193796427487122}
+--- !u!114 &-6276344703719106539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727319965899070389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b84f109b9dcda4996e180916e5ddd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicketMachine
