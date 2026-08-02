@@ -9,6 +9,7 @@ public class AimWeapon : MonoBehaviour
     private weaponManager wpnManager;
     private GameObject player;
     private TopDownMovement playerMovement;
+    private PauseManager pauseManager;
 
     public void Start()
     {
@@ -16,6 +17,7 @@ public class AimWeapon : MonoBehaviour
         gunHolder = GameObject.FindWithTag("GunHolder");
         wpnManager = gunHolder.GetComponent<weaponManager>();
         playerMovement = player.GetComponent<TopDownMovement>();
+        pauseManager = GameObject.FindGameObjectWithTag("PauseManager").GetComponent<PauseManager>();
     }
 
     void Update()
@@ -26,12 +28,15 @@ public class AimWeapon : MonoBehaviour
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-        if (playerMovement.flipGuns == false)
+        if(pauseManager.isActive == false)
         {
-            currentGunTransform.eulerAngles = new Vector3(0, 0, angle);
-        }
-        else {
-            currentGunTransform.eulerAngles = new Vector3(180, 0, -angle);
+            if (playerMovement.flipGuns == false)
+            {
+                currentGunTransform.eulerAngles = new Vector3(0, 0, angle);
+            }
+            else {
+                currentGunTransform.eulerAngles = new Vector3(180, 0, -angle);
+            }
         }
     }
 }

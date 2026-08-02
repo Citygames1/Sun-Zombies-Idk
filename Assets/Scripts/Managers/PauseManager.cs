@@ -2,9 +2,17 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    public Animator optionsMenu;
+    public bool isActive = false;
     public GameObject playerUI;
-    float previousTimeScale;
+    public GameObject EscapeMenuUI;
+    private GameObject gunHolder;
+    private float previousTimeScale;
+
+    void Start()
+    {
+        gunHolder = GameObject.FindWithTag("GunHolder");
+        previousTimeScale = Time.timeScale;
+    }
 
     void Update()
     {
@@ -17,17 +25,20 @@ public class PauseManager : MonoBehaviour
 
     public void TogglePause()
     {
-        optionsMenu.SetTrigger("Change");
-        if(Time.timeScale > 0)
+        if(isActive == false)
         {
-            previousTimeScale = Time.timeScale;
             Time.timeScale = 0;
-            playerUI.SetActive(false);
+            gunHolder.GetComponent<weaponManager>().currentGun.GetComponent<Shooting>().timeBetweenShotTimerRunning = true;
+            EscapeMenuUI.transform.localScale = new Vector3(1,1,1);
+            playerUI.transform.localScale = new Vector3(0,0,1);
+            isActive = true;
         }
-        else if(Time.timeScale == 0)
+        else
         {
             Time.timeScale = previousTimeScale;
-            playerUI.SetActive(true);
+            EscapeMenuUI.transform.localScale = new Vector3(0,0,1);
+            playerUI.transform.localScale = new Vector3(1,1,1);
+            isActive = false;
         }
     }
 }

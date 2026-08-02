@@ -46,6 +46,7 @@ TagManager:
   - BreakfastHallDoors
   - TicketMachine
   - TrainManager
+  - PauseManager
   layers:
   - Default
   - TransparentFX
