@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,8 +11,15 @@ public class MainMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public GameObject StartMenu;
+    public GameObject SettingsMenu;
+    public GameObject MapChoiceMenu;
+    public GameObject MapSettingsMenu;
+
     public void Start()
     {
+        ActivateStartScreen();
+
         resolutions = Screen.resolutions;
 
         //clear the options
@@ -66,5 +72,35 @@ public class MainMenu : MonoBehaviour
     public void SetFullScreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    //Main menu swaps
+    public void ActivateStartScreen()
+    {
+        StartMenu.transform.position = new Vector2(0,0);
+        SettingsMenu.transform.position = new Vector2(-25,0);
+        MapChoiceMenu.transform.position = new Vector2(0,15);
+        MapSettingsMenu.transform.position = new Vector2(25,0);
+    }
+    public void ActivateSettingsScreen()
+    {
+        StartMenu.transform.position = new Vector2(0,-15);
+        SettingsMenu.transform.position = new Vector2(0,0);
+        MapChoiceMenu.transform.position = new Vector2(0,15);
+        MapSettingsMenu.transform.position = new Vector2(25,0);
+    }
+    public void ActivateMapChoiceScreen()
+    {
+        StartMenu.transform.position = new Vector2(0,-15);
+        SettingsMenu.transform.position = new Vector2(-25,0);
+        MapChoiceMenu.transform.position = new Vector2(0,0);
+        MapSettingsMenu.transform.position = new Vector2(25,0);
+    }
+    public void ActivateMapSettingsScreen()
+    {
+        StartMenu.transform.position = new Vector2(0,-15);
+        SettingsMenu.transform.position = new Vector2(-25,0);
+        MapChoiceMenu.transform.position = new Vector2(0,15);
+        MapSettingsMenu.transform.position = new Vector2(0,0);
     }
 }
