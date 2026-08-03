@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
         Hurt1, Hurt2, Hurt3, Hurt4,
 
         //Ui
-        RoundBeep,
+        RoundBeep, ButtonHumClick,
         
         //music
         Music_Menu, 
@@ -47,9 +47,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
  
     public Sound[] AllSounds;
- 
     private Dictionary<SoundType, Sound> _soundDictionary = new Dictionary<SoundType, Sound>();
     private AudioSource _musicSource;
+    [HideInInspector] public float currentVolumeLevel = 1;
  
     private void Awake()
     {
@@ -75,9 +75,9 @@ public class AudioManager : MonoBehaviour
         soundObj.AddComponent<SetVolume>();
         soundObj.GetComponent<SetVolume>().maxDistance = s.MaxDistance;
         soundObj.GetComponent<SetVolume>().followsPlayer = s.followsPlayer;
- 
+
         audioSrc.clip = s.Clip;
-        audioSrc.volume = s.Volume;
+        audioSrc.volume = s.Volume * currentVolumeLevel;
         audioSrc.Play();
         Destroy(soundObj, s.Clip.length);
 

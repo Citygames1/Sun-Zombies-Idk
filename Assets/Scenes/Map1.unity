@@ -21206,7 +21206,7 @@ RectTransform:
   m_GameObject: {fileID: 589998230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 734139496}
@@ -21215,7 +21215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -455, y: 379}
+  m_AnchoredPosition: {x: -618, y: 432}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589998232
@@ -21265,10 +21265,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1987033690}
+        m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: SetFullScreen
-        m_Mode: 0
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21277,7 +21277,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &590225739
 GameObject:
   m_ObjectHideFlags: 0
@@ -23333,7 +23333,7 @@ RectTransform:
   m_GameObject: {fileID: 630717327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 784120675}
@@ -23343,7 +23343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -539, y: 203}
+  m_AnchoredPosition: {x: -621, y: 336}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630717329
@@ -23409,10 +23409,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1987033690}
+        m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
         m_MethodName: SetResolution
-        m_Mode: 0
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26920,7 +26920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 792.75}
+  m_AnchoredPosition: {x: 0, y: 121371}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -28041,7 +28041,7 @@ GameObject:
   - component: {fileID: 800755290}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28368,6 +28368,7 @@ MonoBehaviour:
     MaxDistance: 5
     followsPlayer: 1
     Source: {fileID: 0}
+  currentVolumeLevel: 0
 --- !u!1 &801101769
 GameObject:
   m_ObjectHideFlags: 0
@@ -29015,7 +29016,7 @@ RectTransform:
   m_GameObject: {fileID: 805462264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1794645478}
@@ -29026,7 +29027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -525, y: 16}
+  m_AnchoredPosition: {x: -620, y: 185}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805462266
@@ -29076,10 +29077,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1987033690}
+        m_TargetAssemblyTypeName: EscapeMenu, Assembly-CSharp
+        m_MethodName: SetVolumeLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 805462264}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &806809325
 GameObject:
   m_ObjectHideFlags: 0
@@ -57012,7 +57025,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 87174874}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.74833333
+  m_Size: 0.34
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -67874,6 +67887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987033689}
+  - component: {fileID: 1987033690}
   m_Layer: 5
   m_Name: ----EscapeMenu--------
   m_TagString: Untagged
@@ -67905,6 +67919,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1987033690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987033688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5a66ec3a39f9e4e9615d1c3dee93ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EscapeMenu
+  resolutionDropdown: {fileID: 630717329}
+  volumeSlider: {fileID: 0}
 --- !u!4 &1989858987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2331067157749831940, guid: 37811e97760d43441bfa74b831f47a37, type: 3}

@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class SocialLinks : MonoBehaviour
 {
-    void OpenYouTube(){
+    public void OpenYouTube(){
         Application.OpenURL("https://www.youtube.com/@CityGameDev");
     }
     
-    void JoinDiscord()
+    public void JoinDiscord()
     {
         Application.OpenURL("https://discord.gg/fvGyhEpTxV");
     }
     
-    void OpenTikTok()
+    public void OpenTikTok()
     {
         Application.OpenURL("https://www.tiktok.com/@citygames0725");
     }

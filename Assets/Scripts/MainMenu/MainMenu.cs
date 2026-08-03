@@ -2,14 +2,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public string mapName = "Map1";
-
     Resolution[] resolutions;
-
     public TMP_Dropdown resolutionDropdown;
+    private AudioManager audioManager;
+    [SerializeField] private AudioManager.SoundType sound;
 
     public GameObject StartMenu;
     public GameObject SettingsMenu;
@@ -18,6 +19,8 @@ public class MainMenu : MonoBehaviour
 
     public void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
         ActivateStartScreen();
 
         resolutions = Screen.resolutions;
@@ -72,6 +75,17 @@ public class MainMenu : MonoBehaviour
     public void SetFullScreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetVolumeLevel(GameObject thisSlider)
+    {
+        float currentVolumeLevel = thisSlider.GetComponent<Slider>().value;
+        audioManager.currentVolumeLevel = currentVolumeLevel;
+    }
+
+    public void PlaySound()
+    {
+        AudioManager.Instance.Play(sound);
     }
 
     //Main menu swaps
