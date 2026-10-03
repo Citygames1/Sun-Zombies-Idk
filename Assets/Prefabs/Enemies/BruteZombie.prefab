@@ -163,6 +163,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4148601197726836798}
+    - targetCorrespondingSourceObject: {fileID: 4552569008655902541, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3358965663684879149}
   m_SourcePrefab: {fileID: 100100000, guid: a38bd66cc4c3f2f4aa0f5d163cc79077, type: 3}
 --- !u!1 &2160356253701614027 stripped
 GameObject:
@@ -181,7 +184,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d65131a58afb1148878a3b87e5bbf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrutePathfind
-  speed: 1.5
+  distanceToKeep: 7.5
+  speed: 5
   nextWaypointDistance: 3
   timeBetweenWaypoints: 0.1
   timeBetweenSteps: 0.6
+--- !u!114 &3358965663684879149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160356253701614027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2188744f8ecb4bae58f1f4ef0a663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BruteAttackl
+  timeBetweenShots: 4
+  bruteAttack: {fileID: 9120964286518358179, guid: 529e38bf8320f9f488d3b38dd5fc1ff7, type: 3}

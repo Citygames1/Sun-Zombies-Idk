@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         {
             roundCountText.text = roundCount.ToString() + ":0" + currentCountMinutes;
         }
-        else
+        else if(currentCountMinutes < 60)
         {
             roundCountText.text = roundCount.ToString() + ":" + currentCountMinutes;
         }

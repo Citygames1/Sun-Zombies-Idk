@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 45944036190517843}
   - component: {fileID: 5251260507538567020}
-  - component: {fileID: 5288369925132995189}
   - component: {fileID: 4658812205588831428}
   - component: {fileID: 7980120857162456024}
+  - component: {fileID: 5288369925132995189}
+  - component: {fileID: 88443554491740778}
   m_Layer: 11
   m_Name: Ammo Vault
   m_TagString: Untagged
@@ -95,19 +96,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
---- !u!114 &5288369925132995189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841273104811739444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccdb566b20525b7429fca73c1b83f489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRangeOfMachine: 0
 --- !u!60 &4658812205588831428
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -212,6 +200,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.6325083, y: 2.5358953}
   m_EdgeRadius: 0
+--- !u!114 &5288369925132995189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841273104811739444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdb566b20525b7429fca73c1b83f489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRangeOfMachine: 0
+--- !u!114 &88443554491740778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841273104811739444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c67089905a4f84484bb6e6430f9a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnablePopUpText
+  thingsToEnable:
+  - {fileID: 7896895787595486781}
 --- !u!1 &7896895787595486781
 GameObject:
   m_ObjectHideFlags: 0

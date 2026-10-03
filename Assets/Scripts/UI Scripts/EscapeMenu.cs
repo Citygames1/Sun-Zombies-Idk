@@ -59,7 +59,7 @@ public class EscapeMenu : MonoBehaviour
         audioManager.currentVolumeLevel = currentVolumeLevel;
     }
 
-    public void PlaySound(AudioManager.Sound soundType)
+    public void PlaySound()
     {
         AudioManager.Instance.Play(sound);
     }

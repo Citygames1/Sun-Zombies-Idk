@@ -48,6 +48,7 @@ TagManager:
   - TrainManager
   - PauseManager
   - AudioManager
+  - SRCManager
   layers:
   - Default
   - TransparentFX

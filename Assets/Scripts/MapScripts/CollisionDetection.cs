@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using Pathfinding.Examples;
 
 public class CollisionDetection : MonoBehaviour
 {
@@ -52,6 +51,7 @@ public class CollisionDetection : MonoBehaviour
                         //purchase both start doors
                         if(tag == "StartRoomDoors")
                         {
+                            GameObject.FindGameObjectWithTag("SRCManager").GetComponent<SRchallengeManager>().hasOpenedStartRoom = true;
                             GameObject[] doors = GameObject.FindGameObjectsWithTag("StartRoomDoors");
                             foreach(GameObject door in doors)
                             {

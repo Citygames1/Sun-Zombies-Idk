@@ -3,11 +3,12 @@ using UnityEngine;
 public class SRchallengeManager : MonoBehaviour
 {
     private GameManager gameManager;
-    private GameObject startRoomDoor;
+    private GameObject[] startRoomDoors;
     private GameObject secretDoor;
     public GameObject blockade;
     public int roundToStartChallenge = 5;
 
+    public bool hasOpenedStartRoom = false;
     public bool challengeIsActive = false;
     private bool shopIsOpen = false;
     public bool isInShop;
@@ -20,22 +21,31 @@ public class SRchallengeManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        startRoomDoor = GameObject.FindGameObjectWithTag("StartRoomDoors");
+        startRoomDoors = GameObject.FindGameObjectsWithTag("StartRoomDoors");
         secretDoor = GameObject.FindGameObjectWithTag("SecretDoor");
         timeToEnterShopTime = timeToEnterShop;
     }
 
     void Update()
     {
-        if (startRoomDoor.activeSelf == true && gameManager.roundCount == roundToStartChallenge && challengeIsActive == false)
+        if (hasOpenedStartRoom == false && gameManager.roundCount == roundToStartChallenge && challengeIsActive == false)
         {
-            startRoomDoor.SetActive(false);
+            foreach(GameObject door in startRoomDoors)
+            {
+                if(door.activeSelf == true)
+                {
+                    door.SetActive(false);
+                }
+            }
+
             blockade.SetActive(true);
             challengeIsActive = true;
         }
 
         if (shopIsOpen == true)
         {
+            secretDoor.GetComponent<BoxCollider2D>().enabled = false;
+
             if (isInShop == false)
             {
                 timeToEnterShopTime -= Time.deltaTime;
@@ -55,7 +65,10 @@ public class SRchallengeManager : MonoBehaviour
                 secretDoor.GetComponent<Animator>().SetTrigger("Change");
                 shopIsOpen = false;
             }
-
+        }
+        else
+        {
+            secretDoor.GetComponent<BoxCollider2D>().enabled = true;
         }
 
         if (challengeIsActive == true)

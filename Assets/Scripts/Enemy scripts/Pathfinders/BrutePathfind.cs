@@ -5,6 +5,8 @@ public class BrutePathfind : MonoBehaviour
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private BruteAttackl bruteAttack;
+    public float distanceToKeep;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -29,6 +31,7 @@ public class BrutePathfind : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        bruteAttack = GetComponent<BruteAttackl>();
 
         //Name, When you want it to start, how often you want it to repeat (in seconds)
         InvokeRepeating("UpdatePath", 0f, timeBetweenWaypoints);
@@ -43,20 +46,23 @@ public class BrutePathfind : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if(path == null)
+        if (path == null)
         {
-            return;
-        }
-
-        if(currentWaypoint >= path.vectorPath.Count)
-        {
-            //reachedEndOfPath = true;
+            rb.linearVelocity = Vector2.zero;
+            animator.SetFloat("Speed", 0f);
+            bruteAttack.IsInRange();
             return;
         }
         else
         {
-            //reachedEndOfPath = false;
+            bruteAttack.OutOfRange();
+        }
+
+        if (currentWaypoint >= path.vectorPath.Count)
+        {
+            rb.linearVelocity = Vector2.zero;
+            animator.SetFloat("Speed", 0f);
+            return;
         }
 
         Vector2 usedDirection = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
@@ -85,13 +91,13 @@ public class BrutePathfind : MonoBehaviour
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        float distanceFromPlayer = Vector2.Distance(rb.position, target.position);
+        animator.SetFloat("Speed", rb.linearVelocity.magnitude);
 
-        if(distance < nextWaypointDistance)
+        if(distance < nextWaypointDistance && distanceFromPlayer >= distanceToKeep)
         {
             currentWaypoint++;
         }
-
-        animator.SetFloat("Speed", distance);
 
         //Flipping the sprite based on bigger movements rather than small
         float xDifference = target.position.x - transform.position.x;
@@ -104,8 +110,21 @@ public class BrutePathfind : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone())
+        if (!seeker.IsDone())
+            return;
+
+        float dist = Vector2.Distance(rb.position, target.position);
+
+        if (dist > distanceToKeep + 2)
+        {
+            // Chase
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+        }
+        else
+        {
+            // Don't generate a new path.
+            path = null;
+        }
     }
 
     void OnPathComplete(Path p)
