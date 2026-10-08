@@ -73,7 +73,8 @@ public class SRchallengeManager : MonoBehaviour
 
         if (challengeIsActive == true)
         {
-            if (gameManager.roundCount % 3 == 0 && gameManager.zombiesSpawned == 0) //if round count is divisible by 3 and is start of round
+            //if round count is divisible by 3 and is start of round
+            if (gameManager.roundCount % 3 == 0 && gameManager.zombiesSpawned == 0)
             {
                 if (animTriggered == false)
                 {
