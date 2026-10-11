@@ -12,12 +12,16 @@ public class BoxGunSpawn : MonoBehaviour
     private CircleCollider2D circleCollider;
     public bool playerInRange = false;
 
+    void Awake()
+    {
+        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+        player = GameObject.FindWithTag("Player");
+    }
+
     void Start()
     {
         weaponManager = GameObject.FindGameObjectWithTag("GunHolder").GetComponent<weaponManager>();
-        player = GameObject.FindWithTag("Player");
         circleCollider = GetComponent<CircleCollider2D>();
-        currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
 
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
