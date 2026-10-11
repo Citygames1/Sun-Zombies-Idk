@@ -3,6 +3,7 @@ using UnityEngine;
 public class GunSound : MonoBehaviour
 {
     private Vector3 playerPos;
+    [HideInInspector] public GameObject currentReloadSoundObj;
 
     public void PlayShot(string nameOfGun)
     {
@@ -66,53 +67,56 @@ public class GunSound : MonoBehaviour
 
         if(nameOfGun == "StarterPistol")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.StarterPistolReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.StarterPistolReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "Uzi")
+        else if(nameOfGun == "Uzi")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.UziReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.UziReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "Sniper")
+        else if(nameOfGun == "Sniper")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.SniperReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.SniperReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "Semi-AutoShotgun")
+        else if(nameOfGun == "Semi-AutoShotgun")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.AssaultRifleReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.AssaultRifleReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "RNGgun")
+        else if(nameOfGun == "RNGgun")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.RNGgunReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.RNGgunReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "MiniGun")
+        else if(nameOfGun == "MiniGun")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.MinigunReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.MinigunReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "Magnum")
+        else if(nameOfGun == "Magnum")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.MagnumReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.MagnumReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "M16A2")
+        else if(nameOfGun == "M16A2")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.M16A2reload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.M16A2reload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "AssaultRifle")
+        else if(nameOfGun == "AssaultRifle")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.AssaultRifleReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.AssaultRifleReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
         }
-        if(nameOfGun == "HuntingRifle")
+        else if(nameOfGun == "HuntingRifle")
         {
-            GameObject soundObj = AudioManager.Instance.Play(AudioManager.SoundType.HuntingRifleReload);
-            soundObj.GetComponent<Transform>().position = playerPos;
+            currentReloadSoundObj = AudioManager.Instance.Play(AudioManager.SoundType.HuntingRifleReload);
+            currentReloadSoundObj.GetComponent<Transform>().position = playerPos;
+        }
+        else{
+            Debug.Log("No reload sound for this gun");
         }
     }
 }

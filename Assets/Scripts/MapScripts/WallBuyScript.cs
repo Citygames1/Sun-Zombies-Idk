@@ -60,6 +60,8 @@ public class WallBuyScript : MonoBehaviour
 
                     weaponManager.guns[replaceIndex] = newGun;
                     weaponManager.currentGun = newGun;
+
+                    // Update player speed based on the new gun's weight
                     player.GetComponent<TopDownMovement>().runSpeed = weaponManager.originalRunSpeed;
                     player.GetComponent<TopDownMovement>().runSpeed *= weaponManager.currentGun.GetComponent<Shooting>().weight;
                 }
@@ -69,6 +71,8 @@ public class WallBuyScript : MonoBehaviour
                     GameObject newGun = Instantiate(wallBuyWeapon, gunHolderTransform);
                     weaponManager.guns.Insert(weaponManager.currentWeaponIndex + 1, newGun);
                     weaponManager.currentGun = newGun;
+
+                    // Update player speed based on the new gun's weight
                     player.GetComponent<TopDownMovement>().runSpeed = weaponManager.originalRunSpeed;
                     player.GetComponent<TopDownMovement>().runSpeed *= weaponManager.currentGun.GetComponent<Shooting>().weight;
                 }

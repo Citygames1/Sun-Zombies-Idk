@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 673193620088337308, guid: 22a7276b5a407a348a10d878c4dc169c, type: 3}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: gunName
-      value: AssaultRifle
+      value: AK-47
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize

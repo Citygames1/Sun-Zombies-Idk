@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 829736817371255254, guid: 67a0254201a5b754fabbd50ac26bd168, type: 3}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: gunName
-      value: MiniGun
+      value: Mini-Gun
       objectReference: {fileID: 0}
     - target: {fileID: 5611191695135060474, guid: 26410315015c2e94cab432795c89bb28, type: 3}
       propertyPath: magSize

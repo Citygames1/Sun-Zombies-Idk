@@ -5,7 +5,7 @@ public class SRchallengeManager : MonoBehaviour
     private GameManager gameManager;
     private GameObject[] startRoomDoors;
     private GameObject secretDoor;
-    public GameObject blockade;
+    private GameObject blockade;
     public int roundToStartChallenge = 5;
 
     public bool hasOpenedStartRoom = false;
@@ -23,6 +23,7 @@ public class SRchallengeManager : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         startRoomDoors = GameObject.FindGameObjectsWithTag("StartRoomDoors");
         secretDoor = GameObject.FindGameObjectWithTag("SecretDoor");
+        blockade = GameObject.FindGameObjectWithTag("Blockade");
         timeToEnterShopTime = timeToEnterShop;
     }
 
@@ -30,15 +31,24 @@ public class SRchallengeManager : MonoBehaviour
     {
         if (hasOpenedStartRoom == false && gameManager.roundCount == roundToStartChallenge && challengeIsActive == false)
         {
-            foreach(GameObject door in startRoomDoors)
-            {
-                if(door.activeSelf == true)
-                {
-                    door.SetActive(false);
-                }
-            }
+            AudioManager.Instance.Play(AudioManager.SoundType.StartShutterClose);
 
-            blockade.SetActive(true);
+            //enable the blockades 
+            for(int i = 0; i < blockade.transform.childCount; i++)
+            {
+                blockade.transform.GetChild(i).gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+                //need to disable the start doors colliders so it cant be bought
+                foreach(GameObject door in startRoomDoors)
+                {
+                    if(door.activeSelf == true)
+                    {
+                        door.GetComponent<BoxCollider2D>().enabled = false;
+                    }
+                }
+
+                blockade.transform.GetChild(i).gameObject.GetComponent<Animator>().SetTrigger("Change");
+            }
             challengeIsActive = true;
         }
 

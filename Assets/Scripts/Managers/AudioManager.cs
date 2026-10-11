@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
         Hurt1, Hurt2, Hurt3, Hurt4,
 
         //Ui
-        RoundBeep, ButtonHumClick,
+        RoundBeep, ButtonHumClick, StartShutterClose, //not UI but had to add here lol
         
         //music
         Music_Menu, 

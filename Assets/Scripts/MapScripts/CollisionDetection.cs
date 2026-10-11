@@ -57,6 +57,7 @@ public class CollisionDetection : MonoBehaviour
                             {
                                 door.GetComponent<CollisionDetection>().hasBeenBought = true;
                                 door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                                door.GetComponent<CollisionDetection>().GetComponent<BoxCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
                                 door.GetComponent<CollisionDetection>().playSound = true;
                             }
@@ -69,6 +70,7 @@ public class CollisionDetection : MonoBehaviour
                             {
                                 door.GetComponent<CollisionDetection>().hasBeenBought = true;
                                 door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                                door.GetComponent<CollisionDetection>().GetComponent<BoxCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
                                 door.GetComponent<CollisionDetection>().playSound = true;
                             }

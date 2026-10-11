@@ -5,6 +5,7 @@ public class Shooting : MonoBehaviour
 {
     public string gunName;
     public Sprite UIphoto;
+    public Sprite initialSprite;
 
     //timers
     public float timeToReload = 3;
@@ -22,7 +23,7 @@ public class Shooting : MonoBehaviour
     public bool isShotgun;
     public bool burstRifle;
     [HideInInspector] public bool chanceToSaveBullet;
-    private bool playedSound = false;
+    [HideInInspector] public bool playedSound = false;
 
     //Game Objects
     public Transform firePoint;
@@ -52,6 +53,7 @@ public class Shooting : MonoBehaviour
     public void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        initialSprite = GetComponentInChildren<SpriteRenderer>().sprite;
 
         reloadTimer = timeToReload;
         timeBetweenShotTimer = timeBetweenShot;

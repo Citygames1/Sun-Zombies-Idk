@@ -38,6 +38,19 @@ public class weaponManager : MonoBehaviour
             {
                 int currentSortingOrder = currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
+
+                //setting sprite and reload back to original values
+                currentGun.GetComponentInChildren<SpriteRenderer>().sprite = currentGunShooting.initialSprite;
+                currentGunShooting.reloadTimer = currentGunShooting.timeToReload;
+                currentGunShooting.reloadTimerRunning = false;
+                currentGunShooting.timeBetweenShotTimer = currentGunShooting.timeBetweenShot;
+                currentGunShooting.timeBetweenBurstShotTimer = currentGunShooting.timeBetweenBurstShot;
+
+                //getting rid of sound effect
+                currentGunShooting.playedSound = false;
+                Destroy(currentGun.GetComponentInChildren<GunSound>().currentReloadSoundObj);
+
+                //switching to the next gun
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex++;
                 guns[currentWeaponIndex].SetActive(true);
@@ -54,6 +67,19 @@ public class weaponManager : MonoBehaviour
             {
                 int currentSortingOrder = currentGun.GetComponentInChildren<SpriteRenderer>().sortingOrder;
                 player.GetComponent<TopDownMovement>().runSpeed = originalRunSpeed;
+
+                //setting sprite and reload back to original values
+                currentGun.GetComponentInChildren<SpriteRenderer>().sprite = currentGunShooting.initialSprite;
+                currentGunShooting.reloadTimer = currentGunShooting.timeToReload;
+                currentGunShooting.reloadTimerRunning = false;
+                currentGunShooting.timeBetweenShotTimer = currentGunShooting.timeBetweenShot;
+                currentGunShooting.timeBetweenBurstShotTimer = currentGunShooting.timeBetweenBurstShot;
+
+                //getting rid of sound effect
+                currentGunShooting.playedSound = false;
+                Destroy(currentGun.GetComponentInChildren<GunSound>().currentReloadSoundObj);
+
+                //switching to the next gun
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex--;
                 guns[currentWeaponIndex].SetActive(true);
