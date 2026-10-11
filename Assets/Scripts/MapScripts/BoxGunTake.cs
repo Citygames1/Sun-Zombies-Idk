@@ -80,7 +80,7 @@ public class BoxGunTake : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
-            currentDetails.GetComponent<TMP_Text>().text = "Press E to take the" + nameOfGun + ", or press Q to discard it.";
+            currentDetails.GetComponent<TMP_Text>().text = "Press E to take the " + nameOfGun + ", or press Q to discard it.";
             currentDetails.SetActive(true);
         }
     }
