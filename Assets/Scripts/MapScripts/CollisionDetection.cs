@@ -17,6 +17,9 @@ public class CollisionDetection : MonoBehaviour
     private bool soundHasPlayed = false;
     public float timeBeforeSound;
     private float timeBeforeSoundTimer;
+    
+    public float timeBeforePass;
+    private float timeBeforePassTimer;
 
     void Awake()
     {
@@ -30,6 +33,7 @@ public class CollisionDetection : MonoBehaviour
 
         animator = GetComponent<Animator>();
         timeBeforeSoundTimer = timeBeforeSound;
+        timeBeforePassTimer = timeBeforePass;
     }
 
     void Update()
@@ -56,7 +60,6 @@ public class CollisionDetection : MonoBehaviour
                             foreach(GameObject door in doors)
                             {
                                 door.GetComponent<CollisionDetection>().hasBeenBought = true;
-                                door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().GetComponent<BoxCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
                                 door.GetComponent<CollisionDetection>().playSound = true;
@@ -69,7 +72,6 @@ public class CollisionDetection : MonoBehaviour
                             foreach(GameObject door in doors)
                             {
                                 door.GetComponent<CollisionDetection>().hasBeenBought = true;
-                                door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().GetComponent<BoxCollider2D>().enabled = false;
                                 door.GetComponent<CollisionDetection>().animator.SetTrigger("Open");
                                 door.GetComponent<CollisionDetection>().playSound = true;
@@ -78,7 +80,7 @@ public class CollisionDetection : MonoBehaviour
                         else
                         {
                             hasBeenBought = true;
-                            GetComponent<EdgeCollider2D>().enabled = false;
+                            GetComponent<BoxCollider2D>().enabled = false;
                             animator.SetTrigger("Open");
                             playSound = true;
                         }
@@ -86,6 +88,37 @@ public class CollisionDetection : MonoBehaviour
 
                     //taking away the cost of the door from the total points of the player
                     totalPointsNumber.totalPoints = totalPointsNumber.totalPoints - costToOpen;
+                }
+            }
+        }
+
+        //disable the collider after a certain amount of time has passed since the door was opened
+        if(hasBeenBought == true)
+        {
+            timeBeforePassTimer -= Time.deltaTime;
+
+            if(timeBeforePassTimer <= 0)
+            {
+                if(tag == "StartRoomDoors")
+                {
+                    GameObject[] doors = GameObject.FindGameObjectsWithTag("StartRoomDoors");
+                    foreach(GameObject door in doors)
+                    {
+                        door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                    }
+                }
+                //purchase both breakfast hall doors
+                else if(tag == "BreakfastHallDoors")
+                {
+                    GameObject[] doors = GameObject.FindGameObjectsWithTag("BreakfastHallDoors");
+                    foreach(GameObject door in doors)
+                    {
+                        door.GetComponent<CollisionDetection>().GetComponent<EdgeCollider2D>().enabled = false;
+                    }
+                }
+                else
+                {
+                    GetComponent<EdgeCollider2D>().enabled = false;
                 }
             }
         }

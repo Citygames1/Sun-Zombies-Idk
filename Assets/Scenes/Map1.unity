@@ -467,6 +467,10 @@ PrefabInstance:
       propertyPath: nameOfDoor
       value: BreakfastHall
       objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1271,6 +1275,10 @@ PrefabInstance:
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: nameOfDoor
       value: Garden
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
@@ -17675,6 +17683,10 @@ PrefabInstance:
       value: Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: timeBeforeSound
       value: 0.5
       objectReference: {fileID: 0}
@@ -27408,7 +27420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25598968}
+  m_AnchoredPosition: {x: 0, y: 26349196}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &766613210
@@ -42939,6 +42951,10 @@ PrefabInstance:
       propertyPath: nameOfDoor
       value: StartRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -43388,6 +43404,10 @@ PrefabInstance:
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: nameOfDoor
       value: Reception
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: timeBeforeSound
@@ -51648,6 +51668,10 @@ PrefabInstance:
       value: Reception
       objectReference: {fileID: 0}
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: timeBeforeSound
       value: 0.5
       objectReference: {fileID: 0}
@@ -57261,6 +57285,10 @@ PrefabInstance:
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: nameOfDoor
       value: MainHall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: timeBeforeSound
@@ -63215,6 +63243,10 @@ PrefabInstance:
       propertyPath: nameOfDoor
       value: SecurityRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -65384,6 +65416,10 @@ PrefabInstance:
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: nameOfDoor
       value: FoodHall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
@@ -68175,6 +68211,10 @@ PrefabInstance:
     - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: nameOfDoor
       value: StartRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692520153621108761, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
+      propertyPath: timeBeforePass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2743401551975239727, guid: 847e40bd50fc5cc44b85b28b91c00035, type: 3}
       propertyPath: m_IsActive
