@@ -6,13 +6,18 @@ using UnityEngine;
 
 public class TrainManager : MonoBehaviour
 {
+    private bool trainArrived = false;
     public int trainArrivalRound;
 
     public GameObject[] doorObjects;
     private GameObject currentDetails;
     public string currentLocation = "startArea";
 
-    private Animator animator;
+    public float timeToWait;
+    private float timeToWaitTimer;
+    public bool canTeleport;
+    [HideInInspector] public Animator animator;
+    private bool initialMovement = false;
 
     private GameManager gms;
 
@@ -27,14 +32,38 @@ public class TrainManager : MonoBehaviour
         animator = GetComponent<Animator>();
 
         currentDetails.SetActive(false);
+        timeToWaitTimer = timeToWait;
     }
 
     private void Update()
     {
+        if(canTeleport == false)
+        {
+            timeToWaitTimer -= Time.deltaTime;
+            if(initialMovement == false)
+            {
+                initialMovement = true;
+                animator.SetTrigger("Change");
+            }
+
+            if(timeToWaitTimer <= 0)
+            {
+                canTeleport = true;
+                initialMovement = false;
+                timeToWaitTimer = timeToWait;
+
+                animator.SetTrigger("Change");
+            }
+        }
+
         if(gms.roundCount  >= trainArrivalRound)
         {
-            animator.SetBool("IsReceptionRound", true);
-            float price = doorObjects[0].GetComponent<TeleporterScript>().costOfTeleportation;
+            if(trainArrived == false)
+            {
+                trainArrived = true;
+                animator.SetTrigger("Change");
+                Debug.Log("Train has arrived at the station");
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TeleporterScript : MonoBehaviour
 {
+    private TrainManager trainManager;
     private DifficultyManager difficultyManager;
     public float costOfTeleportation;
 
@@ -34,6 +35,7 @@ public class TeleporterScript : MonoBehaviour
     {
         //setting price increase of difficulty
         difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
+        trainManager = GameObject.FindGameObjectWithTag("TrainManager").GetComponent<TrainManager>();
         costOfTeleportation = costOfTeleportation * difficultyManager.priceMultiplier;
 
         gms = gameManager.GetComponent<GameManager>();
@@ -50,8 +52,10 @@ public class TeleporterScript : MonoBehaviour
     {
         if(tms.currentLocation == "startArea")
         {
-            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation)
+            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation && trainManager.canTeleport == true)
             {
+                trainManager.canTeleport = false;
+
                 ps.totalPoints = ps.totalPoints - costOfTeleportation;
                 rb.position = rb2.position; // teleports to reception
                 camera.GetComponent<Transform>().position = new Vector3(rb.position.x, rb.position.y, -10);
@@ -68,8 +72,10 @@ public class TeleporterScript : MonoBehaviour
         }
         else if(tms.currentLocation == "hotelArea") 
         {
-            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation)
+            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation && trainManager.canTeleport == true)
             {
+                trainManager.canTeleport = false;
+
                 ps.totalPoints = ps.totalPoints - costOfTeleportation;
                 rb.position = rb3.position; // teleports to food hall
                 camera.GetComponent<Transform>().position = new Vector3(rb.position.x, rb.position.y, -10);
@@ -86,8 +92,10 @@ public class TeleporterScript : MonoBehaviour
         }
         else if(tms.currentLocation == "foodHallArea") 
         {
-            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation)
+            if (inRange == true && Input.GetKeyDown(KeyCode.E) && ps.totalPoints >= costOfTeleportation && trainManager.canTeleport == true)
             {
+                trainManager.canTeleport = false;
+
                 ps.totalPoints = ps.totalPoints - costOfTeleportation;
                 rb.position = rb4.position; // teleports to start area
                 camera.GetComponent<Transform>().position = new Vector3(rb.position.x, rb.position.y, -10);
@@ -106,7 +114,7 @@ public class TeleporterScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && trainManager.canTeleport == true)
         {
             inRange = true;
             currentDetails.SetActive(true);
