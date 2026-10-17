@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
 
     //health scaling
     private int scaleRound = 7;
-    private bool isScaling;
+    [SerializeField] private bool isScaling;
     private float healthScaleFloat = 1f;
     private float speedScaleFloat = 1f;
     private int roundBetweenScaleIncreases = 3;

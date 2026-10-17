@@ -162,6 +162,5 @@ MonoBehaviour:
   hasBought: 0
   costOfMachine: 2500
   healthPerRegenTick: 15
-  regenIntervalTimer: 0
-  regenInterval: 0
-  regenActive: 0
+  regenInterval: 15
+  healthBar: {fileID: 0}

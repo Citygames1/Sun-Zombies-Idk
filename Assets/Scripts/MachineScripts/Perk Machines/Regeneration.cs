@@ -12,13 +12,15 @@ public class Regeneration : MonoBehaviour
     public float costOfMachine;
     public int healthPerRegenTick = 15;
 
-    public float regenIntervalTimer;
+    private float regenIntervalTimer;
     public float regenInterval;
-    public bool regenActive;
+    public GameObject healthBar;
+    private HealthBar healthBarScript;
 
     void Awake()
     {
         currentDetails = GameObject.FindGameObjectWithTag("CurrentDetails");
+        healthBarScript = healthBar.GetComponent<HealthBar>();
     }
 
     void Start()
@@ -54,28 +56,36 @@ public class Regeneration : MonoBehaviour
             {
                 regenIntervalTimer -= Time.deltaTime;
 
-                if (regenIntervalTimer <= 0 && regenActive == false)
+                if (regenIntervalTimer <= 0)
                 {
-                    regenActive = true;
                     regenIntervalTimer = regenInterval;
+
+                    //regeneration
+                    if(playerHS.currentHealth != playerHS.maxHealth)
+                    {
+                        if(playerHS.maxHealth - playerHS.currentHealth >= healthPerRegenTick)
+                        {
+                            //regeneration occurs
+                            playerHS.currentHealth += healthPerRegenTick;
+                            healthBarScript.healthBar.value = playerHS.currentHealth;
+                            healthBarScript.delayedBar.value = playerHS.currentHealth;
+                            regenIntervalTimer = regenInterval;
+                        }
+                        else
+                        {
+                            //if the player doesnt need the full health tick to be full, we can just set it to max health
+                            playerHS.currentHealth = playerHS.maxHealth;
+                            healthBarScript.healthBar.value = playerHS.currentHealth;
+                            healthBarScript.delayedBar.value = playerHS.currentHealth;
+                            regenIntervalTimer = regenInterval;
+                        }
+                    }
                 }
             }
 
-            //regeneration
-            if(regenActive == true && playerHS.currentHealth != playerHS.maxHealth)
+            else
             {
-                if(playerHS.maxHealth - playerHS.currentHealth >= healthPerRegenTick)
-                {
-                    //regeneration occurs
-                    playerHS.currentHealth += healthPerRegenTick;
-                    regenActive = false;
-                }
-                else
-                {
-                    //if the player doesnt need the full health tick to be full, we can just set it to max health
-                    playerHS.currentHealth = playerHS.maxHealth;
-                    regenActive = false;
-                }
+                regenIntervalTimer = regenInterval;
             }
         }
     }

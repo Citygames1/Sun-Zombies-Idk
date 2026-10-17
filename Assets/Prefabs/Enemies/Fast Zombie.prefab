@@ -238,10 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2763270f473d2384b846dbbf9e43d37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 13
   nextWaypointDistance: 0.75
   timeBetweenWaypoints: 0.5
-  dashSpeed: 45
+  dashSpeed: 30
   dashLength: 0.3
   dashCooldown: 3.5
   timeBetweenSteps: 0.2

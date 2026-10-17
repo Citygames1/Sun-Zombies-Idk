@@ -8,7 +8,7 @@ public class SpeedUp : MonoBehaviour
     private GameObject currentDetails;
     private TopDownMovement tdmPlayer;
     private PlayerHealth playerHealth;
-    public float multiplier = 1.5f;
+    public float multiplier;
     public bool inRangeOfMachine;
     public bool hasBought;
     public float costOfMachine;
@@ -37,7 +37,7 @@ public class SpeedUp : MonoBehaviour
 
             if (player.GetComponent<PointSystem>().totalPoints >= costOfMachine && Input.GetKeyDown(KeyCode.E))
             {
-                tdmPlayer.runSpeed *= multiplier;
+                tdmPlayer.runSpeed = tdmPlayer.runSpeed * multiplier;
                 playerHealth.originalRunSpeed = tdmPlayer.runSpeed;
                 player.GetComponent<PointSystem>().totalPoints -= costOfMachine;
                 hasBought = true;

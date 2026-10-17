@@ -112,7 +112,8 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1054698807
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 100
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5682118624835700926
 MonoBehaviour:
@@ -161,8 +162,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -183,7 +185,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -220,5 +222,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91efb9517dbd3046836b6b8a49fddc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointsTextHandler
-  duration: 1.5
-  moveSpeed: 70
+  duration: 0.4
+  moveSpeed: 2000
